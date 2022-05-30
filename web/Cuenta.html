@@ -71,18 +71,106 @@
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <h5 class="cuenta-highlights layout1">Nombre Completo</h5>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre Completo" name="NombreCompleto" required>
         <hr class="cuenta-line1 layout" />
-        <h5 class="cuenta-highlights layout2">Correo Electrónico</h5>
+        <input class="cuenta-highlights layout2" type = "text" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />
-        <h5 class="cuenta-highlights layout3">Contraseña</h5>
+        <input class="cuenta-highlights layout3" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
+        <hr class="cuenta-line layout" />
+        <input class="cuenta-highlights layout3" type = "password" id ="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
         <hr class="cuenta-line1 layout1" />
+        <div id="message">
+          <h5>La contraseña debe contener lo siguiente</h5>
+          <p id="letter" class="invalid">Una<b> minúscula</b></p>
+          <p id="capital" class="invalid">Una <b>mayúscula</b></p>
+          <p id="number" class="invalid">Un <b>número</b></p>
+          <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
+          <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
+        </div>
         <a href="IniciarSesion.html"><div class="cuenta-cover-block3 layout"><h5 class="cuenta-highlights1 layout">Crear Cuenta</h5></a></div>
         <a href="IniciarSesion.html"><h5 class="cuenta-highlights layout4">¿Ya tienes una cuenta? Iniciar sesión</h5></a>
       </div>
     </div>
-    <script type="text/javascript">
-      AOS.init();
-    </script>
+    <script>
+      var myInput = document.getElementById("psw");
+      var myInput2 = document.getElementById("confpsw");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+      
+      myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+      }
+      
+      myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+      }
+
+      myInput2.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+      }
+      
+      myInput2.onblur = function() {
+        document.getElementById("message").style.display = "none";
+      }
+      
+      myInput.onkeyup = function() {
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+      }
+    
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.value.match(upperCaseLetters)) {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+      
+        var numbers = /[0-9]/g;
+        if(myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+      
+
+        if(myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+
+        if (document.getElementById("psw").value == document.getElementById("confpsw").value) {
+          confirmation.classList.remove("invalid");
+          confirmation.classList.add("valid");
+         }
+        else{
+          confirmation.classList.remove("valid");
+          confirmation.classList.add("invalid");
+          }
+      }
+      myInput2.onkeyup = function() {
+        if (document.getElementById("psw").value == document.getElementById("confpsw").value) {
+          confirmation.classList.remove("invalid");
+          confirmation.classList.add("valid");
+         }
+        else{
+          confirmation.classList.remove("valid");
+          confirmation.classList.add("invalid");
+          }
+        }
+      </script>
   </body>
 </html>

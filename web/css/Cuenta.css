@@ -585,6 +585,7 @@
   height: -moz-min-content;
   height: min-content;
   width: 64.56%;
+  border: 0px;
   margin: 45px auto 0px; }
   @media (max-width: 1199px) {
     .cuenta-highlights.layout1 {
@@ -635,6 +636,7 @@
   height: -moz-min-content;
   height: min-content;
   width: 65.11%;
+  border: 0px;
   margin: 48px auto 0px; }
   @media (max-width: 1199px) {
     .cuenta-highlights.layout2 {
@@ -664,6 +666,7 @@
   height: -moz-min-content;
   height: min-content;
   width: 64.56%;
+  border: 0px;
   margin: 47px auto 0px; }
   @media (max-width: 1199px) {
     .cuenta-highlights.layout3 {
@@ -686,6 +689,56 @@
     .cuenta-highlights.layout3 {
       width: 81.21%;
       margin: 18px auto 0px; } }
+
+#message{
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 64.56%;
+    border: 0px;
+    margin: 47px auto 0px; }
+    @media (max-width: 1199px) {
+      .cuenta-highlights.layout3 {
+        margin: 40px auto 0px; } }
+    @media (max-width: 991px) {
+      .cuenta-highlights.layout3 {
+        margin: 33px auto 0px; } }
+    @media (max-width: 767px) {
+      .cuenta-highlights.layout3 {
+        margin: 27px auto 0px; } }
+    @media (max-width: 575px) {
+      .cuenta-highlights.layout3 {
+        width: 70.85%;
+        margin: 23px auto 0px; } }
+    @media (max-width: 479px) {
+      .cuenta-highlights.layout3 {
+        width: 76.42%;
+        margin: 20px auto 0px; } }
+    @media (max-width: 383px) {
+      .cuenta-highlights.layout3 {
+        width: 81.21%;
+        margin: 18px auto 0px; } }
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -2%;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -2%;
+  content: "✖";
+}
 
 .cuenta-line1.layout1 {
   position: relative;

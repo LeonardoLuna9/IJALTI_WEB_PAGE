@@ -740,8 +740,61 @@
 .usu-prof1-highlights24 {
   font: 18px/1.11 "DM Sans", Helvetica, Arial, serif;
   color: #6e6b8f;
-  letter-spacing: 0px; }
+  letter-spacing: 0px; 
+  border: 0px;
+  width: 65%;
+}
 
+#message{
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 64.56%;
+    border: 0px;
+    margin-top: -15%;
+    margin-left: 38%}
+    @media (max-width: 1199px) {
+      .cuenta-highlights.layout3 {
+        margin: 40px auto 0px; } }
+    @media (max-width: 991px) {
+      .cuenta-highlights.layout3 {
+        margin: 33px auto 0px; } }
+    @media (max-width: 767px) {
+      .cuenta-highlights.layout3 {
+        margin: 27px auto 0px; } }
+    @media (max-width: 575px) {
+      .cuenta-highlights.layout3 {
+        width: 70.85%;
+        margin: 23px auto 0px; } }
+    @media (max-width: 479px) {
+      .cuenta-highlights.layout3 {
+        width: 76.42%;
+        margin: 20px auto 0px; } }
+    @media (max-width: 383px) {
+      .cuenta-highlights.layout3 {
+        width: 81.21%;
+        margin: 18px auto 0px; } }
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -2%;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -2%;
+  content: "✖";
+}
 .usu-prof1-highlights24.layout {
   position: relative;
   flex: 0 0 auto;

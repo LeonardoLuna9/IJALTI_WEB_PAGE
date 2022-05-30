@@ -176,19 +176,19 @@
               </div>
               <h4 class="usu-prof1-highlights3 layout1">Número de telefono</h4>
               <div class="usu-prof1-content-box layout">
-                <h4 class="usu-prof1-highlights24 layout">(123) 456 - 7890</h4>
-                <div class="usu-prof1-content-box-spacer"></div>
+                <input class="usu-prof1-highlights24 layout" type="tel" id="phone" name="phonenum" pattern="[0-9]{10}" required></input>
+                <div class="usu-prof1-content-box-spacer">
+                </div>
                 <div class="usu-prof1-content-box-item">
-                  <div
-                    style="--src:url(/assets/6f3cb7b39aba46db862a7043b39b828e.png)"
-                    class="usu-prof1-cover-block3 layout"
-                  >
-                    <div
-                      style="--src:url(/assets/3f502488ef6d2a1a58ed662ee07875c3.png)"
-                      class="usu-prof1-image4 layout"
-                    ></div>
+                  <div style="--src:url(/assets/6f3cb7b39aba46db862a7043b39b828e.png)"
+                    class="usu-prof1-cover-block3 layout">
+                    <div style="--src:url(/assets/3f502488ef6d2a1a58ed662ee07875c3.png)"
+                      class="usu-prof1-image4 layout"></div>
                   </div>
                 </div>
+              </div>
+              <div id="message">
+                <p id="letter" class="invalid">Numero valido</b></p>
               </div>
             </div>
           </div>
@@ -214,6 +214,21 @@
     </div>
     <script type="text/javascript">
       AOS.init();
+    </script>
+    <script>
+      var phoneInput = document.getElementById("phone");
+      
+      phoneInput.onkeyup = function() {
+        var phoneNum = /^\d{10}$/;
+        if(phoneInput.value.match(phoneNum)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+      }
+    }
+
     </script>
   </body>
 </html>
