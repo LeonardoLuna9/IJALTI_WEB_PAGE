@@ -1,6 +1,11 @@
+<?php
+
+@include 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
-  <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -60,24 +65,32 @@
             </div>
           </div>
         </div>
+        <form action="" method="post" class ="form1">
         <div class="cuenta-flex3 layout">
           <h5 class="cuenta-highlights layout">¿Cómo planeas usar tu cuenta?</h5>
-          <div class="cuenta-flex3-spacer"></div>
+          <div class="cuenta-flex3-spacer">
+            <select name="SeleccionaCuenta" id="SelectCuenta">
+              <option value="Empresarial">Empresarial</option>
+              <option value="UsuarioProf">Usuario Profesional</option>
+            </select>
+          </div>
           <div class="cuenta-flex3-item">
-            <div class="cuenta-block1 layout">
-              <div style="--src:url(/assets/c6e6f7bf28825d8a5c1365aa72edb16c.png)" class="cuenta-image layout"></div>
-              <div style="--src:url(/assets/7909597d42a8bde836a91901b8b64d32.png)" class="cuenta-image1 layout"></div>
-            </div>
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre Completo" name="NombreCompleto" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required>
         <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout2" type = "text" placeholder="Correo Electrónico" name="CorreoElectronico" required>
+        <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout3" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre" name="Nombre" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout3" type = "password" id ="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Paterno" name="ApellidoP" required>
+        <hr class="cuenta-line layout" />
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Materno" name="ApellidoM" required>
+        <hr class="cuenta-line layout" />
+        <input class="cuenta-highlights layout1" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
+        <hr class="cuenta-line layout" />
+        <input class="cuenta-highlights layout1" type = "password" id ="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
         <hr class="cuenta-line1 layout1" />
         <div id="message">
           <h5>La contraseña debe contener lo siguiente</h5>
@@ -87,8 +100,9 @@
           <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
           <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
         </div>
-        <a href="IniciarSesion.html"><div class="cuenta-cover-block3 layout"><h5 class="cuenta-highlights1 layout">Crear Cuenta</h5></a></div>
-        <a href="IniciarSesion.html"><h5 class="cuenta-highlights layout4">¿Ya tienes una cuenta? Iniciar sesión</h5></a>
+        <input type = "submit" name ="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
+        <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.html">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
+      </form>
       </div>
     </div>
     <script>

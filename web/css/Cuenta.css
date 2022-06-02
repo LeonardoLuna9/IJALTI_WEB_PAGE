@@ -514,6 +514,12 @@
 .cuenta-flex3-spacer {
   flex: 0 1 205px; }
 
+#SelectCuenta{
+  font: 16px/2.18 "Abel", Helvetica, Arial, serif;
+  border: 0px;
+  margin-left: 25%;
+  margin-top: 3%;
+}
 .cuenta-flex3-item {
   display: flex;
   flex-direction: column;
@@ -584,6 +590,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  margin-left: 18% !important;
   width: 64.56%;
   border: 0px;
   margin: 45px auto 0px; }
@@ -765,12 +772,18 @@
   border-radius: 8px 8px 8px 8px; }
 
 .cuenta-cover-block3.layout {
+  font: 16px/2.18 "Abel", Helvetica, Arial, serif;
+  letter-spacing: 1.28px;
+  color: white;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left: 25%;
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   width: 64.42%;
-  margin: 47px auto 0px; }
+  margin: 5% auto 0px; }
   @media (max-width: 1199px) {
     .cuenta-cover-block3.layout {
       margin: 40px auto 0px; } }
@@ -789,6 +802,10 @@
   @media (max-width: 383px) {
     .cuenta-cover-block3.layout {
       margin: 18px auto 0px; } }
+
+.cuenta-cover-block3.layout:hover{
+  color: aqua;
+}
 
 .cuenta-highlights1 {
   font: 16px/2.18 "Abel", Helvetica, Arial, serif;
