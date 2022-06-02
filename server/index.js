@@ -17,8 +17,8 @@ con.connect(function (err) {
   console.log("connected");
 });
 
-app.post("/iniciosesion/:Usuario/:Contra",function(req,res){
-  con.query("INSERT INTO usuarios (CURP,correo,nombre,apellidoP,apellidoM,contraseña) VALUES ('"+req.params.Usuario+"','"+req.params.Contra+"','asdfad','asdf','asdfa','ads')", function (err, result) {
+app.post("/iniciosesion/:Curp/:Correo/:nombre/:apep/:apem/:contra",function(req,res){
+  con.query("INSERT INTO usuarios (CURP,correo,nombre,apellidoP,apellidoM,contraseña) VALUES ('"+req.params.Curp+"','"+req.params.Correo+"','"+req.params.nombre+"','"+req.params.apep+"','"+req.params.apem+"','"+req.params.contra+"')", function (err, result) {
     if (err) throw err;
     console.log("record bien");
   });
