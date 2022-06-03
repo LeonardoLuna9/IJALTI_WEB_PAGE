@@ -182,7 +182,7 @@
          }
         else{
           confirmation.classList.remove("valid");
-          confirmation.classList.add("invalid");
+          confirmation.classList.add("invalidholas");
           }
         }
       </script>
