@@ -56,7 +56,7 @@
           </div>
           <div class="desktop-flex2-spacer"></div>
           <div class="desktop-flex2-item1">
-            <a href="IntEmp.php"><div style="--src:url(http://localhost/PaginaWebFinal/assets/92895f952a3b0e1dbe9da3e6806941ae.png)" class="desktop-image4 layout"></div></a>
+            <a href="IntEmp.php" style="text-decoration: none;"><div style="--src:url(http://localhost/PaginaWebFinal/assets/92895f952a3b0e1dbe9da3e6806941ae.png)" class="desktop-image4 layout"></div></a>
           </div>
         </div>
         <div class="desktop-cover-block1 layout">

@@ -146,10 +146,10 @@
                 Por favor revisa la información de los pasos anteriores, and si todo esta bien, presiona el botón de
                 aplicar para que te consideren como candidato a la vacante.
               </h4>
-              <a href="IntUsuProf.php"><div class="usu-prof3-block1 layout"><h4 class="usu-prof3-highlights3 layout">Aplicar</h4></div></a>
+              <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof3-block1 layout"><h4 class="usu-prof3-highlights3 layout">Aplicar</h4></div></a>
             </div>
           </div>
-          <a href="UsuProf2.php"><div class="usu-prof3-block4 layout"><h4 class="usu-prof3-highlights4 layout">Regresar</h4></div></a>
+          <a href="UsuProf2.php" style="text-decoration: none;"><div class="usu-prof3-block4 layout"><h4 class="usu-prof3-highlights4 layout">Regresar</h4></div></a>
         </div>
       </div>
       <div class="usu-prof3-block-spacer1"></div>

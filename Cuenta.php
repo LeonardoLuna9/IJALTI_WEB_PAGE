@@ -141,7 +141,7 @@ if (isset($_POST['submit'])){
           <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
         </div>
         <input type = "submit" name ="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
-        <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
+        <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
       </form>
       </div>
     </div>

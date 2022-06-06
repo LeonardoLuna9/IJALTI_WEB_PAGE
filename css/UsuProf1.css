@@ -753,7 +753,8 @@
     width: 64.56%;
     border: 0px;
     margin-top: -15%;
-    margin-left: 38%}
+    margin-left: 38%;
+    display: none;}
     @media (max-width: 1199px) {
       .cuenta-highlights.layout3 {
         margin: 40px auto 0px; } }

@@ -113,7 +113,7 @@ if (isset($_POST['submit'])){
         </div>
         <input type = "submit" name ="submit" value="Iniciar sesión" class="iniciar-sesion-cover-block layout">
         </form>
-        <a href="Cuenta.php"><h5 class="iniciar-sesion-highlights11 layout">¿No tienes cuenta? Crear cuenta</h5></a>
+        <a href="Cuenta.php" style="text-decoration: none;"><h5 class="iniciar-sesion-highlights11 layout">¿No tienes cuenta? Crear cuenta</h5></a>
       </div>
     </div>
   </body>
