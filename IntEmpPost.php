@@ -134,7 +134,7 @@
             <div class="int-emp-post-flex8 layout">
               <div class="int-emp-post-flex8-item">
                 <div class="int-emp-post-cover-block5 layout">
-                  <a href="IntEmpCrear.php"><h5 class="int-emp-post-highlights2 layout">Borradores</h5></a>
+                  <a href="IntEmpCrear.php" style="text-decoration: none;"><h5 class="int-emp-post-highlights2 layout">Borradores</h5></a>
                 </div>
               </div>
               <div class="int-emp-post-flex8-spacer"></div>
@@ -198,7 +198,7 @@
                       <div class="int-emp-post-flex12-spacer"></div>
                       <div class="int-emp-post-flex12-item">
                         <div class="int-emp-post-cover-block3 layout">
-                          <a href="IntEmp.php"><div class="int-emp-post-text-body layout">Ver aplicantes</div></a>
+                          <a href="IntEmp.php" style="text-decoration: none;"><div class="int-emp-post-text-body layout">Ver aplicantes</div></a>
                         </div>
                       </div>
                     </div>

@@ -140,7 +140,7 @@
               <div class="int-emp-crear-flex8-spacer"></div>
               <div class="int-emp-crear-flex8-item">
                 <div class="int-emp-crear-cover-block9 layout">
-                  <a href="IntEmpPost.php"><h5 class="int-emp-crear-highlights1 layout">Posts</h5></a>
+                  <a href="IntEmpPost.php" style="text-decoration: none;"><h5 class="int-emp-crear-highlights1 layout">Posts</h5></a>
                 </div>
               </div>
               <div class="int-emp-crear-flex8-spacer1"></div>

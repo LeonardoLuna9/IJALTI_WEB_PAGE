@@ -94,7 +94,7 @@
               <div class="int-usu-prof-flex7-spacer"></div>
               <div class="int-usu-prof-flex7-item">
                 <div class="int-usu-prof-cover-block1 layout">
-                  <a href="CrearCv.php"><div
+                  <a href="CrearCv.php" style="text-decoration: none;"><div
                     style="--src:url(http://localhost/PaginaWebFinal/assets/f9740cec0b3a7ed46d2dd7fa0c0db315.png)"
                     class="int-usu-prof-image9 layout"
                   ></div></a>

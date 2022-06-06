@@ -29,7 +29,7 @@
           <img class="Oracle" src="./assets/Oracle.jpg">
           <div class="vacanteprof-cover-group3 layout">
             <h5 class="vacanteprof-highlights2 layout">Abiertas</h5>
-            <h4 class="vacanteprof-highlights3 layout">Hoy, 26 de abril</h4>
+            <h4 class="vacanteprof-highlights3 layout">Hoy, 25 de abril</h4>
             <div
               style="--src:url(http://localhost/PaginaWebFinal/assets/e1bc56c7f326c2c24e81a4c7380fd5a8.png)"
               class="vacanteprof-cover3 layout"
@@ -95,7 +95,7 @@
                             <div class="vacanteprof-flex9 layout">
                               <div class="vacanteprof-group layout">
                                 <div class="vacanteprof-cover-block3 layout">
-                                  <div class="vacanteprof-text-body1 layout">Aplicar ahora</div>
+                                  <div class="vacanteprof-text-body1 layout"><a href="UsuProf1.php" style="text-decoration: none;">Aplicar ahora</a></div>
                                 </div>
                                 <div class="vacanteprof-cover-block2 layout">
                                   <div class="vacanteprof-text-body2 layout">Ver</div>
@@ -179,7 +179,7 @@
       <div class="vacanteprof-text-body2 layout3">#software</div>
       <div class="vacanteprof-text-body2 layout4">#trabajo</div>
       <div class="vacanteprof-text-body2 layout5">#intern</div>
-      <div class="vacanteprof-cover-block3 layout1"><a href="UsuProf1.php"><div class="vacanteprof-text-body1 layout">Aplicar ahora</div></a></div>
+      <div class="vacanteprof-cover-block3 layout1"><div class="vacanteprof-text-body1 layout">Aplicar ahora</div></div>
       <div class="vacanteprof-cover-block2 layout1"><div class="vacanteprof-text-body2 layout">Ver</div></div>
       <div class="vacanteprof-cover-block1 layout">
         <px-posize
@@ -250,7 +250,7 @@ Campo Profesional: Arquitectura de redes</pre
           </div>
         </div>
       </div>
-      <div class="vacanteprof-cover-block layout"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></div>
+      <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div>
       <div class="vacanteprof-paragraph-body layout2">
         Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te sumergirás
         profundamente en cada capa de la experiencia, mejorando nuestros productos, infraestructuras y plataformas.
@@ -279,8 +279,8 @@ Campo Profesional: Arquitectura de redes</pre
         xxs-y="5px 46px 61px"
         tn-x="1664fr 48px 16fr"
         tn-y="5px 46px 5px"
-        ><div class="vacanteprof-icon8" style="--src:url(http://localhost/PaginaWebFinal/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
-      ></px-posize>
+        ><a href = "IntUsuProf.php" style="text-decoration: none;"><div class="vacanteprof-icon8" style="--src:url(http://localhost/PaginaWebFinal/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
+      ></a></px-posize>
 
       <px-posize
         x="476fr 17px 1235fr"

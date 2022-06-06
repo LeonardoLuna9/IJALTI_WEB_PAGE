@@ -192,7 +192,7 @@
               </div>
             </div>
           </div>
-          <a href="UsuProf2.php"><div class="usu-prof1-block1 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a>
+          <a href="UsuProf2.php" style="text-decoration: none;"><div class="usu-prof1-block1 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a>
         </div>
       </div>
       <div class="usu-prof1-block-spacer1"></div>

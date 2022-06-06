@@ -139,11 +139,11 @@
           </div>
           <div class="usu-prof2-flex8 layout">
             <div class="usu-prof2-flex8-item">
-              <a href="UsuProf1.php"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
+              <a href="UsuProf1.php" style="text-decoration: none;"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
             </div>
             <div class="usu-prof2-flex8-spacer"></div>
             <div class="usu-prof2-flex8-item1">
-              <a href="UsuProf3.php"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
+              <a href="UsuProf3.php" style="text-decoration: none;"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
             </div>
           </div>
         </div>

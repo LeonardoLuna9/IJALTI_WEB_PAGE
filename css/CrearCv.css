@@ -429,8 +429,7 @@
 .crear-cv-block3.layout3 {
   position: relative;
   height: 36px;
-  width: 927px;
-  min-width: 927px; }
+  width: 97%; }
 
 .crear-cv-small-text-body11 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -439,10 +438,15 @@
   width: 100%;
   height: 100%; }
 
-.crear-cv-icon {
+.crear-cv-icon3 {
   background: var(--src) center center/contain no-repeat;
   width: 100%;
   height: 100%; }
+
+.crear-cv-icon4 {
+    background: var(--src) center center/contain no-repeat;
+    width: 100%;
+    height: 100%; }
 
 .crear-cv-block7-spacer {
   flex: 0 1 48px; }
@@ -553,14 +557,13 @@
 .crear-cv-block3.layout5 {
   position: relative;
   height: 36px;
-  width: 927px;
-  min-width: 927px; }
+  width: 100%}
 
 .crear-cv-small-text-body12 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
   letter-spacing: 0px;
-  width: 100%;
+  width: 150%;
   height: 100%; }
 
 .crear-cv-block11 {
@@ -586,6 +589,26 @@
   left: -1px;
   width: 10px; }
 
+  .crear-cv-image5 {
+    background: var(--src) center center/contain no-repeat; }
+  
+  .crear-cv-image5.layout {
+    position: absolute;
+    top: -1px;
+    height: 13px;
+    left: -26px;
+    width: 10px; }
+
+    .crear-cv-image6 {
+      background: var(--src) center center/contain no-repeat; }
+    
+    .crear-cv-image6.layout {
+      position: absolute;
+      top: -1px;
+      height: 13px;
+      left: -18px;
+      width: 10px; }
+
 .crear-cv-image3 {
   background: var(--src) center center/contain no-repeat; }
 
@@ -593,7 +616,7 @@
   position: absolute;
   top: -1px;
   height: 13px;
-  left: 7px;
+  left: 6px;
   width: 11px; }
 
 .crear-cv-block10-spacer {
@@ -635,13 +658,14 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content; 
+  padding-bottom: 1%;}
 
 .crear-cv-small-text-body13 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
   letter-spacing: 0px;
-  width: 100%;
+  width: 150%;
   height: 100%; }
 
 .crear-cv-block12-spacer {
@@ -674,7 +698,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 69.77%;
+  width: 67.4%;
   margin: 39px 25.58% 60px 4.65%; }
 
 .crear-cv-block11.layout1 {
@@ -695,8 +719,9 @@
   bottom: 824px;
   left: 0px;
   right: 0px;
-  width: 69.77%;
-  margin: 0px 25.36% 0px 4.88%; }
+  width: 67.4%;
+  margin: 0px 10% 0px 4.88%;
+  padding-bottom: 1%; }
 
 .crear-cv-small-text-body14 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
