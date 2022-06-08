@@ -1,6 +1,6 @@
 <?php
 
-@include 'config.php';
+@include 'config.php'; // Base de datos
 
 if (isset($_POST['submit'])){
   $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
@@ -27,6 +27,10 @@ if (isset($_POST['submit'])){
     else{
       $insert = "INSERT INTO usuarios(CURP, correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$CURP', '$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
       mysqli_query($conn, $insert);
+      
+      $insert2 = "INSERT INTO usuario_prof(CURP) VALUES ('$CURP')";
+      mysqli_query($conn, $insert2);
+
       header('location:IniciarSesion.php');
     }
   }

@@ -81,6 +81,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
             <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="crear-cv-icon2 layout"></div>
           </div>
         </div>
+        
         <div class="crear-cv-flex2 layout">
           <div class="crear-cv-flex2-item">
             <div class="crear-cv-group layout3">
@@ -88,19 +89,21 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 <div class="crear-cv-block2 layout">
                   <div class="crear-cv-block2-item">
                     <div class="crear-cv-flex3 layout">
-                      <h5 class="crear-cv-highlights layout">Nombre completo</h5>
+                      <h5 class="crear-cv-highlights layout">Datos personales</h5>
                       <div class="crear-cv-block3 layout">
-                        <div class="crear-cv-small-text-body1 layout">Nombre</div>
+                        <!--<div class="crear-cv-small-text-body1 layout">Nombre</div> -- Input -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Nombre" name="Nombre" pattern="{18}" required>
+                        <hr class="cuenta-line1 layout" />
                       </div>
                     </div>
                   </div>
                   <div class="crear-cv-block2-spacer"></div>
                   <div class="crear-cv-small-text-body layout">Nombre completo como aparece en la INE</div>
                   <!-- CURP -->
-                  <!--<div class="crear-cv-block3 layout">
-                    <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required> CURP -->
-                    <!--<hr class="cuenta-line1 layout" />
-                    </div>  CURP -->
+                  <div class="crear-cv-block3 layout">
+                    <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required> <!-- CURP -->
+                    <hr class="cuenta-line1 layout" />
+                    </div> <!-- CURP -->
                 </div>
                 <div class="crear-cv-block4 layout">
                   <div class="crear-cv-block4-item">
@@ -123,7 +126,8 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                         </div>
                       </div>
                       <div class="crear-cv-block3 layout1">
-                        <div class="crear-cv-small-text-body1 layout">Empresa</div>
+                        <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{18}" required>
                       </div>
                     </div>
                   </div>
@@ -134,13 +138,14 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   <div class="crear-cv-block5-item">
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout2">
-                        <div class="crear-cv-small-text-body1 layout">Descripcion</div>
+                        <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{18}" required>
                       </div>
                       <div class="crear-cv-small-text-body2 layout">Limit: 400 words</div>
                     </div>
                   </div>
                   <div class="crear-cv-block5-spacer"></div>
-                  <div class="crear-cv-small-text-body layout2">¿Qué nos quieres contar?</div>
+                  <div class="crear-cv-small-text-body layout2">¿Qué nos querés contar?</div>
                 </div>
                 <div class="crear-cv-block7 layout">
                   <div class="crear-cv-block7-item">
@@ -151,12 +156,11 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             track-style='{"flexGrow":1}'
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body11"> Fecha Inicial
-                          <input type="date" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                            ><div class="crear-cv-small-text-body11">Fecha Inicial
+                          <input type="date" id="crear-cv-small-text-body11" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
                           </div>
                         </px-posize>
                         </div>
-                        <br>
                         <div class="crear-cv-block3 layout3">
                           <px-posize
                             track-style='{"flexGrow":1}'
@@ -187,7 +191,8 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       <h5 class="crear-cv-highlights layout">Educación</h5>
                       <div class="crear-cv-block6 layout1">
                         <div class="crear-cv-block3 layout4">
-                          <div class="crear-cv-small-text-body1 layout">Escuela</div>
+                          <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
+                          <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escuela" name="Escuela" pattern="{18}" required>
                         </div>
                         <div class="crear-cv-small-text-body3 layout">Limit: 100 words</div>
                       </div>
@@ -205,8 +210,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             track-style='{"flexGrow":1}'
                             x="16px 110fr 801fr"
                             y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body12">Grado de educacion</div></px-posize
-                          >
+                            > <input class="crear-cv-small-text-body12" type = "text" placeholder="Grado de educación" name="GradoEducacion" pattern="{18}" required>
+                            <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> --> 
+                            </px-posize>
                         </div>
                       </div>
                       <div class="crear-cv-block11 layout">
@@ -232,9 +238,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                           track-style='{"flexGrow":1}'
                           x="16px 114fr 797fr"
                           y="11px minmax(0px, max-content) 10fr"
-                          ><div class="crear-cv-small-text-body13">Fecha de graduacion
-                          <input type="date" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
-                          </div></px-posize
+                          ><div class="crear-cv-small-text-body13">Fecha de graduacion</div></px-posize
                         >
                       </div>
                       <px-posize x="891fr 30px 6fr" y="2px 30px 4px" absolute="true"
@@ -250,7 +254,8 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 </div>
                 <h5 class="crear-cv-highlights layout2">Habilidades</h5>
                 <div class="crear-cv-block13 layout">
-                  <div class="crear-cv-small-text-body1 layout">Escribir acá</div>
+                  <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
+                  <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escribir acá" name="Habilidades" pattern="{18}" required>
                 </div>
               </div>
               <div class="crear-cv-block11 layout1">
@@ -265,8 +270,8 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
               </div>
               <div class="crear-cv-block13 layout1">
                 <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
-                  ><div class="crear-cv-small-text-body14">Apellido</div></px-posize
-                >
+                  > <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
+                  <input class="crear-cv-small-text-body14" type = "text" placeholder="Apellido" name="Apellido" pattern="{18}" required></px-posize>
               </div>
             </div>
           </div>
