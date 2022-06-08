@@ -1,3 +1,40 @@
+<?php
+
+@include 'config.php'; // Base de datos
+
+if (isset($_POST['submit'])){ // Hacemos POST a base de datos
+  $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
+  $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
+  $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
+  //$apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
+  //$apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
+  //$contraseña = md5($_POST['Contraseña']);
+  //$RepContraseña =md5($_POST['RepetirContraseña']);
+  //$SeleccionCuenta = $_POST['SeleccionaCuenta'];
+
+  $select = " SELECT * FROM usuario_prof WHERE CURP = '$CURP'";
+
+  $result = mysqli_query($conn, $select);
+
+  if(mysqli_num_rows($result)> 0){
+
+    $error[] = 'CURP incorrecto';
+  }
+  else{
+    if($contraseña!=$RepContraseña){
+      $error[] = "Contraseña no coincide";
+    }
+    else{
+      $insert = "UPDATE usuario_prof SET informacion_laboral = $empresa WHERE CURP = '$CURP'";
+      mysqli_query($conn, $insert);
+      header('location:IntUsuProf.php');
+    }
+  }
+
+};
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
