@@ -1,6 +1,6 @@
 <?php
 
-@include 'config.php';
+@include 'config.php'; // Base de datos
 
 if (isset($_POST['submit'])){
   $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);

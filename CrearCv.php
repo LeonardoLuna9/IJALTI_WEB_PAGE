@@ -1,3 +1,40 @@
+<?php
+
+@include 'config.php'; // Base de datos
+
+if (isset($_POST['submit'])){ // Hacemos POST a base de datos
+  $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
+  $infolaboral = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
+  $nombre = mysqli_real_escape_string($conn, $_POST['Nombre']);
+  $apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
+  $apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
+  $contraseña = md5($_POST['Contraseña']);
+  $RepContraseña =md5($_POST['RepetirContraseña']);
+  $SeleccionCuenta = $_POST['SeleccionaCuenta'];
+
+  $select = " SELECT * FROM usuarios WHERE correo = '$correo' && contraseña = '$contraseña'";
+
+  $result = mysqli_query($conn, $select);
+
+  if(mysqli_num_rows($result)> 0){
+
+    $error[] = 'usuario ya existe';
+  }
+  else{
+    if($contraseña!=$RepContraseña){
+      $error[] = "Contraseña no coincide";
+    }
+    else{
+      $insert = "INSERT INTO usuarios(CURP, correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$CURP', '$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+      mysqli_query($conn, $insert);
+      header('location:IniciarSesion.php');
+    }
+  }
+
+};
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -53,7 +90,9 @@
                     <div class="crear-cv-flex3 layout">
                       <h5 class="crear-cv-highlights layout">Nombre completo</h5>
                       <div class="crear-cv-block3 layout">
-                        <div class="crear-cv-small-text-body1 layout">Nombre</div>
+                        <!--<div class="crear-cv-small-text-body1 layout">Nombre</div> -- Input -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Nombre" name="Nombre" pattern="{18}" required>
+                        <hr class="cuenta-line1 layout" />
                       </div>
                     </div>
                   </div>
@@ -81,7 +120,8 @@
                         </div>
                       </div>
                       <div class="crear-cv-block3 layout1">
-                        <div class="crear-cv-small-text-body1 layout">Empresa</div>
+                        <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{18}" required>
                       </div>
                     </div>
                   </div>
@@ -92,7 +132,8 @@
                   <div class="crear-cv-block5-item">
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout2">
-                        <div class="crear-cv-small-text-body1 layout">Descripcion</div>
+                        <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{18}" required>
                       </div>
                       <div class="crear-cv-small-text-body2 layout">Limit: 400 words</div>
                     </div>
@@ -132,7 +173,8 @@
                       <h5 class="crear-cv-highlights layout">Educación</h5>
                       <div class="crear-cv-block6 layout1">
                         <div class="crear-cv-block3 layout4">
-                          <div class="crear-cv-small-text-body1 layout">Escuela</div>
+                          <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
+                          <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escuela" name="Escuela" pattern="{18}" required>
                         </div>
                         <div class="crear-cv-small-text-body3 layout">Limit: 100 words</div>
                       </div>
@@ -150,8 +192,9 @@
                             track-style='{"flexGrow":1}'
                             x="16px 110fr 801fr"
                             y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body12">Grado de educacion</div></px-posize
-                          >
+                            > <input class="crear-cv-small-text-body12" type = "text" placeholder="Grado de educación" name="GradoEducacion" pattern="{18}" required>
+                            <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> --> 
+                            </px-posize>
                         </div>
                       </div>
                       <div class="crear-cv-block11 layout">
@@ -193,7 +236,8 @@
                 </div>
                 <h5 class="crear-cv-highlights layout2">Habilidades</h5>
                 <div class="crear-cv-block13 layout">
-                  <div class="crear-cv-small-text-body1 layout">Escribir acá</div>
+                  <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
+                  <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escribir acá" name="Habilidades" pattern="{18}" required>
                 </div>
               </div>
               <div class="crear-cv-block11 layout1">
@@ -208,8 +252,8 @@
               </div>
               <div class="crear-cv-block13 layout1">
                 <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
-                  ><div class="crear-cv-small-text-body14">Apellido</div></px-posize
-                >
+                  > <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
+                  <input class="crear-cv-small-text-body14" type = "text" placeholder="Apellido" name="Apellido" pattern="{18}" required></px-posize>
               </div>
             </div>
           </div>
