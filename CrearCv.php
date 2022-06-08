@@ -4,30 +4,30 @@
 
 if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
-  $infolaboral = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
-  $nombre = mysqli_real_escape_string($conn, $_POST['Nombre']);
-  $apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
-  $apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
-  $contraseña = md5($_POST['Contraseña']);
-  $RepContraseña =md5($_POST['RepetirContraseña']);
-  $SeleccionCuenta = $_POST['SeleccionaCuenta'];
+  $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
+  $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
+  //$apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
+  //$apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
+  //$contraseña = md5($_POST['Contraseña']);
+  //$RepContraseña =md5($_POST['RepetirContraseña']);
+  //$SeleccionCuenta = $_POST['SeleccionaCuenta'];
 
-  $select = " SELECT * FROM usuarios WHERE correo = '$correo' && contraseña = '$contraseña'";
+  $select = " SELECT * FROM usuario_prof WHERE CURP = '$CURP'";
 
   $result = mysqli_query($conn, $select);
 
   if(mysqli_num_rows($result)> 0){
 
-    $error[] = 'usuario ya existe';
+    $error[] = 'CURP incorrecto';
   }
   else{
     if($contraseña!=$RepContraseña){
       $error[] = "Contraseña no coincide";
     }
     else{
-      $insert = "INSERT INTO usuarios(CURP, correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$CURP', '$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+      $insert = "UPDATE usuario_prof SET informacion_laboral = $empresa WHERE CURP = '$CURP'";
       mysqli_query($conn, $insert);
-      header('location:IniciarSesion.php');
+      header('location:IntUsuProf.php');
     }
   }
 
@@ -81,6 +81,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
             <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="crear-cv-icon2 layout"></div>
           </div>
         </div>
+        
         <div class="crear-cv-flex2 layout">
           <div class="crear-cv-flex2-item">
             <div class="crear-cv-group layout3">
@@ -88,7 +89,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 <div class="crear-cv-block2 layout">
                   <div class="crear-cv-block2-item">
                     <div class="crear-cv-flex3 layout">
-                      <h5 class="crear-cv-highlights layout">Nombre completo</h5>
+                      <h5 class="crear-cv-highlights layout">Datos personales</h5>
                       <div class="crear-cv-block3 layout">
                         <!--<div class="crear-cv-small-text-body1 layout">Nombre</div> -- Input -->
                         <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Nombre" name="Nombre" pattern="{18}" required>
@@ -98,6 +99,11 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   </div>
                   <div class="crear-cv-block2-spacer"></div>
                   <div class="crear-cv-small-text-body layout">Nombre completo como aparece en la INE</div>
+                  <!-- CURP -->
+                  <div class="crear-cv-block3 layout">
+                    <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required> <!-- CURP -->
+                    <hr class="cuenta-line1 layout" />
+                    </div> <!-- CURP -->
                 </div>
                 <div class="crear-cv-block4 layout">
                   <div class="crear-cv-block4-item">
@@ -150,8 +156,20 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             track-style='{"flexGrow":1}'
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body11">Fechas</div></px-posize
-                          >
+                            ><div class="crear-cv-small-text-body11">Fecha Inicial
+                          <input type="date" id="crear-cv-small-text-body11" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                          </div>
+                        </px-posize>
+                        </div>
+                        <div class="crear-cv-block3 layout3">
+                          <px-posize
+                            track-style='{"flexGrow":1}'
+                            x="16px 42fr 869fr"
+                            y="11px minmax(0px, max-content) 10fr"
+                            ><div class="crear-cv-small-text-body11">Fecha Final
+                          <input type="date" id="crear-cv-small-text-body11" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                          </div>
+                        </px-posize>
                         </div>
                       </div>
                       <px-posize x="891fr 70px 6fr" y="3px 30px 3px" absolute="true"
