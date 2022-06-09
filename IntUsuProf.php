@@ -347,10 +347,10 @@
                 ></px-posize>
                 <div class="int-usu-prof-box14 layout"></div>
                 <div class="int-usu-prof-cover-block3 layout1">
-                  <div class="int-usu-prof-text-body1 layout1">Share Now</div>
+                  <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
-                  <div class="int-usu-prof-text-body2 layout3">Edit</div>
+                  <div class="int-usu-prof-text-body2 layout3">Ver</div>
                 </div>
                 <div class="int-usu-prof-paragraph-body1-box layout">
                   <pre class="int-usu-prof-paragraph-body1">
