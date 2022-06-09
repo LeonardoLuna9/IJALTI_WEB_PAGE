@@ -716,7 +716,8 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  right: 20%; }
 
 .int-emp-crear-text-body1.layout1 {
   position: relative;
@@ -738,7 +739,8 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  right: 10% }
 
 .int-emp-crear-text-body {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;
