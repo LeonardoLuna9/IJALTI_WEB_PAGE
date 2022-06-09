@@ -93,9 +93,9 @@
         </div>
         <h3 class="desktop-subtitle-box layout">
           <pre class="desktop-subtitle">
-Graduado de Ingeniería en tecnologías computacinales 
-en ITESM, Experiencia en creación de páginas web y 
-ciencia de datos.</pre
+              Graduado de Ingeniería en tecnologías computacionales 
+              en ITESM. Experiencia en creación de páginas web y 
+              ciencia de datos.</pre
           >
         </h3>
         <div class="desktop-block2 layout">

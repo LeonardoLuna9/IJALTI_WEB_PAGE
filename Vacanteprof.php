@@ -107,10 +107,10 @@
                                   class="vacanteprof-block3 layout"
                                 ></div>
                                 <div class="vacanteprof-small-text-body layout">Publicado hoy 11:32pm</div>
-                                <h2 class="vacanteprof-medium-title layout">Oracle</h2>
-                                <h2 class="vacanteprof-medium-title layout1">Guadalajara</h2>
-                                <h2 class="vacanteprof-medium-title layout2">Especialista</h2>
-                                <h2 class="vacanteprof-medium-title layout3">Arquitectura de redes</h2>
+                                <h2 class="vacanteprof-medium-title layout"> Oracle</h2>
+                                <h2 class="vacanteprof-medium-title layout1"> Guadalajara</h2>
+                                <h2 class="vacanteprof-medium-title layout2"> Especialista</h2>
+                                <h2 class="vacanteprof-medium-title layout3"> Arquitectura de redes</h2>
                                 <div class="vacanteprof-box22 layout"></div>
                               </div>
                             </div>
@@ -203,10 +203,10 @@
       </div>
       <div class="vacanteprof-group1 layout">
         <h5 class="vacanteprof-highlights4-box layout">
-          <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">Descripción
+          <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">Descripción<br>
 </span><span class="vacanteprof-highlights4-span1">Oracle es la primera compañía de software que desarrolla e implementa software para empresas 100 por ciento activado por Internet a través de toda su línea de productos: base de datos, aplicaciones comerciales y herramientas de desarrollo de aplicaciones y soporte de decisiones.
 
-</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> Diseñar arquitecturas de red.
+</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> Diseñar arquitecturas de red.<br>
 
 </span><span class="vacanteprof-highlights4-span4">Perfil Deseado:
 </span><span class="vacanteprof-highlights4-span5">
@@ -226,9 +226,9 @@ Infraestructura de redes
 
 </span><span class="vacanteprof-highlights4-span8">Funciones:
 </span><span class="vacanteprof-highlights4-span9">
-·      Hacer diseños de red.</span></pre>
+Hacer diseños de red.</span></pre>
         </h5>
-      </div>
+      </div><br>
       <div class="vacanteprof-group layout3">
         <div class="vacanteprof-group layout2"><div class="vacanteprof-group layout1"></div></div>
         <div class="vacanteprof-group layout">
@@ -239,8 +239,8 @@ Infraestructura de redes
                   <pre class="vacanteprof-medium-title1">
 Empresa: Oracle
 Índice de referencia salarial: 8000-13000
-Ubicación:Guadalajara
-Nivel profesional:Especialista
+Ubicación: Guadalajara
+Nivel profesional: Especialista
 Campo Profesional: Arquitectura de redes</pre
                   >
                   <br>
@@ -279,7 +279,7 @@ Campo Profesional: Arquitectura de redes</pre
         xxs-y="5px 46px 61px"
         tn-x="1664fr 48px 16fr"
         tn-y="5px 46px 5px"
-        ><a href = "IntUsuProf.php" style="text-decoration: none;"><div class="vacanteprof-icon8" style="--src:url(http://localhost/PaginaWebFinal/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
+        ><a href = "IntUsuProf.php" style="text-decoration: none;"><div class="vacanteprof-icon8" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
       ></a></px-posize>
 
       <px-posize

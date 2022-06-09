@@ -891,7 +891,8 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  }
 
 .int-usu-prof-text-body1 {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;
@@ -1210,7 +1211,7 @@
 .int-usu-prof-box14.layout {
   position: absolute;
   top: 0px;
-  height: 242px;
+  height: 270px;
   left: 0px;
   right: 0px; }
 
@@ -1250,7 +1251,8 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 11px 39px; }
+  margin: 11px 39px;
+ }
 
 .int-usu-prof-paragraph-body1-box.layout {
   position: relative;

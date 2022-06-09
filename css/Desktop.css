@@ -327,7 +327,7 @@
   margin: 7px 6px; }
 
 .desktop-flex6-spacer {
-  flex: 0 1 698px; }
+  flex: 0 1 630px; }
 
 .desktop-flex6-item1 {
   display: flex;
@@ -361,11 +361,9 @@
 
 .desktop-hero-title.layout {
   position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 100%;
-  margin: 0px 0px; }
+  width: 200%;
+  margin: 5% 15%;
+ }
 
 .desktop-medium-title {
   font: 24px/1.2 "Helvetica", Helvetica, Arial, serif;
@@ -376,7 +374,7 @@
   position: absolute;
   height: 29px;
   bottom: -26px;
-  left: 138px;
+  left: 180px;
   width: 224px; }
 
 .desktop-subtitle-box {
@@ -388,8 +386,8 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 51.36%;
-  margin: 36px auto 0px; }
+  width: 70.36%;
+  margin: 4% 19% 1% }
 
 .desktop-subtitle {
   overflow: visible;
@@ -420,7 +418,7 @@
 .desktop-icon4.layout {
   position: relative;
   height: 36px;
-  width: 36px;
+  width: 130px;
   min-width: 36px; }
 
 .desktop-medium-title1 {
@@ -434,7 +432,7 @@
   top: 2px;
   height: 32px;
   width: 249px;
-  right: -46px; }
+  right: -155px; }
 
 .desktop-block3 {
   display: flex;
@@ -466,7 +464,7 @@
 .desktop-image3.layout {
   position: relative;
   height: 22px;
-  width: 26px;
+  width: 155px;
   min-width: 26px;
   margin: 7px 0px 0px 5px; }
 
@@ -475,7 +473,7 @@
   top: 2px;
   height: 32px;
   width: 285px;
-  right: -37px; }
+  right: -160px; }
 
 .desktop-block1 {
   display: flex;
@@ -492,9 +490,9 @@
 .desktop-medium-title1.layout2 {
   position: absolute;
   top: 2px;
-  height: 32px;
+  height: 35px;
   width: 197px;
-  right: -39px; }
+  right: -144px; }
 
 .desktop-flex9 {
   display: flex; }
@@ -523,7 +521,8 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  left: 40% }
 
 .desktop-big-title {
   font: 28px/1.2 "Helvetica", Helvetica, Arial, serif;
@@ -563,13 +562,15 @@
 .desktop-box2.layout {
   position: absolute;
   top: 0px;
-  height: 50px;
-  left: 0px;
-  right: 3px; }
+  height: 83px;
+  left: 130px;
+  right: 3px; 
+  width: 100%}
 
 .desktop-big-title.layout1 {
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 9px 0px 7px 3px; }
+  margin: 9px 0px 7px 3px;
+  left: 90% }
