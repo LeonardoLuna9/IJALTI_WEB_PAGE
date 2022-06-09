@@ -174,10 +174,6 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                         </div>
                       </div>
                       <px-posize x="891fr 70px 6fr" y="3px 30px 3px" absolute="true"
-                        ><div
-                          class="crear-cv-icon3"
-                          style="--src:url(http://localhost/PaginaWebFinal/assets/f538a2b04e0125dfb0b72a8a57157ff4.png)"
-                        ></div
                       ></px-posize>
                     </div>
                   </div>
@@ -244,10 +240,6 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                           </div></px-posize>
                       </div>
                       <px-posize x="891fr 30px 6fr" y="2px 30px 4px" absolute="true"
-                        ><div
-                          class="crear-cv-icon4"
-                          style="--src:url(http://localhost/PaginaWebFinal/assets/f538a2b04e0125dfb0b72a8a57157ff4.png)"
-                        ></div
                       ></px-posize>
                     </div>
                   </div>
@@ -261,14 +253,6 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 </div>
               </div>
               <div class="crear-cv-block11 layout1">
-                <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/743fb051cb54d53ec88964adfeb80085.png)"
-                  class="crear-cv-image5 layout"
-                ></div>
-                <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/2ae89624b0c8cd63b1bc51b12950a0cc.png)"
-                  class="crear-cv-image6 layout"
-                ></div>
               </div>
               <div class="crear-cv-block13 layout1">
                 <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
