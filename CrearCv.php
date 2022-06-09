@@ -3,16 +3,16 @@
 @include 'config.php'; // Base de datos
 
 if (isset($_POST['submit'])){ // Hacemos POST a base de datos
-  $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
+  $correo = mysqli_real_escape_string($conn, $_POST['correo']);
   $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
   $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
-  //$apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
-  //$apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
-  //$contraseña = md5($_POST['Contraseña']);
-  //$RepContraseña =md5($_POST['RepetirContraseña']);
-  //$SeleccionCuenta = $_POST['SeleccionaCuenta'];
+  $fechaInicial = mysqli_real_escape_string($conn, $_POST['fechaInicial']);
+  $fechaFinal = mysqli_real_escape_string($conn, $_POST['fechaFinal']);
+  $escuela = md5($_POST['escuela']);
+  $grado =md5($_POST['grado']);
+  $habilidades = $_POST['habilidades'];
 
-  $select = " SELECT * FROM usuario_prof WHERE CURP = '$CURP'";
+  $select = " SELECT * FROM usuario_prof WHERE correo = '$correo'";
 
   $result = mysqli_query($conn, $select);
 
