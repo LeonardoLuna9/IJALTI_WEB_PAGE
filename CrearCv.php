@@ -157,7 +157,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Inicial
-                          <input type="date" id="crear-cv-small-text-body11" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-07" min="2018-01-01" max="2022-12-31">
                           </div>
                         </px-posize>
                         </div>
@@ -168,7 +168,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Final
-                          <input type="date" id="crear-cv-small-text-body11" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-07" min="2018-01-01" max="2022-12-31">
                           </div>
                         </px-posize>
                         </div>
@@ -236,7 +236,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                           x="16px 114fr 797fr"
                           y="11px minmax(0px, max-content) 10fr"
                           ><div class="crear-cv-small-text-body13">Fecha de graduacion
-                          <input type="date" name="crear-cv-small-text-body11" value="2022-06-07" min="2018-01-01" max="2022-12-31">
+                          <input type="date" name="FechaIncial" value="2022-06-07" min="2018-01-01" max="2022-12-31">
                           </div></px-posize>
                       </div>
                       <px-posize x="891fr 30px 6fr" y="2px 30px 4px" absolute="true"
