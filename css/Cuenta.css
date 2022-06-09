@@ -153,9 +153,10 @@
 .cuenta-image2.layout {
   position: relative;
   height: 28px;
-  width: 25px;
-  min-width: 25px;
-  margin: 15px 0px 14px 19px; }
+  width: 40px;
+  min-width: 30px;
+  margin: 15px 0px 14px 19px;
+  }
   @media (max-width: 1199px) {
     .cuenta-image2.layout {
       margin: 13px 0px 12px 17px; } }

@@ -133,9 +133,8 @@
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <!--<input class="usu-prof2-highlights5 layout" type = "text" name="presentacion" pattern="{800}" required>-->
-                <textarea class="usu-prof2-highlights5" rows="10" cols="50">Máximo 800 palabras </textarea>
-                <!--<h4 class="usu-prof2-highlights5 layout">Máximo 800 palabras</h4>-->
+                <!--<input class="usu-prof2-highlights5 layout" type = "text" placeholder = "Máximo 800 palabras" name="presentacion" pattern="{800}" required>-->
+                <textarea class="usu-prof2-highlights5" rows="10" cols="50" placeholder = "Máximo 800 palabras "></textarea>
               </div>
             </div>
           </div>

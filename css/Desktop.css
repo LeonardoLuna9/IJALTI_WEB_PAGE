@@ -361,11 +361,9 @@
 
 .desktop-hero-title.layout {
   position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 100%;
-  margin: 0px 0px; }
+  width: 400%;
+  margin: 0% 100%;
+ }
 
 .desktop-medium-title {
   font: 24px/1.2 "Helvetica", Helvetica, Arial, serif;
