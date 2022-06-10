@@ -143,7 +143,7 @@
                 <div class="usu-prof1-flex9-item">
                   <div class="usu-prof1-cover-block4 layout">
                     <div class="usu-prof1-flex10 layout">
-                      <h4 class="usu-prof1-highlights22 layout">John Carter</h4>
+                      <input class="usu-prof1-highlights22 layout" name = "name" placeholder="John Carter" pattern="{10}" required >
                       <div class="usu-prof1-flex10-spacer"></div>
                       <div class="usu-prof1-flex10-item">
                         <div class="usu-prof1-flex11 layout">
@@ -163,8 +163,9 @@
                 <div class="usu-prof1-flex9-spacer"></div>
                 <div class="usu-prof1-flex9-item">
                   <div class="usu-prof1-content-box1 layout">
-                    <h4 class="usu-prof1-highlights23 layout">Email address</h4>
-                    <div class="usu-prof1-content-box1-spacer"></div>
+                    <input class="usu-prof1-highlights23 layout" name="email" type = "email" placeholder="johncarter@gmail.com" required>
+                    <div class="usu-prof1-content-box1-spacer">
+                    </div>
                     <div class="usu-prof1-content-box1-item">
                       <div
                         style="--src:url(http://localhost/PaginaWebFinal/assets/50357c3b43fc84bdfcba3b203c0eeaed.png)"
@@ -176,7 +177,7 @@
               </div>
               <h4 class="usu-prof1-highlights3 layout1">Número de telefono</h4>
               <div class="usu-prof1-content-box layout">
-                <input class="usu-prof1-highlights24 layout" type="tel" id="phone" name="phonenum" pattern="[0-9]{10}" required></input>
+                <input class="usu-prof1-highlights24 layout" type="tel" id="phone" name="phonenum" pattern="[0-9]{10}" placeholder="3312345554" required></input>
                 <div class="usu-prof1-content-box-spacer">
                 </div>
                 <div class="usu-prof1-content-box-item">
