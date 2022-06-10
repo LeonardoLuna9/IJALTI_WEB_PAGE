@@ -133,7 +133,7 @@
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <h4 class="usu-prof2-highlights5 layout">Máximo 800 palabras</h4>
+                <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="50" placeholder = "Máximo 800 palabras "></textarea>
               </div>
             </div>
           </div>

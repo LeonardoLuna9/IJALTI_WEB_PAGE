@@ -1,9 +1,9 @@
 <?php
 
-@include 'config.php';
+@include 'config.php'; // Base de datos
 
 if (isset($_POST['submit'])){
-  $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
+  $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
   $correo = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
   $nombre = mysqli_real_escape_string($conn, $_POST['Nombre']);
   $apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
@@ -18,15 +18,22 @@ if (isset($_POST['submit'])){
 
   if(mysqli_num_rows($result)> 0){
 
-    $error[] = 'usuario ya existe';
+    $error[] = 'Usuario ya existe';
   }
   else{
     if($contraseña!=$RepContraseña){
       $error[] = "Contraseña no coincide";
     }
     else{
-      $insert = "INSERT INTO usuarios(CURP, correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$CURP', '$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+      $insert = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
       mysqli_query($conn, $insert);
+      
+      $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')";
+      mysqli_query($conn, $insert2);
+
+      $insert3 = "INSERT INTO telefono(correo, num_tel) VALUES ('$correo', $telefono)";
+      mysqli_query($conn, $insert3);
+
       header('location:IniciarSesion.php');
     }
   }
@@ -118,7 +125,7 @@ if (isset($_POST['submit'])){
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" required>
         <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />

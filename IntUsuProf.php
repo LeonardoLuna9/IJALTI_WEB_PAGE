@@ -1,3 +1,15 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -90,7 +102,7 @@
         <div class="int-usu-prof-flex-item1">
           <div class="int-usu-prof-flex6 layout">
             <div class="int-usu-prof-flex7 layout">
-              <h1 class="int-usu-prof-big-title layout">Oportunidades de trabajo</h1>
+              <h1 class="int-usu-prof-big-title layout">Oportunidades de trabajo para <?php echo $_SESSION['CorreoElectronico']?></h1>
               <div class="int-usu-prof-flex7-spacer"></div>
               <div class="int-usu-prof-flex7-item">
                 <div class="int-usu-prof-cover-block1 layout">

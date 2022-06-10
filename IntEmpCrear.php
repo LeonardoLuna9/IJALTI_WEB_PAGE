@@ -262,7 +262,7 @@ be ordered in any color combination. As it made of a moldable material (polyuret
                     <div class="int-emp-crear-flex17-spacer2"></div>
                     <div class="int-emp-crear-flex17-item">
                       <div class="int-emp-crear-cover-block2 layout1">
-                        <div class="int-emp-crear-text-body1 layout6">Edit</div>
+                        <div class="int-emp-crear-text-body1 layout6">Editar</div>
                       </div>
                     </div>
                     <div class="int-emp-crear-flex17-spacer3"></div>

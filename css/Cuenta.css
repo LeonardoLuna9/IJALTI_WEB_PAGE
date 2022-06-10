@@ -74,8 +74,9 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 22.25%;
-  margin: 0px auto; }
+  width: 40.25%;
+  margin: 0px auto;
+  left: 10% }
 
 .cuenta-flex1 {
   display: flex; }
@@ -153,12 +154,13 @@
 .cuenta-image2.layout {
   position: relative;
   height: 28px;
-  width: 25px;
-  min-width: 25px;
-  margin: 15px 0px 14px 19px; }
+  width: 24px;
+  min-width: 24px;
+  margin: 14px 10px 13px 10px;
+  }
   @media (max-width: 1199px) {
     .cuenta-image2.layout {
-      margin: 13px 0px 12px 17px; } }
+      margin: 14px 10px 13px 10px } }
   @media (max-width: 991px) {
     .cuenta-image2.layout {
       margin: 11px 0px 10px 14px; } }
@@ -248,7 +250,8 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  }
 
 .cuenta-cover-block1-item1 {
   display: flex;
@@ -259,12 +262,12 @@
 .cuenta-image2.layout1 {
   position: relative;
   height: 28px;
-  width: 25px;
-  min-width: 25px;
-  margin: 15px 0px 14px 14px; }
+  width: 24px;
+  min-width: 24px;
+  margin: 14px 10px 13px 10px; }
   @media (max-width: 1199px) {
     .cuenta-image2.layout1 {
-      margin: 13px 0px 12px 12px; } }
+      margin: 14px 10px 13px 10px; } }
   @media (max-width: 991px) {
     .cuenta-image2.layout1 {
       margin: 11px 0px 10px 10px; } }
@@ -402,13 +405,13 @@
 
 .cuenta-image3.layout {
   position: relative;
-  height: 27px;
-  width: 25px;
-  min-width: 25px;
-  margin: 14px 0px 16px 19px; }
+  height: 28px;
+  width: 24px;
+  min-width: 24px;
+  margin: 14px 10px 13px 10px; }
   @media (max-width: 1199px) {
     .cuenta-image3.layout {
-      margin: 12px 0px 14px 17px; } }
+      margin: 14px 10px 13px 10px; } }
   @media (max-width: 991px) {
     .cuenta-image3.layout {
       margin: 10px 0px 12px 14px; } }
@@ -857,7 +860,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 43.13%;
+  width: 45.13%;
   margin: 40px auto 9px; }
   @media (max-width: 1199px) {
     .cuenta-highlights.layout4 {

@@ -570,14 +570,18 @@
 .usu-prof2-highlights5 {
   font: 18px/1.66 "DM Sans", Helvetica, Arial, serif;
   color: #9ea2b1;
-  letter-spacing: 0px; }
+  letter-spacing: 0px;
+   }
 
 .usu-prof2-highlights5.layout {
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 14px 24px 286px; }
+  margin: 14px 24px 286px;
+  border: 0px;
+  color: #9ea2b1;
+ }
 
 .usu-prof2-flex8 {
   display: flex; }

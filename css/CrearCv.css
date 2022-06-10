@@ -429,8 +429,8 @@
 
 .crear-cv-block3.layout3 {
   position: relative;
-  height: 36px;
-  width: 97%; }
+  height: 55px;
+  width: 95.5%; }
 
 .crear-cv-small-text-body11 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -566,7 +566,8 @@
   letter-spacing: 0px;
   width: 150%;
   height: 100%;
-  border: 0px; }
+  border: 0px;
+  }
 
 .crear-cv-block11 {
   display: flex;
@@ -668,7 +669,7 @@
   color: black;
   letter-spacing: 0px;
   width: 150%;
-  height: 100%; }
+  height: 100%;}
 
 .crear-cv-block12-spacer {
   flex: 0 1 51px; }
@@ -700,7 +701,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 67.4%;
+  width: 66.4%;
   margin: 39px 25.58% 60px 4.65%; }
 
 .crear-cv-block11.layout1 {
@@ -721,7 +722,7 @@
   bottom: 824px;
   left: 0px;
   right: 0px;
-  width: 67.4%;
+  width: 66.2%;
   margin: 0px 10% 0px 4.88%;
   padding-bottom: 1%; }
 
@@ -729,8 +730,10 @@
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
   letter-spacing: 0px;
-  width: 100%;
-  height: 100%; }
+  width: 300%;
+  height: 100%;
+  border: 0px;
+  }
 
 .crear-cv-flex2-spacer {
   flex: 0 1 53px; }
@@ -749,10 +752,8 @@
 
 .crear-cv-cover-block.layout {
   position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
-  margin: 961px 0px 6px; }
+  margin: 1100px 0px 6px; }
 
 .crear-cv-text-body {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;
