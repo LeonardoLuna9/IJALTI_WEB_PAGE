@@ -114,7 +114,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   </div>
                   <!-- <div class="crear-cv-block2-spacer"></div>
                   <div class="crear-cv-small-text-body layout">Nombre completo como aparece en la INE</div>
-                  <!-- CURP 
+                   CURP 
                   <div class="crear-cv-block3 layout">
                     <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required> CURP
                     <hr class="cuenta-line1 layout" />
