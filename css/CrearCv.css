@@ -321,7 +321,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 13px 0px 0px 3px; }
+  margin: 13px 0px 0px 0px; }
 
 .crear-cv-block4-spacer {
   flex: 0 1 51px; }
@@ -365,7 +365,9 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  width: 100%;
+  margin-left: 0%; }
 
 .crear-cv-small-text-body2 {
   display: flex;
@@ -430,7 +432,7 @@
 .crear-cv-block3.layout3 {
   position: relative;
   height: 55px;
-  width: 95.5%; }
+  width: 120%; }
 
 .crear-cv-small-text-body11 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -567,6 +569,7 @@
   width: 150%;
   height: 100%;
   border: 0px;
+  margin-top: -15%;
   }
 
 .crear-cv-block11 {
@@ -662,7 +665,8 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content; 
-  padding-bottom: 1%;}
+  padding-bottom: 1%;
+  width: 100%}
 
 .crear-cv-small-text-body13 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -701,8 +705,8 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 66.4%;
-  margin: 39px 25.58% 60px 4.65%; }
+  width: 83%;
+  margin: 10px 25.58% 60px 4.65%; }
 
 .crear-cv-block11.layout1 {
   position: absolute;
@@ -722,7 +726,7 @@
   bottom: 824px;
   left: 0px;
   right: 0px;
-  width: 66.2%;
+  width: 83.5%;
   margin: 0px 10% 0px 4.88%;
   padding-bottom: 1%; }
 
@@ -753,7 +757,12 @@
 .crear-cv-cover-block.layout {
   position: relative;
   height: min-content;
-  margin: 1100px 0px 6px; }
+  margin: 1100px 0px 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e6dff;
+  border-radius: 8px 8px 8px 8px;
+  }
 
 .crear-cv-text-body {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;
@@ -766,3 +775,10 @@
   height: -moz-min-content;
   height: min-content;
   margin: 11px 28px 11px 32px; }
+  
+  #SelectCuenta{
+    font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
+    border: 0px;
+    margin-left: 125%;
+    margin-top: -2%;
+  }
