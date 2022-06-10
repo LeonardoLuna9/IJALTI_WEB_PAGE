@@ -151,7 +151,7 @@ session_start();
                 <div class="usu-prof1-flex9-item">
                   <div class="usu-prof1-cover-block4 layout">
                     <div class="usu-prof1-flex10 layout">
-                      <input class="usu-prof1-highlights22 layout" name = "name" placeholder="John Carter" pattern="{10}" required >
+                      <input class="usu-prof1-highlights22 layout" name = "name" placeholder="John Carter" pattern="[0-9]{10}" required >
                       <div class="usu-prof1-flex10-spacer"></div>
                       <div class="usu-prof1-flex10-item">
                         <div class="usu-prof1-flex11 layout">

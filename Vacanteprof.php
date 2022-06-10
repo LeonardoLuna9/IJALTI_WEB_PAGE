@@ -31,7 +31,6 @@
             <h5 class="vacanteprof-highlights2 layout">Abiertas</h5>
             <h4 class="vacanteprof-highlights3 layout">Hoy, 25 de abril</h4>
             <div
-              style="--src:url(http://localhost/PaginaWebFinal/assets/e1bc56c7f326c2c24e81a4c7380fd5a8.png)"
               class="vacanteprof-cover3 layout"
             ></div>
           </div>

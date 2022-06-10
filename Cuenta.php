@@ -18,7 +18,7 @@ if (isset($_POST['submit'])){
 
   if(mysqli_num_rows($result)> 0){
 
-    $error[] = 'usuario ya existe';
+    $error[] = 'Usuario ya existe';
   }
   else{
     if($contraseña!=$RepContraseña){
@@ -32,6 +32,7 @@ if (isset($_POST['submit'])){
       mysqli_query($conn, $insert2);
 
       $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')";
+
       mysqli_query($conn, $insert3);
 
       header('location:IniciarSesion.php');
@@ -125,7 +126,7 @@ if (isset($_POST['submit'])){
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="[0-9]{10}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" required>
         <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />
