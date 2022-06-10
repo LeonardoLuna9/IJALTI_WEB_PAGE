@@ -2,33 +2,38 @@
 
 @include 'config.php'; // Base de datos
 
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+print_r($CorreoElectronico);
 if (isset($_POST['submit'])){ // Hacemos POST a base de datos
-  $correo = mysqli_real_escape_string($conn, $_POST['correo']);
+  //$correo = mysqli_real_escape_string($conn, $_POST[$CorreoElectronico]);
   $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
   $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
-  $fechaInicial = mysqli_real_escape_string($conn, $_POST['fechaInicial']);
-  $fechaFinal = mysqli_real_escape_string($conn, $_POST['fechaFinal']);
-  $escuela = md5($_POST['escuela']);
-  $grado =md5($_POST['grado']);
-  $habilidades = $_POST['habilidades'];
-
-  $select = " SELECT * FROM usuario_prof WHERE correo = '$correo'";
+  $fechaInicial = mysqli_real_escape_string($conn, $_POST['FechaInicial']);
+  $fechaFinal = mysqli_real_escape_string($conn, $_POST['FechaFinal']);
+  $escuela = md5($_POST['Escuela']);
+  $grado =md5($_POST['GradoEducacion']);
+  $habilidades = $_POST['Habilidades'];
+  
+  $select = " SELECT * FROM usuarios WHERE correo = '$desc'"; //Prueba para ver si me valida 
 
   $result = mysqli_query($conn, $select);
 
-  if(mysqli_num_rows($result)> 0){
+  $row = mysqli_num_rows($result);
 
-    $error[] = 'CURP incorrecto';
+  if($row==1){ // No entra al if
+    $insert = "INSERT INTO informacion_laboral(correo, empresa, descripcion, fechaInicial, fechaFinal) VALUES ('HolaSoyCorreo1@gmail.com', 'Empresa1', 'EmpDesc', '2019-01-01', '2020-01-01')";
+    //$insert = "INSERT INTO informacion_laboral(correo, empresa, descripcion, fechaInicial, fechaFinal) VALUES ('$correo', '$empresa', '$desc', '$fechaInicial', '$fechaFinal')";
+    mysqli_query($conn, $insert);
+    header('location:IntUsuProf.php');
+    
   }
   else{
-    if($contraseña!=$RepContraseña){
-      $error[] = "Contraseña no coincide";
-    }
-    else{
-      $insert = "UPDATE usuario_prof SET informacion_laboral = $empresa WHERE CURP = '$CURP'";
-      mysqli_query($conn, $insert);
-      header('location:IntUsuProf.php');
-    }
+    $error[] = 'Usuario no existe';
   }
 
 };
@@ -63,7 +68,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
     <div class="crear-cv crear-cv-block layout">
       <div class="crear-cv-flex layout">
         <div class="crear-cv-flex1 layout">
-          <h1 class="crear-cv-big-title layout">Ingresa tus datos</h1>
+          <h1 class="crear-cv-big-title layout">Ingresa tus datos <?php echo $_SESSION['CorreoElectronico']?></h1>
           <div class="crear-cv-flex1-spacer"></div>
           <div class="crear-cv-flex1-item">
             <div class="crear-cv-block14 layout">
@@ -127,7 +132,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       </div>
                       <div class="crear-cv-block3 layout1">
                         <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{30}" required>
                       </div>
                     </div>
                   </div>
@@ -139,7 +144,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout2">
                         <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{100}" required>
                       </div>
                       <div class="crear-cv-small-text-body2 layout">Limit: 400 words</div>
                     </div>
@@ -263,13 +268,14 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
           </div>
           <div class="crear-cv-flex2-spacer"></div>
           <div class="crear-cv-flex2-item1">
-            <a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>
+            <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
+            <input type = "submit" name ="submit" value="Publicar" class="crear-cv-cover-block layout">
           </div>
         </div>
       </div>
-    </div>
+    </div> <!--
     <script type="text/javascript">
       AOS.init();
-    </script>
+    </script> -->
   </body>
 </html>
