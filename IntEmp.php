@@ -43,9 +43,10 @@
       <div class="int-emp-flex layout">
         <div class="int-emp-flex-item">
           <div class="int-emp-group4 layout">
-            <div class="int-emp-group5 layout">
-              <div class="int-emp-rect1 layout"></div>
-            </div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex-item1">
@@ -118,7 +119,10 @@
       <div class="int-emp-flex4 layout">
         <div class="int-emp-flex4-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-rect2 layout"></div>
+            <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex4-item1">
@@ -179,12 +183,12 @@
       <div class="int-emp-flex6 layout">
         <div class="int-emp-flex6-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-group28 layout">
+            
               <label class="container">
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
-            </div>
+            
           </div>
         </div>
         <div class="int-emp-flex6-item1">
@@ -253,9 +257,12 @@
       <div class="int-emp-flex9 layout">
         <div class="int-emp-flex9-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-group37 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout15"></div>
-            </div>
+            
+            <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
           </div>
         </div>
         <div class="int-emp-flex9-item1">
@@ -324,7 +331,10 @@
       <div class="int-emp-flex12 layout">
         <div class="int-emp-flex12-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-rect3 layout"></div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex12-item1">
@@ -380,9 +390,10 @@
     <div class="int-emp-group51 layout">
       <div class="int-emp-flex14 layout">
         <div class="int-emp-flex14-item">
-          <div class="int-emp-group layout">
-            <div class="int-emp-rect4 layout"></div>
-          </div>
+        <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
         </div>
         <div class="int-emp-flex14-item1">
           <div class="int-emp-group layout">
@@ -440,9 +451,10 @@
       <div class="int-emp-flex16 layout">
         <div class="int-emp-flex16-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-group59 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout26"></div>
-            </div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex16-item1">
@@ -511,9 +523,10 @@
       <div class="int-emp-flex19 layout">
         <div class="int-emp-flex19-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-group68 layout">
-              <div style="--src:url(/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout31"></div>
-            </div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex19-item1">
@@ -581,9 +594,10 @@
     <div class="int-emp-group76 layout">
       <div class="int-emp-flex22 layout">
         <div class="int-emp-flex22-item">
-          <div class="int-emp-group layout">
-            <div class="int-emp-rect5 layout"></div>
-          </div>
+        <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
         </div>
         <div class="int-emp-flex22-item1">
           <div class="int-emp-group layout">
@@ -639,7 +653,10 @@
       <div class="int-emp-flex24 layout">
         <div class="int-emp-flex24-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-rect6 layout"></div>
+            <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex24-item1">
@@ -698,9 +715,10 @@
       <div class="int-emp-flex26 layout">
         <div class="int-emp-flex26-item">
           <div class="int-emp-group layout">
-            <div class="int-emp-group90 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout42"></div>
-            </div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex26-item1">
@@ -769,9 +787,10 @@
       <div class="int-emp-flex29 layout">
         <div class="int-emp-flex29-item">
           <div class="int-emp-group layout43">
-            <div class="int-emp-group99 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout47"></div>
-            </div>
+          <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
           </div>
         </div>
         <div class="int-emp-flex29-item1">
@@ -839,9 +858,10 @@
     <div class="int-emp-group107 layout">
       <div class="int-emp-flex32 layout">
         <div class="int-emp-flex32-item">
-          <div class="int-emp-group layout">
-            <div class="int-emp-rect7 layout"></div>
-          </div>
+        <label class="container">
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
         </div>
         <div class="int-emp-flex32-item1">
           <div class="int-emp-group layout">
