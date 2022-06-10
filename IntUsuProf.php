@@ -4,8 +4,9 @@
 
 session_start();
 
-if(!isset($_SESSION['CorreoElectronico'])){
-  header('location:IniciarSesion.php');
+if (isset($_POST['submit'])){ 
+  $CorreoElectronico = $_SESSION['CorreoElectronico'];
+  header('location:CrearCV.php');
 }
 
 ?>
@@ -106,10 +107,9 @@ if(!isset($_SESSION['CorreoElectronico'])){
               <div class="int-usu-prof-flex7-spacer"></div>
               <div class="int-usu-prof-flex7-item">
                 <div class="int-usu-prof-cover-block1 layout">
-                  <a href="CrearCv.php" style="text-decoration: none;"><div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/f9740cec0b3a7ed46d2dd7fa0c0db315.png)"
-                    class="int-usu-prof-image9 layout"
-                  ></div></a>
+                  <form action="" method="post">
+                  <input type = "submit" name ="submit" value="Crear CV" class="int-usu-prof-text-body5 layout">
+                  </form>
                 </div>
               </div>
               <div class="int-usu-prof-flex7-spacer1"></div>

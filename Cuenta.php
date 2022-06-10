@@ -31,7 +31,8 @@ if (isset($_POST['submit'])){
       $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')";
       mysqli_query($conn, $insert2);
 
-      $insert3 = "INSERT INTO telefono(correo, num_tel) VALUES ('$correo', $telefono)";
+      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')";
+
       mysqli_query($conn, $insert3);
 
       header('location:IniciarSesion.php');

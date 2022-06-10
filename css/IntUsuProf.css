@@ -904,7 +904,20 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 11px 20px 11px 15px; }
+  margin: 11px 20px 11px 15px; 
+  }
+
+.int-usu-prof-text-body5.layout{
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 11px 20px 11px 15px; 
+  border: 0px;
+  background-color: #0e6dff;
+}
 
 .int-usu-prof-cover-block {
   display: flex;
