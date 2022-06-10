@@ -180,7 +180,10 @@
         <div class="int-emp-flex6-item">
           <div class="int-emp-group layout">
             <div class="int-emp-group28 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/354a8efc12f43d3c44d802e1cf1eed4c.png)" class="int-emp-img layout10"></div>
+              <label class="container">
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
             </div>
           </div>
         </div>
