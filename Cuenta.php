@@ -31,7 +31,7 @@ if (isset($_POST['submit'])){
       $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')";
       mysqli_query($conn, $insert2);
 
-      $insert3 = "INSERT INTO telefono(correo, num_tel) VALUES ('$correo', $telefono)";
+      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')";
       mysqli_query($conn, $insert3);
 
       header('location:IniciarSesion.php');
@@ -125,7 +125,7 @@ if (isset($_POST['submit'])){
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{20}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="[0-9]{10}" required>
         <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />
