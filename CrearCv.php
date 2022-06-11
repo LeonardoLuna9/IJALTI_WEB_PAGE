@@ -142,7 +142,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   </div>
                   <!-- <div class="crear-cv-block2-spacer"></div>
                   <div class="crear-cv-small-text-body layout">Nombre completo como aparece en la INE</div>
-                  <!-- CURP 
+                   CURP 
                   <div class="crear-cv-block3 layout">
                     <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required> CURP
                     <hr class="cuenta-line1 layout" />
@@ -175,7 +175,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     </div>
                   </div>
                   <div class="crear-cv-block4-spacer"></div>
-                  <div class="crear-cv-small-text-body layout1">Empresa, puesto y responsabilidades</div>
+                  <!--<div class="crear-cv-small-text-body layout1">Empresa, puesto y responsabilidades</div>-->
                 </div>
                 <div class="crear-cv-block5 layout">
                   <div class="crear-cv-block5-item">
@@ -188,7 +188,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     </div>
                   </div>
                   <div class="crear-cv-block5-spacer"></div>
-                  <div class="crear-cv-small-text-body layout2">¿Qué nos quieres contar?</div>
+                  <!--<div class="crear-cv-small-text-body layout2">¿Qué nos quieres contar?</div>-->
                 </div>
                 <div class="crear-cv-block7 layout">
                   <div class="crear-cv-block7-item">
@@ -222,7 +222,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   </div>
                   <div class="crear-cv-block7-spacer"></div>
                   <div class="crear-cv-block7-item1">
-                    <div class="crear-cv-small-text-body layout3">¿En que fecha empezaste y cuando terminaste?</div>
+                    <!--<div class="crear-cv-small-text-body layout3">¿En que fecha empezaste y cuando terminaste?</div>-->
                   </div>
                 </div>
                 <div class="crear-cv-block9 layout">
@@ -311,8 +311,10 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
           </div>
           <div class="crear-cv-flex2-spacer"></div>
           <div class="crear-cv-flex2-item1">
+
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
             <input type = "submit" name ="submit" value="Publicar" class="crear-cv-cover-block layout">
+
             </form>
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
             </div>
