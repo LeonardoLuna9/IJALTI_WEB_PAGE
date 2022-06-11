@@ -28,12 +28,29 @@ if (isset($_POST['submit'])){
       $insert = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
       mysqli_query($conn, $insert);
       
-      $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')";
+      $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')"; // usuario_prof
       mysqli_query($conn, $insert2);
 
-      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')";
+      // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
 
+      // Otros usuarios:
+      // reclutador -- CIF NIF ???
+
+      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
       mysqli_query($conn, $insert3);
+
+      // Usuario Profesinales
+      $insert4 = "INSERT INTO titulo(correo) VALUES ('$correo')"; // titulo
+      mysqli_query($conn, $insert4);
+
+      $insert5 = "INSERT INTO habilidades(correo) VALUES ('$correo')"; // habilidades
+      mysqli_query($conn, $insert5);
+
+      $insert6 = "INSERT INTO informacion_laboral(correo) VALUES ('$correo')"; // informacion_laboral
+      mysqli_query($conn, $insert6);
+
+      $insert7 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
+      mysqli_query($conn, $insert7);
 
       header('location:IniciarSesion.php');
     }
