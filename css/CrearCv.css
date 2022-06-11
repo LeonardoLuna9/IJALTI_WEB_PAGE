@@ -366,7 +366,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 100.5%;
+  width: 100%;
   margin-left: 0%; }
 
 .crear-cv-small-text-body2 {
@@ -432,7 +432,7 @@
 .crear-cv-block3.layout3 {
   position: relative;
   height: 55px;
-  width: 125%; }
+  width: 120%; }
 
 .crear-cv-small-text-body11 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -505,8 +505,7 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content;
-  margin-left: -0.5% }
+  height: min-content; }
 
 .crear-cv-small-text-body3 {
   display: flex;
@@ -561,7 +560,7 @@
 .crear-cv-block3.layout5 {
   position: relative;
   height: 36px;
-  width: 100.5%}
+  width: 100%}
 
 .crear-cv-small-text-body12 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -667,7 +666,7 @@
   height: -moz-min-content;
   height: min-content; 
   padding-bottom: 1%;
-  width: 100.5%}
+  width: 100%}
 
 .crear-cv-small-text-body13 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -706,7 +705,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 87.5%;
+  width: 83%;
   margin: 10px 25.58% 60px 4.65%; }
 
 .crear-cv-block11.layout1 {
@@ -727,7 +726,7 @@
   bottom: 824px;
   left: 0px;
   right: 0px;
-  width: 87%;
+  width: 83.5%;
   margin: 0px 10% 0px 4.88%;
   padding-bottom: 1%; }
 
@@ -755,25 +754,25 @@
   background-color: #0e6dff;
   border-radius: 8px 8px 8px 8px; }
 
-  .crear-cv-cover-block.layout {
-    font: 14px/1.57 "Abel", Helvetica, Arial, serif;
-    color: white;
-    text-align: center;
-    position: relative;
-    height: 50px;
-    margin: 1360px 20px 11px 15px;
-    display: flex;
-    background-color: #0e6dff;
-    border: 0px;
-    width: 100px;
-    right: 20%;
-    padding: 13px 0px 10px 27px;
-    }
+.crear-cv-cover-block.layout {
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 50px;
+  margin: 1360px 20px 11px 15px;
+  display: flex;
+  background-color: #0e6dff;
+  border: 0px;
+  width: 100px;
+  right: 20%;
+  padding: 13px 0px 10px 27px;
+  }
 
 .crear-cv-text-body {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;
   color: white;
-  position: relative; }
+  letter-spacing: 0px; }
 
 .crear-cv-text-body.layout {
   position: relative;
