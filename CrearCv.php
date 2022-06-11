@@ -2,12 +2,21 @@
 
 @include 'config.php'; // Base de datos
 
-/* session_start();
+session_start();
 
 if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
+
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
 /* Validación para ver si ya tiene CV 
 $select = " SELECT * FROM informacion_laboral WHERE correo = '$CorreoElectronico' AND empresa != NULL"; //Prueba para ver si me valida 
 
@@ -18,30 +27,60 @@ if(mysqli_num_rows($result) > 0){
   $error[] = 'CV ya existe para usuario, vuleve a publicar si desea actualizar los datos';
 }*/
 if (isset($_POST['submit'])){ // Hacemos POST a base de datos
-  //$correo = mysqli_real_escape_string($conn, $_POST[$CorreoElectronico]);
+  // Datos personales
+  $fechNac = strtotime($_POST['FechaNacimiento']);
+  $fechNac = date('Y-m-d H:i:s', $fechNac);
+  $rfc = mysqli_real_escape_string($conn, $_POST['RFC']);
+  $ciudad = mysqli_real_escape_string($conn, $_POST['Ciudad']);
+  $cp = mysqli_real_escape_string($conn, $_POST['CP']);
+  $calle = mysqli_real_escape_string($conn, $_POST['Calle']);
+  $numCalle = mysqli_real_escape_string($conn, $_POST['NumCalle']);
+
+  //Información laboral
   $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
   $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
-  //$fechaInicial = mysqli_real_escape_string($conn, $_POST['FechaInicial']);
   $fechaInicial = strtotime($_POST["FechaInicial"]);
   $fechaInicial = date('Y-m-d H:i:s', $fechaInicial);
-  //$fechaFinal = mysqli_real_escape_string($conn, $_POST['FechaFinal']);
   $fechaFinal = strtotime($_POST["FechaFinal"]);
   $fechaFinal = date('Y-m-d H:i:s', $fechaFinal);
-  //$escuela = mysqli_real_escape_string($conn, $_POST['Escuela']);
-  //$grado =mysqli_real_escape_string($conn,$_POST['GradoEducacion']);
-  //$habilidades = $_POST['Habilidades'];*/
-  
+
+  // Educación
+  $escuela = mysqli_real_escape_string($conn, $_POST['Escuela']);
+  $carrera = mysqli_real_escape_string($conn, $_POST['Carrera']);
+  $gradEd =mysqli_real_escape_string($conn,$_POST['GradoEducacion']);
+  $fechaGrad =strtotime($_POST['FechaGrad']); 
+  $fechaGrad =date('Y-m-d H:i:s', $fechaGrad);
+
+  // Habilidades 
+  $habilidades = mysqli_real_escape_string($conn, $_POST['Habilidades']);
+  /*
   $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
   $validaUsuario = mysqli_query($conn, $buscaUsuario);
   if(mysqli_num_rows($validaUsuario) == 0){
     $error[] = 'No existe usuario';
     header('location:Cuenta.php');
   }
-  else {
-    $insert = "UPDATE informacion_laboral SET empresa = '$empresa', descripcion = '$desc', fechaInicial = '$fechaInicial', fechaFinal = '$fechaFinal' WHERE correo = '$CorreoElectronico'";
-    mysqli_query($conn, $insert);
-    header('location:IntUsuProf.php');
-  }
+  else { */
+    
+  // Update en usuario_prof
+  $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert2);
+
+  // Update en informacion_laboral
+  $insert2 = "UPDATE informacion_laboral SET empresa = '$empresa', descripcion = '$desc', fechaInicial = '$fechaInicial', fechaFinal = '$fechaFinal' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert2);
+
+  // Update en informacion_laboral
+  $insert3 = "UPDATE educacion SET escuela = '$escuela', carrera = '$carrera', gradoEducacion = '$gradEd', fechaGrad = '$fechaGrad' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert3);
+
+  // Update en habilidades
+  $insert4 = "UPDATE habilidades SET experiencia_habil = '$habilidades' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert4);
+
+  // Regresa a página principal
+  header('location:IntUsuProf.php');
+  //}
 
 };
 
@@ -114,25 +153,28 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   <div class="crear-cv-block2-item">
                     <div class="crear-cv-flex3 layout">
                       <h5 class="crear-cv-highlights layout">Datos personales</h5>
-                      <div class="crear-cv-block3 layout">
-                      <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Fecha de nacimiento" name="FechaNacimiento" pattern="{18}" required>
+                      <!-- <div class="crear-cv-block3 layout">  original -->
+                      <div class="crear-cv-block3 layout">Fecha de nacimiento <!-- agregado -->
+                      <!-- <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Fecha de nacimiento" name="FechaNacimiento" pattern="{18}" required>-->
+                      <input type="date" id="crear-cv-small-text-body11" name="FechaNacimiento" value="2022-06-07" min="1970-01-01" max="2022-12-31" required>
                         <hr class="cuenta-line1 layout" />
+                      <!-- </div>  div extra -->
                       </div>
                     </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Ciudad" name="Ciudad" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Ciudad" name="Ciudad" pattern="{20}" maxlength = "20" required>
                         <hr class="cuenta-line1 layout" />
                       </div>
                       <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Código Postal" name="CP" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Código Postal" name="CP" pattern="{9}" maxlength="9" required>
                         <hr class="cuenta-line1 layout" />
                       </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Calle" name="Calle" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Calle" name="Calle" pattern="{20}" maxlength="20" required>
                         <hr class="cuenta-line1 layout" />
                       </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Número de calle" name="NumCalle" pattern="{18}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Número de calle" name="NumCalle" pattern="{11}" maxlength="11" required>
                         <hr class="cuenta-line1 layout" />
                       </div>
                   </div>
@@ -166,7 +208,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       </div>
                       <div class="crear-cv-block3 layout1">
                         <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{30}" required >
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{30}" maxlength="30" required >
                       </div>
                     </div>
                   </div>
@@ -177,9 +219,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout2">
                         <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{100}" required >
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{100}" maxlength="100" required >
                       </div>
-                      <div class="crear-cv-small-text-body2 layout">Limit: 400 words</div>
+                      <div class="crear-cv-small-text-body2 layout">Limit: 100 words</div>
                     </div>
                   </div>
                   <div class="crear-cv-block5-spacer"></div>
@@ -225,12 +267,12 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       <div class="crear-cv-block6 layout1">
                         <div class="crear-cv-block3 layout4">
                           <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
-                          <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escuela" name="Escuela" pattern="{30}" required>
+                          <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escuela" name="Escuela" pattern="{30}" maxlength="30" required>
                         </div>
                         <div class="crear-cv-small-text-body3 layout">Limit: 100 words</div>
                       </div>
                       <div class="crear-cv-block3 layout1">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Carrera" name="Carrera" pattern="30}" required>
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Carrera" name="Carrera" pattern="{30}" maxlength="30" required>
                       </div>
                     </div>
                   </div>
@@ -247,9 +289,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             x="16px 110fr 801fr"
                             y="11px minmax(0px, max-content) 10fr"
 
-                            > <input class="crear-cv-small-text-body12" type = "text" name="GradoEducacion" pattern="{18}" required>
+                            > <!--<input class="crear-cv-small-text-body12" type = "text" name="GradoEducacion" pattern="{18}" required>-->
 
-                            ><select name="SeleccionaCuenta" id="SelectCuenta" required>
+                            ><select name="GradoEducacion" id="SelectCuenta" required>
                               <optgroup label="GradoEducacion">
                               <option value="GradoEducacion">Licenciatura</option>
                               <option value="GradoEducacion">Maestria</option>
@@ -276,7 +318,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                           x="16px 114fr 797fr"
                           y="11px minmax(0px, max-content) 10fr"
                           ><div class="crear-cv-small-text-body13"> Fecha de Graduación
-                          <input type="date" class="calendario" name="FechaIncial" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
+                          <input type="date" class="calendario" name="FechaGrad" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
                           </div></px-posize>
                       </div>
                       <px-posize x="891fr 30px 6fr" y="2px 30px 4px" absolute="true"
@@ -289,7 +331,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 <h5 class="crear-cv-highlights layout2">Habilidades</h5>
                 <div class="crear-cv-block13 layout">
                   <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
-                  <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Habilidades" name="Habilidades" pattern="{18}" required>
+                  <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
                 </div>
               </div>
               <div class="crear-cv-block11 layout1">
@@ -297,7 +339,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
               <div class="crear-cv-block13 layout1">
                 <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
                   > <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
-                  <input class="crear-cv-small-text-body14" type = "text" placeholder="RFC" name="RFC" pattern="{18}" required></px-posize>
+                  <input class="crear-cv-small-text-body14" type = "text" placeholder="RFC" name="RFC" pattern="{13}" maxlength="13" required></px-posize>
 
               </div>
             </div>
@@ -306,7 +348,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
           <div class="crear-cv-flex2-item1">
             <form action="" method="post">
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
-            <input type = "submit" name ="Publicar" value="Publicar" class="crear-cv-cover-block layout">
+            <input type = "submit" name ="submit" value="Publicar" class="crear-cv-cover-block layout">
             </form>
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
             </div>

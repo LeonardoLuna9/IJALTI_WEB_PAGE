@@ -31,26 +31,24 @@ if (isset($_POST['submit'])){
       $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')"; // usuario_prof
       mysqli_query($conn, $insert2);
 
-      // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
-
-      // Otros usuarios:
-      // reclutador -- CIF NIF ???
-
       $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
       mysqli_query($conn, $insert3);
 
       // Usuario Profesinales
-      $insert4 = "INSERT INTO titulo(correo) VALUES ('$correo')"; // titulo
+
+      // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
+
+      $insert4 = "INSERT INTO habilidades(correo) VALUES ('$correo')"; // habilidades
       mysqli_query($conn, $insert4);
 
-      $insert5 = "INSERT INTO habilidades(correo) VALUES ('$correo')"; // habilidades
+      $insert5 = "INSERT INTO informacion_laboral(correo) VALUES ('$correo')"; // informacion_laboral
       mysqli_query($conn, $insert5);
 
-      $insert6 = "INSERT INTO informacion_laboral(correo) VALUES ('$correo')"; // informacion_laboral
+      $insert6 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
       mysqli_query($conn, $insert6);
 
-      $insert7 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
-      mysqli_query($conn, $insert7);
+      // Otros usuarios:
+      // reclutador -- CIF NIF ???
 
       header('location:IniciarSesion.php');
     }
@@ -143,17 +141,17 @@ if (isset($_POST['submit'])){
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" maxlength="10" required>
         <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
+        <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" maxlength="30" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre" name="Nombre" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre" name="Nombre" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Paterno" name="ApellidoP" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Paterno" name="ApellidoP" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Materno" name="ApellidoM" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Materno" name="ApellidoM" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
+        <input class="cuenta-highlights layout1" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="18" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
         <hr class="cuenta-line layout" />
         <input class="cuenta-highlights layout1" type = "password" id ="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
         <hr class="cuenta-line1 layout1" />
