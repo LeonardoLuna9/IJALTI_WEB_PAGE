@@ -3,7 +3,7 @@
 @include 'config.php'; // Base de datos
 
 if (isset($_POST['submit'])){
-  $CURP = mysqli_real_escape_string($conn, $_POST['CURP']);
+  $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
   $correo = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
   $nombre = mysqli_real_escape_string($conn, $_POST['Nombre']);
   $apellidoP= mysqli_real_escape_string($conn, $_POST['ApellidoP']);
@@ -18,18 +18,39 @@ if (isset($_POST['submit'])){
 
   if(mysqli_num_rows($result)> 0){
 
-    $error[] = 'usuario ya existe';
+    $error[] = 'Usuario ya existe';
   }
   else{
     if($contraseña!=$RepContraseña){
       $error[] = "Contraseña no coincide";
     }
     else{
-      $insert = "INSERT INTO usuarios(CURP, correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$CURP', '$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+      $insert = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
       mysqli_query($conn, $insert);
       
-      $insert2 = "INSERT INTO usuario_prof(CURP) VALUES ('$CURP')";
+      $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')"; // usuario_prof
       mysqli_query($conn, $insert2);
+
+      // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
+
+      // Otros usuarios:
+      // reclutador -- CIF NIF ???
+
+      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
+      mysqli_query($conn, $insert3);
+
+      // Usuario Profesinales
+      $insert4 = "INSERT INTO titulo(correo) VALUES ('$correo')"; // titulo
+      mysqli_query($conn, $insert4);
+
+      $insert5 = "INSERT INTO habilidades(correo) VALUES ('$correo')"; // habilidades
+      mysqli_query($conn, $insert5);
+
+      $insert6 = "INSERT INTO informacion_laboral(correo) VALUES ('$correo')"; // informacion_laboral
+      mysqli_query($conn, $insert6);
+
+      $insert7 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
+      mysqli_query($conn, $insert7);
 
       header('location:IniciarSesion.php');
     }
@@ -122,7 +143,7 @@ if (isset($_POST['submit'])){
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="CURP" name="CURP" pattern="{18}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" required>
         <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />

@@ -1,3 +1,16 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if (isset($_POST['submit'])){ 
+  $CorreoElectronico = $_SESSION['CorreoElectronico'];
+  header('location:CrearCV.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -90,14 +103,13 @@
         <div class="int-usu-prof-flex-item1">
           <div class="int-usu-prof-flex6 layout">
             <div class="int-usu-prof-flex7 layout">
-              <h1 class="int-usu-prof-big-title layout">Oportunidades de trabajo</h1>
+              <h1 class="int-usu-prof-big-title layout">Oportunidades de trabajo para <?php echo $_SESSION['CorreoElectronico']?></h1>
               <div class="int-usu-prof-flex7-spacer"></div>
               <div class="int-usu-prof-flex7-item">
                 <div class="int-usu-prof-cover-block1 layout">
-                  <a href="CrearCv.php" style="text-decoration: none;"><div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/f9740cec0b3a7ed46d2dd7fa0c0db315.png)"
-                    class="int-usu-prof-image9 layout"
-                  ></div></a>
+                  <form action="" method="post">
+                  <input type = "submit" name ="submit" value="Crear CV" class="int-usu-prof-text-body5 layout">
+                  </form>
                 </div>
               </div>
               <div class="int-usu-prof-flex7-spacer1"></div>
@@ -275,7 +287,7 @@
               <div class="int-usu-prof-flex13 layout">
                 <div class="int-usu-prof-flex13-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/163bdf96e64770e50980145bd9542c90.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/Toshibathird.png)"
                     class="int-usu-prof-image13 layout"
                   ></div>
                 </div>
@@ -325,13 +337,17 @@
                       <div class="int-usu-prof-flex17-spacer1"></div>
                       <div class="int-usu-prof-flex17-item1">
                         <div class="int-usu-prof-cover-block2 layout">
-                          <div class="int-usu-prof-text-body2 layout2">Ver</div>
+                          <a href="Vacanteprof2.php" style="text-decoration:none;">
+                            <div class="int-usu-prof-text-body2 layout2">Ver</div>
+                          </a>
                         </div>
                       </div>
                       <div class="int-usu-prof-flex17-spacer2"></div>
                       <div class="int-usu-prof-flex17-item2">
                         <div class="int-usu-prof-cover-block3 layout">
-                          <div class="int-usu-prof-text-body1 layout">Aplicar ahora</div>
+                          <a href="UsuProf1.php" style="text-decoration:none;">
+                            <div class="int-usu-prof-text-body1 layout">Aplicar ahora</div>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -347,10 +363,14 @@
                 ></px-posize>
                 <div class="int-usu-prof-box14 layout"></div>
                 <div class="int-usu-prof-cover-block3 layout1">
-                  <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
+                  <a href="UsuProf1.php" style="text-decoration:none;">
+                    <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
+                  </a>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
-                  <div class="int-usu-prof-text-body2 layout3">Ver</div>
+                  <a href="Vacanteprof3.php" style="text-decoration:none;">
+                    <div class="int-usu-prof-text-body2 layout3">Ver</div>
+                  </a>
                 </div>
                 <div class="int-usu-prof-paragraph-body1-box layout">
                   <pre class="int-usu-prof-paragraph-body1">
