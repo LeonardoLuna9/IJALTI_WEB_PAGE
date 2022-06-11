@@ -164,7 +164,7 @@
   height: min-content;
   width: 91.75%;
   margin: 60px 3.6% 0px 4.65%; }
-
+  
 .crear-cv-block2-item {
   display: flex;
   flex-direction: column;
@@ -755,20 +755,20 @@
   background-color: #0e6dff;
   border-radius: 8px 8px 8px 8px; }
 
-.crear-cv-cover-block.layout {
-  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
-  color: white;
-  text-align: center;
-  position: relative;
-  height: 50px;
-  margin: 1360px 20px 11px 15px;
-  display: flex;
-  background-color: #0e6dff;
-  border: 0px;
-  width: 100px;
-  right: 20%;
-  padding: 13px 0px 10px 27px;
-  }
+  .crear-cv-cover-block.layout {
+    font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 50px;
+    margin: 1360px 20px 11px 15px;
+    display: flex;
+    background-color: #0e6dff;
+    border: 0px;
+    width: 100px;
+    right: 20%;
+    padding: 13px 0px 10px 27px;
+    }
 
 .crear-cv-text-body {
   font: 14px/1.57 "Abel", Helvetica, Arial, serif;

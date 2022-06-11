@@ -271,7 +271,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       </div>
                     </div>
                   </div>
-                  <div class="crear-cv-block10-spacer"></div>
+                  <div class="crear-cv-block10-spacer"></div>  <!-- Hola David-->
                   <!--<div class="crear-cv-small-text-body layout5">Licenciatura, maestria, phd, etc</div> -->
                 </div>
                 <div class="crear-cv-block12 layout">
