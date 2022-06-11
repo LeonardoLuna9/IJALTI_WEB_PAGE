@@ -311,9 +311,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
           </div>
           <div class="crear-cv-flex2-spacer"></div>
           <div class="crear-cv-flex2-item1">
-
+            <form action="" method="post">
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
-            <input type = "submit" name ="submit" value="Publicar" class="crear-cv-cover-block layout">
+            <input type = "submit" name ="Publicar" value="Publicar" class="crear-cv-cover-block layout">
 
             </form>
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
