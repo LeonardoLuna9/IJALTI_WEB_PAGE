@@ -64,7 +64,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
     
   // Update en usuario_prof
   $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
-  mysqli_query($conn, $insert2);
+  mysqli_query($conn, $insert1);
 
   // Update en informacion_laboral
   $insert2 = "UPDATE informacion_laboral SET empresa = '$empresa', descripcion = '$desc', fechaInicial = '$fechaInicial', fechaFinal = '$fechaFinal' WHERE correo = '$CorreoElectronico'";
