@@ -22,20 +22,35 @@ if (isset($_POST['submit'])){
   header('location:CrearCV.php');
 }
 
-$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el dos (Toshiba)
 $query1 = mysqli_query($conn, $vacante1);
 
 $row1 = mysqli_fetch_array($query1);
 
-$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
+$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el uno (Oracle)
 $query2 = mysqli_query($conn, $vacante2);
 
 $row2 = mysqli_fetch_array($query2);
 
-$vacante3 = "SELECT * FROM vacantes WHERE ID_vacante = 3";
+$vacante3 = "SELECT * FROM vacantes WHERE ID_vacante = 3"; // Este es el tres (GetinSoft)
 $query3 = mysqli_query($conn, $vacante3);
 
 $row3 = mysqli_fetch_array($query3);
+
+if (isset($_POST['Aplicate1'])){ 
+  $_SESSION['Vacante'] = $row2['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+
+if (isset($_POST['Aplicate2'])){ 
+  $_SESSION['Vacante'] = $row1['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+
+if (isset($_POST['Aplicate3'])){ 
+  $_SESSION['Vacante'] = $row3['ID_vacante'];
+  header('location:UsuProf2.php');
+}
 
 ?>
 
@@ -271,7 +286,10 @@ $row3 = mysqli_fetch_array($query3);
                     <div class="int-usu-prof-flex12-spacer2"></div>
                     <div class="int-usu-prof-flex12-item2">
                       <div class="int-usu-prof-cover-block3 layout">
-                        <a href="UsuProf1.php" style="text-decoration:none;"><div class="int-usu-prof-text-body1 layout">Aplicar ahora</div></a>
+                      <form action="" method="post">
+                        <!--<a href="UsuProf1.php" style="text-decoration:none;"><div class="int-usu-prof-text-body1 layout">Aplicar ahora</div></a> Aplicar ahora NO VACANTE-->
+                        <input type = "submit" name ="Aplicate1" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                      </form>
                       </div>
                     </div>
                   </div>
@@ -368,9 +386,12 @@ $row3 = mysqli_fetch_array($query3);
                       <div class="int-usu-prof-flex17-spacer2"></div>
                       <div class="int-usu-prof-flex17-item2">
                         <div class="int-usu-prof-cover-block3 layout">
-                          <a href="UsuProf1.php" style="text-decoration:none;">
+                          <!--<a href="UsuProf1.php" style="text-decoration:none;">
                             <div class="int-usu-prof-text-body1 layout">Aplicar ahora</div>
-                          </a>
+                          </a>-->
+                          <form action="" method="post">
+                          <input type = "submit" name ="Aplicate2" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -386,9 +407,12 @@ $row3 = mysqli_fetch_array($query3);
                 ></px-posize>
                 <div class="int-usu-prof-box14 layout"></div>
                 <div class="int-usu-prof-cover-block3 layout1">
-                  <a href="UsuProf1.php" style="text-decoration:none;">
+                  <!--<a href="UsuProf1.php" style="text-decoration:none;">
                     <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
-                  </a>
+                  </a>-->
+                  <form action="" method="post">
+                  <input type = "submit" name ="Aplicate3" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                  </form>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
                   <a href="Vacanteprof3.php" style="text-decoration:none;">
