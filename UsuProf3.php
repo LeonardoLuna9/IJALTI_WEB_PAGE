@@ -1,3 +1,37 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+$vacante = $_SESSION['Vacante'];
+$presentacion = $_SESSION['Presentacion'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+
+//echo $vacante;
+echo $_SESSION['Presentacion'];
+if (isset($_POST['submit'])){
+  $definirAplica = "  INSERT INTO aplicantes(ID_vacante, correo, presentacion, fecha_apl) VALUES ($vacante, '$CorreoElectronico', '$presentacion', CURDATE()) ";
+  mysqli_query($conn, $definirAplica);
+  header('location:IntUsuProf.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -146,7 +180,10 @@
                 Por favor revisa la información de los pasos anteriores, and si todo esta bien, presiona el botón de
                 aplicar para que te consideren como candidato a la vacante.
               </h4>
-              <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof3-block1 layout"><h4 class="usu-prof3-highlights3 layout">Aplicar</h4></div></a>
+              <!-- <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof3-block1 layout"><h4 class="usu-prof3-highlights3 layout">Aplicar</h4></div></a> -->
+              <form action="" method="post">
+              <input type = "submit" name ="submit" value="Aplicar" class="usu-prof3-block1 layout">
+              </form>
             </div>
           </div>
           <a href="UsuProf2.php" style="text-decoration: none;"><div class="usu-prof3-block4 layout"><h4 class="usu-prof3-highlights4 layout">Regresar</h4></div></a>

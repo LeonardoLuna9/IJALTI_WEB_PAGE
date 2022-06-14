@@ -1,3 +1,35 @@
+<?php
+
+@include 'config.php'; // Base de datos
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
+$query = mysqli_query($conn, $vacante1);
+
+$row = mysqli_fetch_array($query);
+
+if (isset($_POST['Aplicate2'])){ 
+  $_SESSION['Vacante'] = $row['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -203,29 +235,24 @@
       <div class="vacanteprof-group1 layout">
         <h5 class="vacanteprof-highlights4-box layout">
           <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">Descripción<br>
-</span><span class="vacanteprof-highlights4-span1">Oracle es la primera compañía de software que desarrolla e implementa software para empresas 100 por ciento activado por Internet a través de toda su línea de productos: base de datos, aplicaciones comerciales y herramientas de desarrollo de aplicaciones y soporte de decisiones.
+</span><span class="vacanteprof-highlights4-span1"><?php echo $row['descripcion']; ?>
 
-</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> Diseñar arquitecturas de red.<br>
+
+</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> <?php echo $row['obj_puesto']; ?><br>
 
 </span><span class="vacanteprof-highlights4-span4">Perfil Deseado:
 </span><span class="vacanteprof-highlights4-span5">
-Ing. en Tecnologías Computacionales,
-
-Mínimo 1 año de experiencia.
-
-Excelente presentación
-
-Sentido de urgencia, Orden, organización, proactividad, trabajo en equipo, disponibilidad de horario, actitud de servicio.
+<?php echo $row['perf_deseado']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span6">Conocimientos:
 </span><span class="vacanteprof-highlights4-span7">
-Infraestructura de redes
+<?php echo $row['conocimientos']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span8">Funciones:
 </span><span class="vacanteprof-highlights4-span9">
-Hacer diseños de red.</span></pre>
+<?php echo $row['funciones']; ?></span></pre>
         </h5>
       </div><br>
       <div class="vacanteprof-group layout3">
@@ -236,11 +263,11 @@ Hacer diseños de red.</span></pre>
               <div class="vacanteprof-group layout">
                 <h2 class="vacanteprof-medium-title1-box layout">
                   <pre class="vacanteprof-medium-title1">
-Empresa: Oracle
-Índice de referencia salarial: 8000-13000
-Ubicación: Guadalajara
-Nivel profesional: Especialista
-Campo Profesional: Arquitectura de redes</pre
+Empresa: <?php echo $row['empresa']; ?> 
+Índice de referencia salarial: <?php echo $row['sueldo']; ?> 
+Ubicación: <?php echo $row['ubicacion']; ?>
+Nivel profesional: <?php echo $row['nivel_prof']; ?>
+Campo Profesional: <?php echo $row['campo_prof']; ?> </pre
                   >
                   <br>
                 </h2>
@@ -249,14 +276,26 @@ Campo Profesional: Arquitectura de redes</pre
           </div>
         </div>
       </div>
-      <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div>
+      <form action="" method="post">
+      <!-- <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div> -->
+      <div class="vacanteprof-cover-block layout"><input type = "submit" name ="Aplicate2" value="Aplicar ahora" 
+      style=
+      "text-decoration: none; 
+      font: 14px/1.57 'Abel', Helvetica, Arial, serif; color: white;
+      position: relative;
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      margin: 11px 20px 11px 15px; 
+      border: 0px;
+      background-color: #0e6dff;">
+      </div>
+      </form>
       <div class="vacanteprof-paragraph-body layout2">
-        Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te sumergirás
-        profundamente en cada capa de la experiencia, mejorando nuestros productos, infraestructuras y plataformas.
-        Utiliza tus conocimientos para cambiar la forma en que el mundo hace negocios.
+      <?php echo $row['intro']; ?>
       </div>
       <div class="vacanteprof-group layout4">
-        <h3 class="vacanteprof-subtitle layout">Software engineer intern - Oracle</h3>
+        <h3 class="vacanteprof-subtitle layout"><?php echo $row['nombre_vac']; ?></h3>
       </div>
       <div class="vacanteprof-text-body2 layout6">#software</div>
       <div class="vacanteprof-text-body2 layout7">#trabajo</div>
