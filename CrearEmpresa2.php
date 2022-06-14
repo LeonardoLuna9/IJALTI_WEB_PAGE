@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 <body style="display: flex; flex-direction: column">
   <div class="cuenta cuenta-block layout">
     <div class="cuenta-flex layout">
-      <h2 class="cuenta-medium-title layout">Crear cuenta</h2>
+      <h2 class="cuenta-medium-title layout">Detalles de la Empresa</h2>
       <div class="cuenta-flex1 layout">
         <!--<div class="cuenta-flex1-item">
           <div class="cuenta-cover-block1 layout">
