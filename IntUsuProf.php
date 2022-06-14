@@ -22,6 +22,21 @@ if (isset($_POST['submit'])){
   header('location:CrearCV.php');
 }
 
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
+$query1 = mysqli_query($conn, $vacante1);
+
+$row1 = mysqli_fetch_array($query1);
+
+$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
+$query2 = mysqli_query($conn, $vacante2);
+
+$row2 = mysqli_fetch_array($query2);
+
+$vacante3 = "SELECT * FROM vacantes WHERE ID_vacante = 3";
+$query3 = mysqli_query($conn, $vacante3);
+
+$row3 = mysqli_fetch_array($query3);
+
 ?>
 
 <!DOCTYPE html>
@@ -212,9 +227,7 @@ if (isset($_POST['submit'])){
                     </div>
                   </div>
                   <div class="int-usu-prof-paragraph-body layout">
-                    Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te sumergirás
-                    profundamente en cada capa de la experiencia, mejorando nuestros productos, infraestructuras y
-                    plataformas. Utiliza tus conocimientos para cambiar la forma en que el mundo hace negocios.
+                  <?php echo $row2['intro']; ?>
                   </div>
                   <div class="int-usu-prof-flex11 layout">
                     <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -318,10 +331,7 @@ if (isset($_POST['submit'])){
                       </div>
                     </div>
                     <div class="int-usu-prof-paragraph-body layout1">
-                      Responsible to write/execute automated and manual test and building out test pipelines for
-                      discovering defects and reporting them. The area of responsibility will include back end and front
-                      end. The type of testing being done is primarily functional, regression, integration and
-                      performance on the applications involved.
+                    <?php echo $row1['intro']; ?>
                     </div>
                     <div class="int-usu-prof-flex16 layout">
                       <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -387,8 +397,7 @@ if (isset($_POST['submit'])){
                 </div>
                 <div class="int-usu-prof-paragraph-body1-box layout">
                   <pre class="int-usu-prof-paragraph-body1">
-Empresa dedicada al desarrollo de tecnología, software y hardware en las siguientes áreas industriales tecnologías de la información (TI) y comunicaciones, farmacéutica, automotriz, agricultura, salud, alimentos y bebidas
-be ordered in any color combination. As it made of a moldable material (polyurethane) this background.</pre
+                  <?php echo $row3['intro']; ?></pre
                   >
                 </div>
                 <div class="int-usu-prof-text-body2 layout4">#nft</div>

@@ -293,9 +293,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
 
                             ><select name="GradoEducacion" id="SelectCuenta" required>
                               <optgroup label="GradoEducacion">
-                              <option value="GradoEducacion">Licenciatura</option>
-                              <option value="GradoEducacion">Maestria</option>
-                              <option value="GradoEducacion">Doctorado</option>
+                              <option value="Licenciatura">Licenciatura</option>
+                              <option value="Maestria">Maestria</option>
+                              <option value="Doctorado">Doctorado</option>
                             </select>
                             <p class="crear-cv-small-text-body12">Grado de educación</p>
                             <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> --> 
