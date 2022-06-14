@@ -105,11 +105,11 @@ if (isset($_POST['submit'])){
           }
           ?>
         <div class="iniciar-sesion-block1 layout">
-          <input class="iniciar-sesion-highlights1 layout" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" required>
+          <input class="iniciar-sesion-highlights1 layout" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" maxlength="30" required>
           <hr class="iniciar-sesion-line layout1" />
         </div>
         <div class="iniciar-sesion-flex layout">
-          <input class="iniciar-sesion-highlights1 layout" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" required>
+          <input class="iniciar-sesion-highlights1 layout" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" maxlength="18" required>
           <hr class="iniciar-sesion-line layout1" />
         </div>
         <input type = "submit" name ="submit" value="Iniciar sesión" class="iniciar-sesion-cover-block layout">

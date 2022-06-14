@@ -4,6 +4,19 @@
 
 session_start();
 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida=$_SESSION['CorreoElectronico'];
+
+$buscaUsuario = " SELECT * FROM usuarios WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
 if (isset($_POST['submit'])){ 
   $CorreoElectronico = $_SESSION['CorreoElectronico'];
   header('location:CrearCV.php');
