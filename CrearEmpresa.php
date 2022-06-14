@@ -136,16 +136,8 @@ if (isset($_POST['submit'])) {
         <hr class="cuenta-line layout" />
         <input class="cuenta-highlights layout1" type="text" placeholder="Telefono" name="telefono" pattern="{10}" required>
         <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Nombre De La Empresa" name="NombreEmpresa" required>
-        <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type="email" placeholder="Correo Electrónico " name="CorreoElectronico" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="email" placeholder="Correo Electrónico De La Empresa" name="CorreoElectronicoEmpresarial" required>
-        <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Descripción De La Empresa" name="DescEmpresa" required>
-        <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="CIF" name="CIF" pattern="{9}" required>
-        <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type="text" placeholder="Nombre" name="Nombre" required>
         <hr class="cuenta-line layout" />
         <input class="cuenta-highlights layout1" type="text" placeholder="Apellido Paterno" name="ApellidoP" required>
@@ -164,7 +156,7 @@ if (isset($_POST['submit'])) {
           <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
           <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
         </div>
-        <input type="submit" name="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
+        <a href="CrearEmpresa2.php" style="text-decoration: none;"><div class="cuenta-cover-block3 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a>
         <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
       </form>
     </div>
