@@ -397,20 +397,23 @@ Cambios Paulina-->
                     form.setAttribute("class","crear-cv-small-text-body1 layout");
 
                     var div2 = document.createElement("div");
-                    div.setAttribute("class","crear-cv-block3 layout2")
+                    div2.setAttribute("class","crear-cv-block3 layout2")
 
                     var form2 = document.createElement("input");
-                    form.setAttribute("method", "post");
-                    form.setAttribute("placeholder","descripcion")
-                    form.setAttribute("action", "submit.php");
-                    form.setAttribute("class","crear-cv-small-text-body1 layout");
+                    form2.setAttribute("method", "post");
+                    form2.setAttribute("placeholder","descripcion")
+                    form2.setAttribute("action", "submit.php");
+                    form2.setAttribute("class","crear-cv-small-text-body1 layout");
                     
                     div.append(form)
                     div2.append(form2)
                     
                     document.getElementsByClassName("crear-cv-block7-item")[0]
                       .appendChild(div);
+
+                      document.getElementsByClassName("crear-cv-block7-item")[0]
                       .appendChild(div2);
+                      
                   }
                 </script>
 
