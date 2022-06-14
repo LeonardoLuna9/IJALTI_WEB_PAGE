@@ -135,8 +135,8 @@ if (isset($_POST['submit'])){
           <h5 class="cuenta-highlights layout">¿Cómo planeas usar tu cuenta?</h5>
           <div class="cuenta-flex3-spacer">
             <select name="SeleccionaCuenta" id="SelectCuenta">
-              <option value="Empresarial">Empresarial</option>
               <option value="UsuarioProf">Usuario Profesional</option>
+              <option value="Empresarial">Empresarial</option>
             </select>
           </div>
           <div class="cuenta-flex3-item">
