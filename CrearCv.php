@@ -114,8 +114,18 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   <div class="crear-cv-block2-item">
                     <div class="crear-cv-flex3 layout">
                       <h5 class="crear-cv-highlights layout">Datos personales</h5>
-                      <div class="crear-cv-block3 layout">
+                      <!--<div class="crear-cv-block3 layout"> Fecha de nacimiento
                       <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Fecha de nacimiento" name="FechaNacimiento" pattern="{18}" required>
+                      <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>-->
+                      <div class="crear-cv-block3 layout">
+                          <px-posize
+                            track-style='{"flexGrow":1}'
+                            x="16px 42fr 869fr"
+                            y="11px minmax(0px, max-content) 10fr"
+                            ><div class="crear-cv-small-text-body11">Fecha Inicial
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                          </div>
+                          <br>
                         <hr class="cuenta-line1 layout" />
                       </div>
                     </div>
@@ -194,7 +204,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Inicial
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-07" min="2018-01-01" max="2022-12-31" required>
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
                         </div>
@@ -205,7 +215,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Final
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
                         </div>
@@ -293,7 +303,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 </div>
               </div>
               <div class="crear-cv-block11 layout1">
-              </div>
+             </div>
               <div class="crear-cv-block13 layout1">
                 <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
                   > <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
@@ -314,7 +324,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
         </div>
         </form>
       </div>
-    </div> <!--
+    </div> 
+    
+    <!--
     <script type="text/javascript">
       AOS.init();
     </script> -->
