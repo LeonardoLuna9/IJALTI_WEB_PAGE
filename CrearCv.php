@@ -228,39 +228,27 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                   function GFG_Fun() {
 
                     // Create a form dynamically
-                    var empresa = document.createElement("input");
+                    var div = document.createElement("div");
+                    div.setAttribute("class","crear-cv-block3 layout2")
+                    
+                    var form = document.createElement("input");
                     form.setAttribute("method", "post");
                     form.setAttribute("placeholder","empresa")
                     form.setAttribute("action", "submit.php");
+                    form.setAttribute("class","crear-cv-small-text-body1 layout");
 
+
+                    var form2 = document.createElement("input");
+                    form.setAttribute("method", "post");
+                    form.setAttribute("placeholder","descripcion")
+                    form.setAttribute("action", "submit.php");
+                    form.setAttribute("class","crear-cv-small-text-body1 layout");
                     // Create an input element for emailID
-                    var ID = document.createElement("input");
-                    ID.setAttribute("type", "text");
-                    ID.setAttribute("name", "emailID");
-                    ID.setAttribute("placeholder", "E-Mail ID");
-
-                    // Create an input element for password
-                    var PWD = document.createElement("input");
-                    PWD.setAttribute("type", "password");
-                    PWD.setAttribute("name", "password");
-                    PWD.setAttribute("placeholder", "Password");
-
-                    // Create a submit button
-                    var s = document.createElement("input");
-                    s.setAttribute("type", "submit");
-                    s.setAttribute("value", "Submit");
-
-                    // Append the email_ID input to the form
-                    form.append(ID);
-
-                    // Append the password to the form
-                    form.append(PWD);
-
-                    // Append the button to the form
-                    form.append(s);
-
+                    
+                    div.append(form)
+                    div.append(form2)
                     document.getElementsByClassName("crear-cv-block7-item")[0]
-                      .appendChild(form);
+                      .appendChild(div);
                   }
                 </script>
                 <div class="crear-cv-block9 layout">
