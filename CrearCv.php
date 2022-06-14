@@ -8,6 +8,7 @@ if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
+// Verificar en base de datos
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
 
 $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 

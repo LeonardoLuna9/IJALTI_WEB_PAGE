@@ -1,3 +1,33 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+if (isset($_POST['submit'])){
+  $presentacion = mysqli_real_escape_string($conn, $_POST['presentacion']);
+  $_SESSION['Presentacion'] = $presentacion;
+  echo $_SESSION['Presentacion']; 
+  //header('location:UsuProf3.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -133,7 +163,10 @@
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="50" placeholder = "Máximo 800 palabras "></textarea>
+                <form action="" method="post">
+                <!-- <input class="usu-prof2-highlights5" name="presentacion" rows="10" cols="50" placeholder = "Máximo 100 palabras "> </textarea> -->
+                <input class="usu-prof2-highlights5" type = "text" placeholder="Máximo 100 palabras" name="presentacion" pattern="{100}" maxlength="100" required>               
+                </form>
               </div>
             </div>
           </div>
@@ -143,7 +176,12 @@
             </div>
             <div class="usu-prof2-flex8-spacer"></div>
             <div class="usu-prof2-flex8-item1">
+<!--
               <a href="UsuProf3.php" style="text-decoration: none;"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
+-->
+              <form action="" method="post">
+              <input type = "submit" name ="submit" value="Siguiente" class="usu-prof2-block1 layout">
+              </form>
             </div>
           </div>
         </div>
