@@ -404,41 +404,50 @@ Cambios Paulina-->
     div3.setAttribute("class", "crear-cv-block3 layout2")
 
     var form3 = document.createElement("input");
-    form3.setAttribute("type","date")
+    form3.setAttribute("type", "date")
     form3.setAttribute("id", "crear-cv-small-text-body11");
     form3.setAttribute("id", "fechaI");
     form3.setAttribute("name", "fechaInicial")
     form3.setAttribute("value", "2022-06-17");
     form3.setAttribute("class", "crear-cv-small-text-body1 layout");
-    form3.setAttribute("min","2018-01-01");
-    form3.setAttribute("max","2022-12-31");
+    form3.setAttribute("min", "2018-01-01");
+    form3.setAttribute("max", "2022-12-31");
     var div4 = document.createElement("div");
     div4.setAttribute("class", "crear-cv-block3 layout2")
 
     var form4 = document.createElement("input");
-    form4.setAttribute("type","date")
+    form4.setAttribute("type", "date")
     form4.setAttribute("id", "crear-cv-small-text-body11");
     form4.setAttribute("id", "fechaI");
     form4.setAttribute("name", "fechaInicial")
     form4.setAttribute("value", "2022-06-17");
     form4.setAttribute("class", "crear-cv-small-text-body1 layout");
-    form4.setAttribute("min","2018-01-01");
-    form4.setAttribute("max","2022-12-31");
+    form4.setAttribute("min", "2018-01-01");
+    form4.setAttribute("max", "2022-12-31");
     //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
     div.append(form)
+
     div2.append(form2)
     div3.append(form3)
     div4.append(form4)
 
     document.getElementsByClassName("crear-cv-block7-item")[0]
       .appendChild(div);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
 
     document.getElementsByClassName("crear-cv-block7-item")[0]
       .appendChild(div2);
     document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-block7-item")[0]
       .appendChild(div3);
-      document.getElementsByClassName("crear-cv-block7-item")[0]
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-block7-item")[0]
       .appendChild(div4);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
 
   }
 </script>
