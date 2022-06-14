@@ -228,8 +228,9 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                   function GFG_Fun() {
 
                     // Create a form dynamically
-                    var form = document.createElement("input");
+                    var empresa = document.createElement("input");
                     form.setAttribute("method", "post");
+                    form.setAttribute("placeholder","empresa")
                     form.setAttribute("action", "submit.php");
 
                     // Create an input element for emailID
