@@ -4,10 +4,29 @@
 
 session_start();
 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
 $vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
 $query = mysqli_query($conn, $vacante1);
 
 $row = mysqli_fetch_array($query);
+
+if (isset($_POST['Aplicate2'])){ 
+  $_SESSION['Vacante'] = $row['ID_vacante'];
+  header('location:UsuProf2.php');
+}
 ?>
 
 
@@ -257,7 +276,21 @@ Campo Profesional: <?php echo $row['campo_prof']; ?> </pre
           </div>
         </div>
       </div>
-      <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div>
+      <form action="" method="post">
+      <!-- <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div> -->
+      <div class="vacanteprof-cover-block layout"><input type = "submit" name ="Aplicate2" value="Aplicar ahora" 
+      style=
+      "text-decoration: none; 
+      font: 14px/1.57 'Abel', Helvetica, Arial, serif; color: white;
+      position: relative;
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      margin: 11px 20px 11px 15px; 
+      border: 0px;
+      background-color: #0e6dff;">
+      </div>
+      </form>
       <div class="vacanteprof-paragraph-body layout2">
       <?php echo $row['intro']; ?>
       </div>

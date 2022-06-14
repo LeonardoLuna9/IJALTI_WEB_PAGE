@@ -8,6 +8,12 @@ $vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
 $query = mysqli_query($conn, $vacante1);
 
 $row = mysqli_fetch_array($query);
+
+if (isset($_POST['Aplicate1'])){ 
+  $_SESSION['Vacante'] = $row['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+
 // if(!isset($_SESSION['CorreoElectronico'])){
 //   header('location:IniciarSesion.php');
 // }
@@ -173,7 +179,21 @@ Campo Profesional: <?php echo $row['campo_prof']; ?></pre
           </div>
         </div>
       </div>
-      <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div>
+      <form action="" method="post">
+      <!-- <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div> -->
+      <div class="vacanteprof-cover-block layout"><input type = "submit" name ="Aplicate1" value="Aplicar ahora" 
+      style=
+      "text-decoration: none; 
+      font: 14px/1.57 'Abel', Helvetica, Arial, serif; color: white;
+      position: relative;
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      margin: 11px 20px 11px 15px; 
+      border: 0px;
+      background-color: #0e6dff;">
+      </div>
+      </form>
       <div class="vacanteprof-paragraph-body layout2">
       <?php echo $row['intro']; ?>
       </div>

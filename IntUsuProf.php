@@ -10,6 +10,7 @@ if(!isset($_SESSION['CorreoElectronico'])){
 
 $correoValida=$_SESSION['CorreoElectronico'];
 
+// Verificar en base de datos
 $buscaUsuario = " SELECT * FROM usuarios WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
@@ -39,6 +40,12 @@ $row3 = mysqli_fetch_array($query3);
 
 if (isset($_POST['Aplicate1'])){ 
   $_SESSION['Vacante'] = $row2['ID_vacante'];
+  /*
+  $vacante = $row2['ID_vacante'];
+  $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
+  $referenceNumber = intval($referenceNumber);
+  $_SESSION['Vacante'] = $referenceNumber ;
+  */
   header('location:UsuProf2.php');
 }
 
