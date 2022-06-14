@@ -66,24 +66,24 @@ if (isset($_POST['Aplicate2'])){
               class="vacanteprof-cover3 layout"
             ></div>
           </div>
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/678e72032f50f740cea7592ddcaa778f.png)" class="vacanteprof-cover4 layout"></div>
+          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/678e72032f50f740cea7592ddcaa778f.png)" class="vacanteprof-cover4 layout"></div>
         </div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/4e1c7cb7169f2b7a32325aef0270c983.png)" class="vacanteprof-cover2 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/4e1c7cb7169f2b7a32325aef0270c983.png)" class="vacanteprof-cover2 layout"></div>
       </div>
       <div class="vacanteprof-box1 layout"></div>
       <div class="vacanteprof-box2 layout"></div>
       <div class="vacanteprof-box2 layout1"></div>
       <div class="vacanteprof-box1 layout1"></div>
-      <div style="--src:url(http://localhost/PaginaWebFinal/assets/384780d208ae093e3bb89e177cc7f0de.png)" class="vacanteprof-cover-block5 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/5156aa8c21068412c3c15b190e4dcb4b.png)" class="vacanteprof-icon1 layout"></div>
+      <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/384780d208ae093e3bb89e177cc7f0de.png)" class="vacanteprof-cover-block5 layout">
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/5156aa8c21068412c3c15b190e4dcb4b.png)" class="vacanteprof-icon1 layout"></div>
       </div>
       <div class="vacanteprof-box4 layout"></div>
       <div class="vacanteprof-box6 layout"></div>
       <div class="vacanteprof-block1 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/6f4eb457f371f6e724291ef5c6d159f6.png)" class="vacanteprof-icon3 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/6f4eb457f371f6e724291ef5c6d159f6.png)" class="vacanteprof-icon3 layout"></div>
       </div>
       <div class="vacanteprof-block2 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/11d763097199e4a0c7cadb7d9ae8faae.png)" class="vacanteprof-image2 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/11d763097199e4a0c7cadb7d9ae8faae.png)" class="vacanteprof-image2 layout"></div>
       </div>
       <px-posize
         x="1354fr 46px 328fr"
@@ -101,14 +101,14 @@ if (isset($_POST['Aplicate2'])){
         xxs-y="19px 46px 60px"
         tn-x="1354fr 46px 328fr"
         tn-y="17px 46px 5px"
-        ><div class="vacanteprof-icon4" style="--src:url(http://localhost/PaginaWebFinal/assets/4684f649983ce0d90eec6003687c925f.png)"></div
+        ><div class="vacanteprof-icon4" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/4684f649983ce0d90eec6003687c925f.png)"></div
       ></px-posize>
       <h5 class="vacanteprof-highlights layout">Definir Zona Horaria</h5>
       <div class="vacanteprof-content-box1 layout">
         <div class="vacanteprof-text-body layout">GMT+06:00 Astana, UK</div>
         <div class="vacanteprof-content-box1-spacer"></div>
         <div class="vacanteprof-content-box1-item">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/c3fbb2d59f348c9218785447202440b2.png)" class="vacanteprof-image3 layout"></div>
+          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/c3fbb2d59f348c9218785447202440b2.png)" class="vacanteprof-image3 layout"></div>
         </div>
       </div>
       <h4 class="vacanteprof-highlights31 layout">Ayer, 24 de abril</h4>
@@ -134,7 +134,7 @@ if (isset($_POST['Aplicate2'])){
                                 <div class="vacanteprof-text-body2 layout1">#trabajo</div>
                                 <div class="vacanteprof-text-body2 layout2">#intern</div>
                                 <div
-                                  style="--src:url(http://localhost/PaginaWebFinal/assets/69aa0d5d62beacb533fb881fe8b822fd.png)"
+                                  style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/69aa0d5d62beacb533fb881fe8b822fd.png)"
                                   class="vacanteprof-block3 layout"
                                 ></div>
                                 <div class="vacanteprof-small-text-body layout">Publicado hoy 11:32pm</div>
@@ -184,7 +184,7 @@ if (isset($_POST['Aplicate2'])){
         tn-y="5px 30px 11px"
         ><div
           class="vacanteprof-icon5"
-          style="--src:url(http://localhost/PaginaWebFinal/assets/d02f123ea73b601eb7af695bce2e73d8.png)"
+          style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/d02f123ea73b601eb7af695bce2e73d8.png)"
         ></div></px-posize
       ><px-posize
         x="624fr 11px 1093fr"
@@ -202,7 +202,7 @@ if (isset($_POST['Aplicate2'])){
         xxs-y="53px 11px 38px"
         tn-x="624fr 11px 1093fr"
         tn-y="5px 11px 18px"
-        ><div class="vacanteprof-icon6" style="--src:url(http://localhost/PaginaWebFinal/assets/42b4aa43838279b3afeced22f2de7170.png)"></div
+        ><div class="vacanteprof-icon6" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/42b4aa43838279b3afeced22f2de7170.png)"></div
       ></px-posize>
       <div class="vacanteprof-small-text-body1-box layout">
         <pre class="vacanteprof-small-text-body1">Publicado hoy 5:20 pm </pre>
@@ -229,7 +229,7 @@ if (isset($_POST['Aplicate2'])){
           xxs-y="9px 12px 8px"
           tn-x="42fr 50px 58fr"
           tn-y="8px 12px 7px"
-          ><div class="vacanteprof-image5" style="--src:url(http://localhost/PaginaWebFinal/assets/ff6283b985b5f3b319cb31ca1df27b04.png)"></div
+          ><div class="vacanteprof-image5" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/ff6283b985b5f3b319cb31ca1df27b04.png)"></div
         ></px-posize>
       </div>
       <div class="vacanteprof-group1 layout">
@@ -338,7 +338,7 @@ Campo Profesional: <?php echo $row['campo_prof']; ?> </pre
         tn-y="20px 27px 5px"
         ><div
           class="vacanteprof-image14"
-          style="--src:url(http://localhost/PaginaWebFinal/assets/a51c9108a4402e7c5140055632e9aec0.png)"
+          style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/a51c9108a4402e7c5140055632e9aec0.png)"
         ></div></px-posize
       ><px-posize
         x="475fr 48px 1205fr"
@@ -356,7 +356,7 @@ Campo Profesional: <?php echo $row['campo_prof']; ?> </pre
         xxs-y="37px 16px 54px"
         tn-x="475fr 48px 1205fr"
         tn-y="19px 16px 5px"
-        ><div class="vacanteprof-image16" style="--src:url(http://localhost/PaginaWebFinal/assets/b142754cb9a6537f63126106030836fe.png)"></div
+        ><div class="vacanteprof-image16" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/b142754cb9a6537f63126106030836fe.png)"></div
       ></px-posize>
     </div>
     <script type="text/javascript">

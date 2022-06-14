@@ -1458,6 +1458,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  margin-left: -10%;
 }
 
 .int-emp-img.layout11 {
@@ -1486,7 +1487,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 4px 0px;
+  margin: 5px 0px 0px -8px;
 }
 
 .int-emp-group.layout8 {
@@ -1890,6 +1891,7 @@
   width: 16px;
   min-width: 16px;
   margin: 4px;
+  right: 18%;
 }
 
 .int-emp-flex11-spacer {
@@ -1911,6 +1913,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 4px 0px;
+  right: 10%;
 }
 
 .int-emp-group.layout12 {
@@ -2987,6 +2990,7 @@
   width: 16px;
   min-width: 16px;
   margin: 4px 4px 5px;
+  right: 18%;
 }
 
 .int-emp-txt53 {
@@ -3004,6 +3008,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 4px 0px;
+  right: 10%;
 }
 
 .int-emp-group.layout25 {
@@ -3388,6 +3393,7 @@
   width: 16px;
   min-width: 16px;
   margin: 4px;
+  right: 18%;
 }
 
 .int-emp-txt61 {
@@ -3405,6 +3411,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 4px 0px;
+  right: 10%;
 }
 
 .int-emp-group.layout29 {
@@ -4481,6 +4488,7 @@
   width: 16px;
   min-width: 16px;
   margin: 4px 4px 5px;
+  right: 18%;
 }
 
 .int-emp-txt83 {
@@ -4498,6 +4506,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 4px 0px;
+  right: 10%;
 }
 
 .int-emp-group.layout42 {
@@ -4890,6 +4899,7 @@
   width: 16px;
   min-width: 16px;
   margin: 4px;
+  right: 18%;
 }
 
 .int-emp-txt91 {
@@ -4907,6 +4917,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 4px 0px;
+  right: 10%;
 }
 
 .int-emp-group.layout47 {
