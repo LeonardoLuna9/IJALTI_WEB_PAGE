@@ -64,7 +64,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
     
   // Update en usuario_prof
   $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
-  mysqli_query($conn, $insert2);
+  mysqli_query($conn, $insert1);
 
   // Update en informacion_laboral
   $insert2 = "UPDATE informacion_laboral SET empresa = '$empresa', descripcion = '$desc', fechaInicial = '$fechaInicial', fechaFinal = '$fechaFinal' WHERE correo = '$CorreoElectronico'";
@@ -293,9 +293,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
 
                             ><select name="GradoEducacion" id="SelectCuenta" required>
                               <optgroup label="GradoEducacion">
-                              <option value="GradoEducacion">Licenciatura</option>
-                              <option value="GradoEducacion">Maestria</option>
-                              <option value="GradoEducacion">Doctorado</option>
+                              <option value="Licenciatura">Licenciatura</option>
+                              <option value="Maestria">Maestria</option>
+                              <option value="Doctorado">Doctorado</option>
                             </select>
                             <p class="crear-cv-small-text-body12">Grado de educación</p>
                             <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> --> 
