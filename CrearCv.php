@@ -59,6 +59,8 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   <link rel="stylesheet" type="text/css" href="css/fonts.css" />
   <link rel="stylesheet" type="text/css" href="css/CrearCv.css" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.5.js"></script>
@@ -67,7 +69,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
 <body style="display: flex; flex-direction: column">
   <div class="crear-cv crear-cv-block layout">
     <div class="crear-cv-flex layout">
-      <form action="" method="post" class="form1">
+      <form action="" method="post" class="form1" id="form_empresa">
         <?php
         if (isset($error)) {
           foreach ($error as $error) {
@@ -161,9 +163,13 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                           <div style="--src:url(http://localhost/PaginaWebFinal/assets/7ba74c20a3d85f39cd180e40dfc3d51c.png)" class="crear-cv-image1 layout"></div>
                         </div>
                       </div>
+                      <button onClick="GFG_Fun()">
+                          +
+                        </button>
+                        <p id="GFG_DOWN"></p>
                       <div class="crear-cv-block3 layout1">
                         <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Empresa" name="Empresa" pattern="{30}" required>
+                        <input class="crear-cv-small-text-body1 layout" id="empresa" type="text" placeholder="Empresa" name="Empresa" pattern="{30}" required>
                       </div>
                     </div>
                   </div>
@@ -174,7 +180,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout2">
                         <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Descripción" name="Descripcion" pattern="{100}" required>
+                        <input class="crear-cv-small-text-body1 layout" id="descripcion" type="text" placeholder="Descripción" name="Descripcion" pattern="{100}" required>
                       </div>
                       <div class="crear-cv-small-text-body2 layout">Limit: 400 words</div>
                     </div>
@@ -191,7 +197,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Inicial
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                          <input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
                         </div>
@@ -202,7 +208,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                             x="16px 42fr 869fr"
                             y="11px minmax(0px, max-content) 10fr"
                             ><div class="crear-cv-small-text-body11">Fecha Final
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
+                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" id="fechaF" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
                         </div>
@@ -214,54 +220,6 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                   <div class="crear-cv-block7-item1">
                   </div>
                 </div>
-                <p>
-                  Click on the button to create
-                  a form dynamically
-                </p>
-                <button class="Add" onClick="GFG_Fun()">
-                  click here
-                </button>
-                <p id="GFG_DOWN"></p>
-                <script>
-                  var down = document.getElementById("GFG_DOWN");
-
-                  function GFG_Fun() {
-
-                    // Create a form dynamically
-                    var form = document.createElement("form");
-                    form.setAttribute("method", "post");
-                    form.setAttribute("action", "submit.php");
-
-                    // Create an input element for emailID
-                    var ID = document.createElement("input");
-                    ID.setAttribute("type", "text");
-                    ID.setAttribute("name", "emailID");
-                    ID.setAttribute("placeholder", "E-Mail ID");
-
-                    // Create an input element for password
-                    var PWD = document.createElement("input");
-                    PWD.setAttribute("type", "password");
-                    PWD.setAttribute("name", "password");
-                    PWD.setAttribute("placeholder", "Password");
-
-                    // Create a submit button
-                    var s = document.createElement("input");
-                    s.setAttribute("type", "submit");
-                    s.setAttribute("value", "Submit");
-
-                    // Append the email_ID input to the form
-                    form.append(ID);
-
-                    // Append the password to the form
-                    form.append(PWD);
-
-                    // Append the button to the form
-                    form.append(s);
-
-                    document.getElementsByClassName("crear-cv-block7-item")[0]
-                      .appendChild(form);
-                  }
-                </script>
                 <div class="crear-cv-block9 layout">
                   <div class="crear-cv-block9-item">
                     <div class="crear-cv-flex6 layout">
@@ -357,5 +315,37 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
       AOS.init();
     </script> -->
 </body>
+<script>
+                  var down = document.getElementById("GFG_DOWN");
+
+                  function GFG_Fun() {
+
+                    // Create a form dynamically
+                    var div = document.createElement("div");
+                    div.setAttribute("class","crear-cv-block3 layout2")
+                    
+                    var form = document.createElement("input");
+                    form.setAttribute("method", "post");
+                    form.setAttribute("placeholder","empresa")
+                    form.setAttribute("action", "submit.php");
+                    form.setAttribute("class","crear-cv-small-text-body1 layout");
+
+                    var div2 = document.createElement("div");
+                    div.setAttribute("class","crear-cv-block3 layout2")
+
+                    var form2 = document.createElement("input");
+                    form.setAttribute("method", "post");
+                    form.setAttribute("placeholder","descripcion")
+                    form.setAttribute("action", "submit.php");
+                    form.setAttribute("class","crear-cv-small-text-body1 layout");
+                    
+                    div.append(form)
+                    div2.append(form2)
+                    
+                    document.getElementsByClassName("crear-cv-block7-item")[0]
+                      .appendChild(div);
+                      .appendChild(div2);
+                  }
+                </script>
 
 </html>
