@@ -4,7 +4,7 @@
 
 session_start();
 
-if(!isset($_SESSION['CorreoElectronico'])){
+/*if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
   $definirAplica = "  INSERT INTO aplicantes(ID_vacante, correo, presentacion, fecha_apl) VALUES ($vacante, '$CorreoElectronico', '$presentacion', CURDATE()) ";
   mysqli_query($conn, $definirAplica);
   header('location:IntUsuProf.php');
-}
+}*/
 
 ?>
 
