@@ -18,7 +18,7 @@ if (mysqli_num_rows($validaUsuario) == 0) {
   header('location:Cuenta.php');
 }
 
-Validación para ver si ya tiene CV 
+//Validación para ver si ya tiene CV 
 $select = " SELECT * FROM informacion_laboral WHERE correo = '$CorreoElectronico' AND empresa != NULL"; //Prueba para ver si me valida 
 
 $result = mysqli_query($conn, $select);
