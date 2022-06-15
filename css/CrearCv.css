@@ -217,6 +217,14 @@
   margin: 11px 16px 10px;
   border: 0px; }
 
+.crear-cv-small-text-body2.layout2 {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 11px 16px 10px;
+  border: 0px; }
+
 .crear-cv-block2-spacer {
   flex: 0 1 51px; }
 
@@ -366,6 +374,14 @@
   height: -moz-min-content;
   height: min-content;
   width: 100.5%;
+  margin-left: 0%; }
+
+.crear-cv-block3.layout7 {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 125%;
   margin-left: 0%; }
 
 .crear-cv-small-text-body2 {

@@ -215,7 +215,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 <div class="crear-cv-block5 layout">
                   <div class="crear-cv-block5-item">
                     <div class="crear-cv-block6 layout">
-                      <div class="crear-cv-block3 layout2">
+                      <div class="crear-cv-block3 layout">
                         <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
                         <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{100}" maxlength="100" required >
                       </div>
@@ -261,47 +261,6 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   +
                 </button>
                 <p id="GFG_DOWN"></p>
-                <script>
-                  var down = document.getElementById("GFG_DOWN");
-
-                  function GFG_Fun() {
-
-                    // Create a form dynamically
-                    var empresa = document.createElement("input");
-                    form.setAttribute("method", "post");
-                    form.setAttribute("placeholder","empresa")
-                    form.setAttribute("action", "submit.php");
-
-                    // Create an input element for emailID
-                    var ID = document.createElement("input");
-                    ID.setAttribute("type", "text");
-                    ID.setAttribute("name", "emailID");
-                    ID.setAttribute("placeholder", "E-Mail ID");
-
-                    // Create an input element for password
-                    var PWD = document.createElement("input");
-                    PWD.setAttribute("type", "password");
-                    PWD.setAttribute("name", "password");
-                    PWD.setAttribute("placeholder", "Password");
-
-                    // Create a submit button
-                    var s = document.createElement("input");
-                    s.setAttribute("type", "submit");
-                    s.setAttribute("value", "Submit");
-
-                    // Append the email_ID input to the form
-                    form.append(ID);
-
-                    // Append the password to the form
-                    form.append(PWD);
-
-                    // Append the button to the form
-                    form.append(s);
-
-                    document.getElementsByClassName("crear-cv-block7-item")[0]
-                      .appendChild(form);
-                  }
-                </script>
                 <div class="crear-cv-block9 layout">
                   <div class="crear-cv-block9-item">
                     <div class="crear-cv-flex6 layout">
@@ -407,10 +366,180 @@ Cambios Paulina-->
       </div>
     </div> 
     
+    
     <!--
     <script type="text/javascript">
       AOS.init();
     </script> -->
 </body>
+<script>
+  var down = document.getElementById("GFG_DOWN");
+
+  function GFG_Fun() {
+
+    // Create a form dynamically
+    var div = document.createElement("div");
+    div.setAttribute("class", "crear-cv-block3 layout7")
+
+    var form = document.createElement("input");
+    form.setAttribute("method", "post");
+    form.setAttribute("placeholder", "Empresa")
+    form.setAttribute("action", "submit.php");
+    form.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "crear-cv-block3 layout7")
+
+    var form2 = document.createElement("input");
+    form2.setAttribute("method", "post");
+    form2.setAttribute("placeholder", "Descripcion")
+    form2.setAttribute("action", "submit.php");
+    form2.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "crear-cv-block3 layout7")
+
+    var form2 = document.createElement("input");
+    form2.setAttribute("method", "post");
+    form2.setAttribute("placeholder", "Descripcion")
+    form2.setAttribute("action", "submit.php");
+    form2.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div3 = document.createElement("div");
+    div3.setAttribute("class", "crear-cv-block3 layout7")
+
+    var form3 = document.createElement("input");
+    form3.setAttribute("type", "date")
+    form3.setAttribute("id", "crear-cv-small-text-body11");
+    form3.setAttribute("id", "fechaI");
+    form3.setAttribute("name", "FechaInicial")
+    form3.setAttribute("value", "2022-06-17");
+    form3.setAttribute("class", "crear-cv-small-text-body1 layout");
+    form3.setAttribute("min", "2018-01-01");
+    form3.setAttribute("max", "2022-12-31");
+    var div4 = document.createElement("div");
+    div4.setAttribute("class", "crear-cv-block3 layout7")
+
+    var form4 = document.createElement("input");
+    form4.setAttribute("type", "date")
+    form4.setAttribute("id", "crear-cv-small-text-body11");
+    form4.setAttribute("id", "fechaI");
+    form4.setAttribute("name", "FechaFinal")
+    form4.setAttribute("value", "2022-06-17");
+    form4.setAttribute("class", "crear-cv-small-text-body1 layout");
+    form4.setAttribute("min", "2018-01-01");
+    form4.setAttribute("max", "2022-12-31");
+
+    //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+    div.append(form)
+
+    div2.append(form2)
+    div3.append(form3)
+    div4.append(form4)
+
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(div);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(div2);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(div3);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(div4);
+    document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+
+  }
+  function GFG_Fun2() {
+
+    // Create a form dynamically
+    var div = document.createElement("div");
+    div.setAttribute("class", "crear-cv-block3 layout")
+
+    var form = document.createElement("input");
+    form.setAttribute("method", "post");
+    form.setAttribute("placeholder", "Escuela")
+    form.setAttribute("action", "submit.php");
+    form.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "crear-cv-block3 layout")
+
+    var form2 = document.createElement("input");
+    form2.setAttribute("method", "post");
+    form2.setAttribute("placeholder", "Carrera")
+    form2.setAttribute("action", "submit.php");
+    form2.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+
+    var div3 = document.createElement("div");
+    div3.setAttribute("class", "crear-cv-block3 layout")
+
+    var form3 = document.createElement("select");
+    //form3.setAttribute("type", "date")
+    /*form3.setAttribute("id", "SelectCuenta");
+    
+    var opgr = document.createElement("optgroup");
+    opgr.setAttribute("label","GradoEducacion");
+    var op1 = document.createElement("option");
+    op1.setAttribute("value","Licenciatura");
+    var op2 = document.createElement("option");
+    op2.setAttribute("value","maestria");
+    
+    opgr.append(op1);
+    form3.append(opgr);
+    /*<select name="GradoEducacion" id="SelectCuenta" required>
+                              <optgroup label="GradoEducacion">
+                                <option value="Licenciatura">Licenciatura</option>
+                                <option value="Maestria">Maestria</option>
+                                <option value="Doctorado">Doctorado</option>
+                            </select>
+                            <p class="crear-cv-small-text-body12">Grado de educación</p>*/
+    var div4 = document.createElement("div");
+    div4.setAttribute("class", "crear-cv-block3 layout")
+
+    var form4 = document.createElement("input");
+    form4.setAttribute("type", "date")
+    form4.setAttribute("id", "crear-cv-small-text-body11");
+    form4.setAttribute("id", "fechaI");
+    form4.setAttribute("name", "fechaInicial")
+    form4.setAttribute("value", "2022-06-17");
+    form4.setAttribute("class", "crear-cv-small-text-body1 layout");
+    form4.setAttribute("min", "2018-01-01");
+    form4.setAttribute("max", "2022-12-31");
+    //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+    div.append(form)
+    div2.append(form2)
+    div3.append(form3)
+    div4.append(form4)
+
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div2);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div3);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div4);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+
+  }
+</script>
 
 </html>
