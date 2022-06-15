@@ -1,3 +1,35 @@
+<?php
+
+@include 'config.php'; // Base de datos
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
+$query = mysqli_query($conn, $vacante1);
+
+$row = mysqli_fetch_array($query);
+
+if (isset($_POST['Aplicate2'])){ 
+  $_SESSION['Vacante'] = $row['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -34,24 +66,24 @@
               class="vacanteprof-cover3 layout"
             ></div>
           </div>
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/678e72032f50f740cea7592ddcaa778f.png)" class="vacanteprof-cover4 layout"></div>
+          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/678e72032f50f740cea7592ddcaa778f.png)" class="vacanteprof-cover4 layout"></div>
         </div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/4e1c7cb7169f2b7a32325aef0270c983.png)" class="vacanteprof-cover2 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/4e1c7cb7169f2b7a32325aef0270c983.png)" class="vacanteprof-cover2 layout"></div>
       </div>
       <div class="vacanteprof-box1 layout"></div>
       <div class="vacanteprof-box2 layout"></div>
       <div class="vacanteprof-box2 layout1"></div>
       <div class="vacanteprof-box1 layout1"></div>
-      <div style="--src:url(http://localhost/PaginaWebFinal/assets/384780d208ae093e3bb89e177cc7f0de.png)" class="vacanteprof-cover-block5 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/5156aa8c21068412c3c15b190e4dcb4b.png)" class="vacanteprof-icon1 layout"></div>
+      <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/384780d208ae093e3bb89e177cc7f0de.png)" class="vacanteprof-cover-block5 layout">
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/5156aa8c21068412c3c15b190e4dcb4b.png)" class="vacanteprof-icon1 layout"></div>
       </div>
       <div class="vacanteprof-box4 layout"></div>
       <div class="vacanteprof-box6 layout"></div>
       <div class="vacanteprof-block1 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/6f4eb457f371f6e724291ef5c6d159f6.png)" class="vacanteprof-icon3 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/6f4eb457f371f6e724291ef5c6d159f6.png)" class="vacanteprof-icon3 layout"></div>
       </div>
       <div class="vacanteprof-block2 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/11d763097199e4a0c7cadb7d9ae8faae.png)" class="vacanteprof-image2 layout"></div>
+        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/11d763097199e4a0c7cadb7d9ae8faae.png)" class="vacanteprof-image2 layout"></div>
       </div>
       <px-posize
         x="1354fr 46px 328fr"
@@ -69,14 +101,14 @@
         xxs-y="19px 46px 60px"
         tn-x="1354fr 46px 328fr"
         tn-y="17px 46px 5px"
-        ><div class="vacanteprof-icon4" style="--src:url(http://localhost/PaginaWebFinal/assets/4684f649983ce0d90eec6003687c925f.png)"></div
+        ><div class="vacanteprof-icon4" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/4684f649983ce0d90eec6003687c925f.png)"></div
       ></px-posize>
       <h5 class="vacanteprof-highlights layout">Definir Zona Horaria</h5>
       <div class="vacanteprof-content-box1 layout">
         <div class="vacanteprof-text-body layout">GMT+06:00 Astana, UK</div>
         <div class="vacanteprof-content-box1-spacer"></div>
         <div class="vacanteprof-content-box1-item">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/c3fbb2d59f348c9218785447202440b2.png)" class="vacanteprof-image3 layout"></div>
+          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/c3fbb2d59f348c9218785447202440b2.png)" class="vacanteprof-image3 layout"></div>
         </div>
       </div>
       <h4 class="vacanteprof-highlights31 layout">Ayer, 24 de abril</h4>
@@ -102,7 +134,7 @@
                                 <div class="vacanteprof-text-body2 layout1">#trabajo</div>
                                 <div class="vacanteprof-text-body2 layout2">#intern</div>
                                 <div
-                                  style="--src:url(http://localhost/PaginaWebFinal/assets/69aa0d5d62beacb533fb881fe8b822fd.png)"
+                                  style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/69aa0d5d62beacb533fb881fe8b822fd.png)"
                                   class="vacanteprof-block3 layout"
                                 ></div>
                                 <div class="vacanteprof-small-text-body layout">Publicado hoy 11:32pm</div>
@@ -152,7 +184,7 @@
         tn-y="5px 30px 11px"
         ><div
           class="vacanteprof-icon5"
-          style="--src:url(http://localhost/PaginaWebFinal/assets/d02f123ea73b601eb7af695bce2e73d8.png)"
+          style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/d02f123ea73b601eb7af695bce2e73d8.png)"
         ></div></px-posize
       ><px-posize
         x="624fr 11px 1093fr"
@@ -170,7 +202,7 @@
         xxs-y="53px 11px 38px"
         tn-x="624fr 11px 1093fr"
         tn-y="5px 11px 18px"
-        ><div class="vacanteprof-icon6" style="--src:url(http://localhost/PaginaWebFinal/assets/42b4aa43838279b3afeced22f2de7170.png)"></div
+        ><div class="vacanteprof-icon6" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/42b4aa43838279b3afeced22f2de7170.png)"></div
       ></px-posize>
       <div class="vacanteprof-small-text-body1-box layout">
         <pre class="vacanteprof-small-text-body1">Publicado hoy 5:20 pm </pre>
@@ -197,35 +229,30 @@
           xxs-y="9px 12px 8px"
           tn-x="42fr 50px 58fr"
           tn-y="8px 12px 7px"
-          ><div class="vacanteprof-image5" style="--src:url(http://localhost/PaginaWebFinal/assets/ff6283b985b5f3b319cb31ca1df27b04.png)"></div
+          ><div class="vacanteprof-image5" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/ff6283b985b5f3b319cb31ca1df27b04.png)"></div
         ></px-posize>
       </div>
       <div class="vacanteprof-group1 layout">
         <h5 class="vacanteprof-highlights4-box layout">
           <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">Descripción<br>
-</span><span class="vacanteprof-highlights4-span1">Oracle es la primera compañía de software que desarrolla e implementa software para empresas 100 por ciento activado por Internet a través de toda su línea de productos: base de datos, aplicaciones comerciales y herramientas de desarrollo de aplicaciones y soporte de decisiones.
+</span><span class="vacanteprof-highlights4-span1"><?php echo $row['descripcion']; ?>
 
-</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> Diseñar arquitecturas de red.<br>
+
+</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> <?php echo $row['obj_puesto']; ?><br>
 
 </span><span class="vacanteprof-highlights4-span4">Perfil Deseado:
 </span><span class="vacanteprof-highlights4-span5">
-Ing. en Tecnologías Computacionales,
-
-Mínimo 1 año de experiencia.
-
-Excelente presentación
-
-Sentido de urgencia, Orden, organización, proactividad, trabajo en equipo, disponibilidad de horario, actitud de servicio.
+<?php echo $row['perf_deseado']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span6">Conocimientos:
 </span><span class="vacanteprof-highlights4-span7">
-Infraestructura de redes
+<?php echo $row['conocimientos']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span8">Funciones:
 </span><span class="vacanteprof-highlights4-span9">
-Hacer diseños de red.</span></pre>
+<?php echo $row['funciones']; ?></span></pre>
         </h5>
       </div><br>
       <div class="vacanteprof-group layout3">
@@ -236,11 +263,11 @@ Hacer diseños de red.</span></pre>
               <div class="vacanteprof-group layout">
                 <h2 class="vacanteprof-medium-title1-box layout">
                   <pre class="vacanteprof-medium-title1">
-Empresa: Oracle
-Índice de referencia salarial: 8000-13000
-Ubicación: Guadalajara
-Nivel profesional: Especialista
-Campo Profesional: Arquitectura de redes</pre
+Empresa: <?php echo $row['empresa']; ?> 
+Índice de referencia salarial: <?php echo $row['sueldo']; ?> 
+Ubicación: <?php echo $row['ubicacion']; ?>
+Nivel profesional: <?php echo $row['nivel_prof']; ?>
+Campo Profesional: <?php echo $row['campo_prof']; ?> </pre
                   >
                   <br>
                 </h2>
@@ -249,14 +276,26 @@ Campo Profesional: Arquitectura de redes</pre
           </div>
         </div>
       </div>
-      <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div>
+      <form action="" method="post">
+      <!-- <div class="vacanteprof-cover-block layout"><a href = "UsuProf1.php" style="text-decoration: none;"><div class="vacanteprof-text-body1 layout1">Aplicar ahora</div></a></div> -->
+      <div class="vacanteprof-cover-block layout"><input type = "submit" name ="Aplicate2" value="Aplicar ahora" 
+      style=
+      "text-decoration: none; 
+      font: 14px/1.57 'Abel', Helvetica, Arial, serif; color: white;
+      position: relative;
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+      margin: 11px 20px 11px 15px; 
+      border: 0px;
+      background-color: #0e6dff;">
+      </div>
+      </form>
       <div class="vacanteprof-paragraph-body layout2">
-        Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te sumergirás
-        profundamente en cada capa de la experiencia, mejorando nuestros productos, infraestructuras y plataformas.
-        Utiliza tus conocimientos para cambiar la forma en que el mundo hace negocios.
+      <?php echo $row['intro']; ?>
       </div>
       <div class="vacanteprof-group layout4">
-        <h3 class="vacanteprof-subtitle layout">Software engineer intern - Oracle</h3>
+        <h3 class="vacanteprof-subtitle layout"><?php echo $row['nombre_vac']; ?></h3>
       </div>
       <div class="vacanteprof-text-body2 layout6">#software</div>
       <div class="vacanteprof-text-body2 layout7">#trabajo</div>
@@ -299,7 +338,7 @@ Campo Profesional: Arquitectura de redes</pre
         tn-y="20px 27px 5px"
         ><div
           class="vacanteprof-image14"
-          style="--src:url(http://localhost/PaginaWebFinal/assets/a51c9108a4402e7c5140055632e9aec0.png)"
+          style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/a51c9108a4402e7c5140055632e9aec0.png)"
         ></div></px-posize
       ><px-posize
         x="475fr 48px 1205fr"
@@ -317,7 +356,7 @@ Campo Profesional: Arquitectura de redes</pre
         xxs-y="37px 16px 54px"
         tn-x="475fr 48px 1205fr"
         tn-y="19px 16px 5px"
-        ><div class="vacanteprof-image16" style="--src:url(http://localhost/PaginaWebFinal/assets/b142754cb9a6537f63126106030836fe.png)"></div
+        ><div class="vacanteprof-image16" style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/b142754cb9a6537f63126106030836fe.png)"></div
       ></px-posize>
     </div>
     <script type="text/javascript">

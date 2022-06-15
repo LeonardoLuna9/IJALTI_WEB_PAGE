@@ -201,9 +201,7 @@
 
 .crear-cv-block3.layout {
   position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: 55px;
   margin: 15px 0px 0px 3px; }
 
 .crear-cv-small-text-body1 {
@@ -322,7 +320,7 @@
   height: -moz-min-content;
   height: min-content;
   margin: 13px 0px 0px 0px;
-  width: 100% }
+  width: 99.5% }
 
 .crear-cv-block4-spacer {
   flex: 0 1 51px; }
@@ -367,7 +365,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 100%;
+  width: 100.5%;
   margin-left: 0%; }
 
 .crear-cv-small-text-body2 {
@@ -562,7 +560,7 @@
 .crear-cv-block3.layout5 {
   position: relative;
   height: 36px;
-  width: 100%}
+  width: 100%;}
 
 .crear-cv-small-text-body12 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -721,7 +719,7 @@
 
 .crear-cv-block13.layout1 {
   position: absolute;
-  top: 151px;
+  top: 171px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -762,7 +760,7 @@
   text-align: center;
   position: relative;
   height: 50px;
-  margin: 1360px 20px 11px 15px;
+  margin: 1420px 20px 11px 15px;
   display: flex;
   background-color: #0e6dff;
   border: 0px;
