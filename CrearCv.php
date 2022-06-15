@@ -540,6 +540,32 @@ Cambios Paulina-->
       .appendChild(document.createElement("br"));
 
   }
+  function GFG_Fun3() {
+
+// Create a form dynamically
+var div = document.createElement("div");
+div.setAttribute("class", "crear-cv-block3 layout7")
+
+var form = document.createElement("input");
+form.setAttribute("method", "post");
+form.setAttribute("placeholder", "Habilidades")
+form.setAttribute("action", "submit.php");
+form.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+
+
+//<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+div.append(form)
+
+
+
+document.getElementsByClassName("crear-cv-block13 layout")[0]
+  .appendChild(div);
+document.getElementsByClassName("crear-cv-block13 layout")[0]
+  .appendChild(document.createElement("br"));
+
+
+}
 </script>
 
 </html>
