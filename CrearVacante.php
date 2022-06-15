@@ -11,22 +11,12 @@ if(!isset($_SESSION['CorreoElectronico'])){
 // Verificar en base de datos
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
 
-$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
   $error[] = 'No existe usuario';
   header('location:Cuenta.php');
 }
-
-/* Validación para ver si ya tiene CV 
-$select = " SELECT * FROM informacion_laboral WHERE correo = '$CorreoElectronico' AND empresa != NULL"; //Prueba para ver si me valida 
-
-$result = mysqli_query($conn, $select);
-
-if(mysqli_num_rows($result) > 0){
-
-  $error[] = 'CV ya existe para usuario, vuleve a publicar si desea actualizar los datos';
-}*/
 
 if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   // Datos personales
@@ -55,14 +45,6 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
 
   // Habilidades 
   $habilidades = mysqli_real_escape_string($conn, $_POST['Habilidades']);
-  /*
-  $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
-  $validaUsuario = mysqli_query($conn, $buscaUsuario);
-  if (mysqli_num_rows($validaUsuario) == 0) {
-    $error[] = 'No existe usuario';
-    header('location:Cuenta.php');
-  }
-  else { */
     
   // Update en usuario_prof
   $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
