@@ -437,7 +437,7 @@
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
   letter-spacing: 0px;
-  width: 110%;
+  width: 120%;
   height: 100%; }
 
 .crear-cv-icon3 {
@@ -780,6 +780,17 @@
   height: -moz-min-content;
   height: min-content;
   margin: 11px 28px 11px 32px; }
+
+.add{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+}
   
   #SelectCuenta{
     font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -787,3 +798,5 @@
     margin-left: 125%;
     margin-top: -2%;
   }
+
+
