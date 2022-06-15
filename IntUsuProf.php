@@ -4,7 +4,7 @@
 
 session_start();
 
-if(!isset($_SESSION['CorreoElectronico'])){
+/*if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
@@ -45,7 +45,7 @@ if (isset($_POST['Aplicate1'])){
   $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
   $referenceNumber = intval($referenceNumber);
   $_SESSION['Vacante'] = $referenceNumber ;
-  */
+  
   header('location:UsuProf2.php');
 }
 
@@ -57,7 +57,7 @@ if (isset($_POST['Aplicate2'])){
 if (isset($_POST['Aplicate3'])){ 
   $_SESSION['Vacante'] = $row3['ID_vacante'];
   header('location:UsuProf2.php');
-}
+}*/
 
 ?>
 
@@ -418,7 +418,7 @@ if (isset($_POST['Aplicate3'])){
                     <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
                   </a>-->
                   <form action="" method="post">
-                  <input type = "submit" name ="Aplicate3" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                  <input type = "submit" name ="Aplicate3" value="Aplicar ahora" class="int-usu-prof-text-body1 layout1">
                   </form>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
