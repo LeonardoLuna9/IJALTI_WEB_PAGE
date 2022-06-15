@@ -4,7 +4,7 @@
 
 session_start();
 
-if(!isset($_SESSION['CorreoElectronico'])){
+/*if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
@@ -46,7 +46,7 @@ if (isset($_POST['Aplicate1'])){
   $referenceNumber = intval($referenceNumber);
   $_SESSION['Vacante'] = $referenceNumber ;
   */
-  header('location:UsuProf2.php');
+ /* header('location:UsuProf2.php');
 }
 
 if (isset($_POST['Aplicate2'])){ 
@@ -57,7 +57,7 @@ if (isset($_POST['Aplicate2'])){
 if (isset($_POST['Aplicate3'])){ 
   $_SESSION['Vacante'] = $row3['ID_vacante'];
   header('location:UsuProf2.php');
-}
+}*/
 
 ?>
 
@@ -219,7 +219,27 @@ if (isset($_POST['Aplicate3'])){
                 </div>
               </div>
               <div class="int-usu-prof-flex8-spacer1"></div>
-              <h5 class="int-usu-prof-highlights layout">Definir Zona Horaria</h5>
+              <<form action = "" method = "get">
+        <input type = "text" name = "busqueda"> <br>
+        <input type = "submit" name = "enviar" value = "Buscar">
+    </form> 
+    <?php
+    if(isset($_GET['enviar'])) 
+    {
+        $busqueda = $_GET['busqueda'];
+    
+        $consulta = $conn->query("SELECT nombre,apellidoP,apellidoM,usuarios.correo 
+        FROM usuarios
+            INNER JOIN educacion 
+        ON usuarios.correo = educacion.correo
+        WHERE educacion.carrera LIKE '%$busqueda%'");
+    
+        while ($row = $consulta->fetch_array()) 
+        {
+            echo $row['correo'].'&nbsp'.'&nbsp'.'&nbsp'.'&nbsp'.'&nbsp'.$row['nombre'].'&nbsp'.$row['apellidoP'].'&nbsp'.$row['apellidoM'].'<br>';
+        }
+    }
+    ?>
               <div class="int-usu-prof-flex8-spacer2"></div>
               <div class="int-usu-prof-flex8-item2">
                 <div class="int-usu-prof-content-box layout">
