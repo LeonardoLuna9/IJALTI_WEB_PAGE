@@ -2,7 +2,7 @@
 
 @include 'config.php'; // Base de datos
 
-session_start();
+/*session_start();
 
 if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
@@ -257,12 +257,8 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                   <div class="crear-cv-block7-item1">
                   </div>
                 </div>
-                <p>
-                  Click on the button to create
-                  a form dynamically
-                </p>
-                <button class="Add" onClick="GFG_Fun()">
-                  click here
+                <button class="add" onClick="GFG_Fun()">
+                  +
                 </button>
                 <p id="GFG_DOWN"></p>
                 <script>
