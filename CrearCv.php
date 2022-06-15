@@ -4,7 +4,7 @@
 
 session_start();
 
-if(!isset($_SESSION['CorreoElectronico'])){
+/*if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 

@@ -139,14 +139,14 @@ if (isset($_POST['submit'])){
                   </div>
                 </div>
                 <div class="usu-prof3-flex7-spacer"></div>
-                <div class="usu-prof3-flex7-item2"><div class="usu-prof3-box2 layout"></div></div>
+                <!--<div class="usu-prof3-flex7-item2"><div class="usu-prof3-box2 layout"></div></div>-->
                 <div class="usu-prof3-flex7-spacer"></div>
                 <div class="usu-prof3-flex7-item">
                   <div
                     style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block3 layout"
                   >
-                    <h5 class="usu-prof3-highlights1 layout1">3</h5>
+                    <!--<h5 class="usu-prof3-highlights1 layout1">3</h5>
                   </div>
                 </div>
                 <div class="usu-prof3-flex7-spacer"></div>
@@ -157,7 +157,7 @@ if (isset($_POST['submit'])){
                     style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block3 layout"
                   >
-                    <h5 class="usu-prof3-highlights1 layout2">4</h5>
+                    <h5 class="usu-prof3-highlights1 layout2">4</h5>-->
                   </div>
                 </div>
               </div>
@@ -182,7 +182,7 @@ if (isset($_POST['submit'])){
               </h4>
               <!-- <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof3-block1 layout"><h4 class="usu-prof3-highlights3 layout">Aplicar</h4></div></a> -->
               <form action="" method="post">
-              <input type = "submit" name ="submit" value="Aplicar" class="usu-prof3-block1 layout">
+              <input type = "submit" name ="submit" value="Aplicar" class="usu-prof3-block1 layout usu-prof3-highlights3 layout">
               </form>
             </div>
           </div>
