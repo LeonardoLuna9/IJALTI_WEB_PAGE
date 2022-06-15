@@ -1001,3 +1001,20 @@
   right: 0px;
   width: 27.43%;
   margin: 17px 72.57% 13px 0%; }
+
+.crear-cv-small-text-body1 {
+    font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
+    color: black;
+    letter-spacing: 0px;
+}
+.crear-cv-small-text-body1.layout {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin: 11px 16px
+px
+ 10px;
+    border: 0px;
+}
+
