@@ -266,7 +266,12 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                   <div class="crear-cv-block9-item">
                     <div class="crear-cv-flex6 layout">
                       <h5 class="crear-cv-highlights layout">Educación</h5>
+                      
                       <div class="crear-cv-block6 layout1">
+                      <button class="Add" onClick="GFG_Fun2()">
+                  click here
+                </button>
+                <p id="GFG_DOWN"></p>
                         <div class="crear-cv-block3 layout4">
                           <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
                           <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Escuela" name="Escuela" pattern="{30}" maxlength="30" required>
@@ -334,7 +339,9 @@ Cambios Paulina-->
                   <!--<div class="crear-cv-small-text-body layout6">Fecha de graduacion</div>-->
                 </div>
                 <h5 class="crear-cv-highlights layout2">Habilidades</h5>
+                
                 <div class="crear-cv-block13 layout">
+                  
                   <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
                   <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
                 </div>
@@ -424,6 +431,7 @@ Cambios Paulina-->
     form4.setAttribute("class", "crear-cv-small-text-body1 layout");
     form4.setAttribute("min", "2018-01-01");
     form4.setAttribute("max", "2022-12-31");
+
     //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
     div.append(form)
 
@@ -447,6 +455,90 @@ Cambios Paulina-->
     document.getElementsByClassName("crear-cv-block7-item")[0]
       .appendChild(div4);
     document.getElementsByClassName("crear-cv-block7-item")[0]
+      .appendChild(document.createElement("br"));
+
+  }
+  function GFG_Fun2() {
+
+    // Create a form dynamically
+    var div = document.createElement("div");
+    div.setAttribute("class", "crear-cv-block3 layout2")
+
+    var form = document.createElement("input");
+    form.setAttribute("method", "post");
+    form.setAttribute("placeholder", "Escuela")
+    form.setAttribute("action", "submit.php");
+    form.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "crear-cv-block3 layout2")
+
+    var form2 = document.createElement("input");
+    form2.setAttribute("method", "post");
+    form2.setAttribute("placeholder", "Carrera")
+    form2.setAttribute("action", "submit.php");
+    form2.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+
+    var div3 = document.createElement("div");
+    div3.setAttribute("class", "crear-cv-block3 layout2")
+
+    var form3 = document.createElement("select");
+    //form3.setAttribute("type", "date")
+    /*form3.setAttribute("id", "SelectCuenta");
+    
+    var opgr = document.createElement("optgroup");
+    opgr.setAttribute("label","GradoEducacion");
+    var op1 = document.createElement("option");
+    op1.setAttribute("value","Licenciatura");
+    var op2 = document.createElement("option");
+    op2.setAttribute("value","maestria");
+    
+    opgr.append(op1);
+    form3.append(opgr);
+    /*<select name="GradoEducacion" id="SelectCuenta" required>
+                              <optgroup label="GradoEducacion">
+                                <option value="Licenciatura">Licenciatura</option>
+                                <option value="Maestria">Maestria</option>
+                                <option value="Doctorado">Doctorado</option>
+                            </select>
+                            <p class="crear-cv-small-text-body12">Grado de educación</p>*/
+    var div4 = document.createElement("div");
+    div4.setAttribute("class", "crear-cv-block3 layout2")
+
+    var form4 = document.createElement("input");
+    form4.setAttribute("type", "date")
+    form4.setAttribute("id", "crear-cv-small-text-body11");
+    form4.setAttribute("id", "fechaI");
+    form4.setAttribute("name", "fechaInicial")
+    form4.setAttribute("value", "2022-06-17");
+    form4.setAttribute("class", "crear-cv-small-text-body1 layout");
+    form4.setAttribute("min", "2018-01-01");
+    form4.setAttribute("max", "2022-12-31");
+    //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+    div.append(form)
+    div2.append(form2)
+    div3.append(form3)
+    div4.append(form4)
+
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div2);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div3);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("crear-cv-group layout2")[0]
+      .appendChild(div4);
+    document.getElementsByClassName("crear-cv-group layout2")[0]
       .appendChild(document.createElement("br"));
 
   }
