@@ -17,17 +17,17 @@ if (isset($_POST['submit'])){
 
     // Usuario Profesional
     $selectProfesional = " SELECT * FROM usuario_prof WHERE correo = '$correo'";
-    $resultProfesional = mysqli_query($conn, $select);
-    $rowProfesional = mysqli_num_rows($resultProfesional) ;
+    $resultProfesional = mysqli_query($conn, $selectProfesional);
+    $rowProfesional = mysqli_num_rows($resultProfesional);
 
     // Reclutador
     $selectReclutador = " SELECT * FROM reclutador WHERE correo = '$correo'";
-    $resultReclutador = mysqli_query($conn, $select);
-    $rowReclutador = mysqli_num_rows($resultReclutador) ;
-    if($rowProfesional == 1) { // Vamos a Usuario Profesional
+    $resultReclutador = mysqli_query($conn, $selectReclutador);
+    $rowReclutador = mysqli_num_rows($resultReclutador);
+    if($rowProfesional == 1 && $rowReclutador == 0) { // Vamos a Usuario Profesional
       header('location:IntUsuProf.php');
     }
-    elseif($rowReclutador == 1){ // Vamos a Reclutador
+    if($rowReclutador == 1 && $rowProfesional == 0){ // Vamos a Reclutador
       header('location:IntEmpPost.php');
     }
     else {
