@@ -1,3 +1,6 @@
+<?php
+@include 'config.php';
+?>
 <!DOCTYPE html>
 <html>
 <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -118,10 +121,31 @@
             
             <div class= "crear-cv-block3 layout">
             <form action="" method="get">
-              <input class="crear-cv-small-text-body1 layout" type="text" name="busqueda" placeholder="Buscar"> <br>
-              <input type="submit" name="enviar" value="Buscar" >
+              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador -->
+              <input class="submit2" type="submit" name="enviar" value="Buscar" >
             </form>
+            <?php
+    if(isset($_GET['enviar'])) 
+    {
+        $busqueda = $_GET['busqueda'];
+    
+        $consulta = $conn->query("SELECT nombre,apellidoP,apellidoM,usuarios.correo 
+        FROM usuarios
+            INNER JOIN educacion 
+        ON usuarios.correo = educacion.correo
+        WHERE educacion.carrera LIKE '%$busqueda%'");
+    
+        while ($row = $consulta->fetch_array()) 
+        {
+            echo $row['correo'].'&nbsp'.'&nbsp'.'&nbsp'.'&nbsp'.'&nbsp'.$row['nombre'].'&nbsp'.$row['apellidoP'].'&nbsp'.$row['apellidoM'].'<br>';
+        }
+    }
+    ?>
             </div>
+            <div
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
+                    class="int-emp-post-image8 layout"
+                  ></div>
         
           </div>
           <div class="int-emp-post-cover-block8 layout">
@@ -219,7 +243,7 @@ be ordered in any color combination. As it made of a moldable material (polyuret
                   <div class="int-emp-post-flex17-spacer2"></div>
                   <div class="int-emp-post-flex17-item">
                     <div class="int-emp-post-cover-block2 layout1">
-                      <div class="int-emp-post-text-body1 layout6">Edit</div>
+                      <div class="int-emp-post-text-body1 layout6">Editar</div>
                     </div>
                   </div>
                   <div class="int-emp-post-flex17-spacer3"></div>

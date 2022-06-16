@@ -338,7 +338,15 @@
   height: 23px;
   width: 21px;
   min-width: 21px;
-  margin: 11px 13px 11px 12px; }
+  margin: 11px 13px 11px 12px;
+  left: -32%;
+  top: -7%; }
+
+.submit2{
+  background-color: #0e6dff;
+  color: #fff;
+  border-color: #0e6dff;
+}
 
 .int-emp-post-flex7-spacer2 {
   flex: 0 1 10px; }
@@ -717,7 +725,9 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content; 
+  left: -10%;
+}
 
 .int-emp-post-text-body1.layout1 {
   position: relative;
