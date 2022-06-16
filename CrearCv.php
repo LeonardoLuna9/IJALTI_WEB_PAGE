@@ -190,6 +190,10 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <hr class="cuenta-line1 layout" />
                     </div>  CURP -->
                 </div>
+                <h5 class="crear-cv-highlights layout2">Situación Laboral</h5>
+                <div class="crear-cv-block13 layout">
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empleado, desempleado, estudiante" name="SitLaboral" pattern="{20}" maxlength = "20" required>
+                      </div>
                 <div class="crear-cv-block4 layout">
                   <div class="crear-cv-block4-item">
                     <div class="crear-cv-flex4 layout">
