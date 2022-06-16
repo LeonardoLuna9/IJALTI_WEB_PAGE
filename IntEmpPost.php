@@ -152,7 +152,7 @@
             <div class="int-emp-post-flex9 layout">
               <div class="int-emp-post-flex9-item">
                 <div style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)" class="int-emp-post-cover-block1 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/7fdfc216ff08749a1ea825ebbae53140.png)" class="int-emp-post-image7 layout"></div>
+                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-image7 layout"></div>
                 </div>
               </div>
               <div class="int-emp-post-flex9-spacer"></div>
