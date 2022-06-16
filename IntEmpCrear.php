@@ -8,7 +8,7 @@ if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
-$correoValida=$_SESSION['CorreoElectronico'];
+$correoValida = $_SESSION['CorreoElectronico'];
 
 $selectReclutador = " SELECT * FROM reclutador WHERE correo = '$correoValida'";
 
