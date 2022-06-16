@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     /*if ($contraseña != $RepContraseña) {
       $error[] = "Contraseña no coincide";
     } else {*/
-      $insert = "INSERT INTO empresarial(CIF_NIF, correoEmpresa, descripcion, telefonoEmpr, nombre_empresa) VALUES ('$cif_nif', '$correoEmpr','$descripcion' ,'$telefonoEmpr', '$$nombreEmpresa')";
+      $insert = "INSERT INTO empresarial(CIF_NIF, correoEmpresa, descripcion, telefonoEmpr, nombre_empresa) VALUES ('$cif_nif', '$correoEmpr','$descripcion' ,'$telefonoEmpr', '$nombreEmpresa')";
       mysqli_query($conn, $insert);
 
       $insert2 = "INSERT INTO reclutador(correo, CIF_NIF) VALUES ('$reclutador', '$cif_nif')";
