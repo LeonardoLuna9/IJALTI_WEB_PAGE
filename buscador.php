@@ -13,6 +13,12 @@
 
     <br><br>
 
+    <!--
+    $correoUsuario = "HolaSoyCorreo1@gmail.com";
+    <form action='' method='get'>
+    <a href='Desktop.php?CorreoAplicantePerfil=' >El que masca iguana</a>  <br>
+    </form> <br> -->
+
     <?php
     if(isset($_GET['enviar'])) 
     {

@@ -1,3 +1,33 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+$selectReclutador = " SELECT * FROM reclutador WHERE correo = '$correoValida'";
+
+// Verificar en base de datos
+$buscaReclutador = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaReclutador);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+if (isset($_POST['submit'])){ 
+  header('location:CrearVacante.php');
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -93,7 +123,11 @@
                   class="int-emp-crear-image6 layout"
                 ></div>
               </div>
-              <div class="int-emp-crear-flex7-spacer1"></div>
+              <div class="int-emp-crear-flex7-spacer1">
+              <form action="" method="post">
+                  <input type = "submit" name ="submit" value="Crear Vacante" class="int-emp-crear-text-body5 layout">
+              </form>
+              </div>
               <div class="int-emp-crear-flex7-item1">
                 <div
                   style="--src:url(http://localhost/PaginaWebFinal/assets/b0461e330ea3f041fd76eac055c61397.png)"

@@ -127,7 +127,11 @@ if (isset($_POST['submit'])){
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
-                <div class="usu-prof2-flex7-item1"><div class="usu-prof2-box1 layout"></div></div>
+                <!--<div class="usu-prof2-flex7-item1"><div class="usu-prof2-box1 layout"></div></div>
+                <div class="usu-prof2-cover-block8 layout"><div class="usu-prof2-box4 layout"></div></div>-->
+                <div class="usu-prof2-flex7-item3">
+                  <div class="usu-prof2-cover-block8 layout"><div class="usu-prof2-box4 layout"></div></div>
+                </div>
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
@@ -138,14 +142,14 @@ if (isset($_POST['submit'])){
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
-                <div class="usu-prof2-flex7-item2"><div class="usu-prof2-box2 layout"></div></div>
+                <!--<div class="usu-prof2-flex7-item2"><div class="usu-prof2-box2 layout"></div></div>-->
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
                     style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof2-cover-block5 layout"
                   >
-                    <h5 class="usu-prof2-highlights1 layout1">3</h5>
+                    <!--<h5 class="usu-prof2-highlights1 layout1">3</h5>
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
@@ -158,7 +162,7 @@ if (isset($_POST['submit'])){
                     style="--src:url(http://localhost/PaginaWebFinal/assets/2c1f110e2a334862edcc342ddd980d4b.png)"
                     class="usu-prof2-cover-block4 layout"
                   >
-                    <h5 class="usu-prof2-highlights2 layout">4</h5>
+                    <h5 class="usu-prof2-highlights2 layout">4</h5>-->
                   </div>
                 </div>
               </div>
@@ -166,19 +170,25 @@ if (isset($_POST['submit'])){
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <!-- <input class="usu-prof2-highlights5" name="presentacion" rows="10" cols="50" placeholder = "Máximo 100 palabras "> </textarea> -->
-                <input class="usu-prof2-highlights5" type = "text" placeholder="Máximo 100 palabras" name="presentacion" pattern="{100}" maxlength="100" required>               
-                
+                <form action="" method="post">
+                <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="45" placeholder = "Máximo 100 palabras "> </textarea>
+                <!--<input class="usu-prof2-highlights5" type = "text" placeholder="Máximo 100 palabras" name="presentacion" pattern="{100}" maxlength="100" required>  -->             
+                </form>
               </div>
             </div>
           </div>
           <div class="usu-prof2-flex8 layout">
             <div class="usu-prof2-flex8-item">
-              <a href="UsuProf1.php" style="text-decoration: none;"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
+              <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
             </div>
             <div class="usu-prof2-flex8-spacer"></div>
             <div class="usu-prof2-flex8-item1">
-              <input type = "submit" name ="submit" value="Siguiente" class="usu-prof2-block1 layout">
+<!--
+              <a href="UsuProf3.php" style="text-decoration: none;"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
+-->
+              <form action="" method="post">
+              <input type = "submit" name ="submit" value="Siguiente" class="usu-prof2-block1 layout usu-prof2-highlights4 layout">
+              </form>
             </div>
           </div>
         </div>

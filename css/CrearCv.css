@@ -182,6 +182,20 @@
   height: min-content;
   margin: 0px 0px 68px; }
 
+.crear-cv-flex7 {
+    display: flex;
+    flex-direction: column; }
+
+.crear-cv-flex7.layout{
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 70%;
+}
+
 .crear-cv-highlights {
   font: 700 16px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
@@ -197,7 +211,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #bfbfbf;
-  border-radius: 8px 8px 8px 8px; }
+  border-radius: 8px 8px 8px 8px; }       
 
 .crear-cv-block3.layout {
   position: relative;
@@ -210,6 +224,14 @@
   letter-spacing: 0px; }
 
 .crear-cv-small-text-body1.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 11px 16px 10px;
+  border: 0px; }
+
+.crear-cv-small-text-body2.layout2 {
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -368,6 +390,22 @@
   width: 100.5%;
   margin-left: 0%; }
 
+.crear-cv-block3.layout7 {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 125%;
+  margin-left: 0%; }
+
+  .crear-cv-block3.layout79 {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 87%;
+    margin-left: 5%; }
+
 .crear-cv-small-text-body2 {
   display: flex;
   justify-content: flex-end;
@@ -437,7 +475,7 @@
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
   color: black;
   letter-spacing: 0px;
-  width: 100%;
+  width: 120%;
   height: 100%; }
 
 .crear-cv-icon3 {
@@ -706,7 +744,7 @@
   height: -moz-min-content;
   height: min-content;
   width: 87%;
-  margin: 10px 25.58% 60px 4.65%; }
+  margin: 10px 25.58% 29px 4.65%; }
 
 .crear-cv-block11.layout1 {
   position: absolute;
@@ -760,7 +798,7 @@
   text-align: center;
   position: relative;
   height: 50px;
-  margin: 1420px 20px 11px 15px;
+  margin: 1850px 20px 11px 15px;
   display: flex;
   background-color: #0e6dff;
   border: 0px;
@@ -780,6 +818,42 @@
   height: -moz-min-content;
   height: min-content;
   margin: 11px 28px 11px 32px; }
+
+.add{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+  margin-top: -1%;
+}
+
+.add2{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+  margin-top: 0%;
+}
+
+.add3{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+  margin-top: 2%;
+}
   
   #SelectCuenta{
     font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -787,3 +861,4 @@
     margin-left: 125%;
     margin-top: -2%;
   }
+
