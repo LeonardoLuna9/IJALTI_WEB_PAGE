@@ -7,102 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" type="text/css" href="css/cv.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts.css" />
 
 </head>
 
-<div id="header"></div>
-<div class="left"></div>
-<div class="stuff">
+<div>
   <br><br>
-  <h1>Resume</h1>
-  <h2> Datos personales 
-  <pre>
-    Fecha de Nacimiento: <?php echo $row['FechaNacimiento']; ?> 
-    RFC: <?php echo $row['RFC']; ?> 
-    Ciudad: <?php echo $row['Ciudad']; ?> 
-    Código Postal: <?php echo $row['CP']; ?>
-    Calle: <?php echo $row['Calle']; ?>
-    Número de Calle: <?php echo $row['NumCalle']; ?></pre
-                    >
-                    <br>
-  </h2>
-  <hr />
+  <h1 id="google_translate_element">CV</h1>
+  <h2 class="subtitulo"> Datos personales </h2>
+    <h4 class="texto">Fecha de Nacimiento: <?php echo $row['FechaNacimiento']; ?> </h4>
+    <h4>RFC: <?php echo $row['RFC']; ?> </h4>
+    <h4>Ciudad: <?php echo $row['Ciudad']; ?> </h4>
+    <h4>Código Postal: <?php echo $row['CP']; ?> </h4>
+    <h4>Calle: <?php echo $row['Calle']; ?></h4>
+    <h4>Número de Calle: <?php echo $row['NumCalle']; ?></h4>
+
   <br>
   <h2> Situación Laboral
-  <pre>
-    Situación Laboral: <?php echo $row['SitLaboral']; ?> 
-                    >
-                    <br>
+   <h4>Situación Laboral: <?php echo $row['SitLaboral']; ?> </h4>
   </h2>
-  <hr />
   <br>
   <h2> Experiencia Laboral
-  <pre>
-    Empresa: <?php echo $row['Empresa']; ?> 
-    Descripción: <?php echo $row['Descripcion']; ?> 
-    Fecha Inicial: <?php echo $row['FechaInicial']; ?> 
-    Fecha Final: <?php echo $row['FechaFinal']; ?>
-                    >
-                    <br>
+    <h4>Empresa: <?php echo $row['Empresa']; ?> </h4>
+    <h4>Descripción: <?php echo $row['Descripcion']; ?> </h4>
+    <h4>Fecha Inicial: <?php echo $row['FechaInicial']; ?> </h4>
+    <h4>Fecha Final: <?php echo $row['FechaFinal']; ?> </h4>
   </h2>
-  <hr />
   <br>
   <h2> Formación acádemica
-  <pre>
-    Escuela: <?php echo $row['Escuela']; ?> 
-    Carrera: <?php echo $row['Carrera']; ?> 
-    Grado de educación: <?php echo $row['GradoEducacion']; ?> 
-    Fecha de graduación: <?php echo $row['FechaGrad']; ?>
-                    >
-                    <br>
+  <h4>Escuela: <?php echo $row['Escuela']; ?> </h4>
+  <h4> Carrera: <?php echo $row['Carrera']; ?> </h4>
+  <h4>Grado de educación: <?php echo $row['GradoEducacion']; ?> </h4>
+  <h4>Fecha de graduación: <?php echo $row['FechaGrad']; ?></h4>
   </h2>
-  <hr />
   <br>
   <h2> Descripción
-  <pre>
-    Certificaciones: <?php echo $row['Certificaciones']; ?> 
-    Cursos: <?php echo $row['Cursos']; ?> 
-    Habilidades: <?php echo $row['Habilidades']; ?> 
-                    >
-                    <br>
+  <h4>Certificaciones: <?php echo $row['Certificaciones']; ?> </h4>
+  <h4>Cursos: <?php echo $row['Cursos']; ?> </h4>
+  <h4>Habilidades: <?php echo $row['Habilidades']; ?> </h4>
   </h2>
-  <hr />
   <br>
-  <!--<p class="head">Interests</p>
-  <ul>
-    <li>Drawing</li>
-    <li>Photography</li>
-    <li>Design</li>
-    <li>Programming</li>
-    <li>Computer Science</li>
-  </ul>
-  <p class="head">Skills</p>
-  <ul>
-    <li>Web Design with HTML & CSS</li>
-  </ul>
-  <p class="head">Education</p>
-  <ul>
-    <a href="http://www.wiltonhighschool.org/pages/Wilton_High_School">
-      <li>Wilton High School</li>
-    </a>
-    Link
-    <a href="https://www.silvermineart.org/">
-      <li>Silvermine School of Arts</li>
-    </a>
-    <li>Codeacademy</li>
-  </ul>
-  <p class="head">Experience</p>
-  <ul>
-    <li>Student Technology Intern for Wilton School District</li>
-    <li>Babysitter</li>
-  </ul>
-  <p class="head">Extracurriculars</p>
-  <ul>
-    <li>Recycling Club</li>
-    <li>Gardening Club</li>
-    <li>Book Club</li>
-  </ul>
 </div>
-<div class="right"></div>
-<div id="footer">
-  <h2 id="name">Emily</h2></div>-->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</html>

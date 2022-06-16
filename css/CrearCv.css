@@ -202,7 +202,11 @@
 .crear-cv-block3.layout {
   position: relative;
   height: 55px;
-  margin: 15px 0px 0px 3px; }
+  margin: 15px 0px 0px 3px;
+  right: -20%;
+  border: 0px;
+  top:-14%;
+  width: 100%; }
 
 .crear-cv-small-text-body1 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
