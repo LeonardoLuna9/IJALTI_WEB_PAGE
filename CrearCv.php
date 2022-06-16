@@ -28,7 +28,7 @@ if(mysqli_num_rows($result) > 0){
   $error[] = 'CV ya existe para usuario, vuleve a publicar si desea actualizar los datos';
 }*/
 
-if (isset($_POST['submit'])){ // Hacemos POST a base de datos
+if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   // Datos personales
   $fechNac = strtotime($_POST['FechaNacimiento']);
   $fechNac = date('Y-m-d H:i:s', $fechNac);
@@ -49,9 +49,9 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   // Educación
   $escuela = mysqli_real_escape_string($conn, $_POST['Escuela']);
   $carrera = mysqli_real_escape_string($conn, $_POST['Carrera']);
-  $gradEd =mysqli_real_escape_string($conn,$_POST['GradoEducacion']);
-  $fechaGrad =strtotime($_POST['FechaGrad']); 
-  $fechaGrad =date('Y-m-d H:i:s', $fechaGrad);
+  $gradEd = mysqli_real_escape_string($conn, $_POST['GradoEducacion']);
+  $fechaGrad = strtotime($_POST['FechaGrad']);
+  $fechaGrad = date('Y-m-d H:i:s', $fechaGrad);
 
   // Habilidades 
   $habilidades = mysqli_real_escape_string($conn, $_POST['Habilidades']);
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
     header('location:Cuenta.php');
   }
   else { */
-    
+
   // Update en usuario_prof
   $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
   mysqli_query($conn, $insert1);
@@ -153,34 +153,31 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Fecha de nacimiento" name="FechaNacimiento" pattern="{18}" required>
                       <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>-->
                       <div class="crear-cv-block3 layout">
-                          <px-posize
-                            track-style='{"flexGrow":1}'
-                            x="16px 42fr 869fr"
-                            y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body11">Fecha de nacimiento
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                        <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
+                          <div class="crear-cv-small-text-body11">Fecha de nacimiento
+                            <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
                           </div>
                           <br>
-                        <hr class="cuenta-line1 layout" />
-                      <!-- </div>  div extra -->
+                          <hr class="cuenta-line1 layout" />
+                          <!-- </div>  div extra -->
                       </div>
                     </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Ciudad" name="Ciudad" pattern="{20}" maxlength = "20" required>
-                        <hr class="cuenta-line1 layout" />
-                      </div>
-                      <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Código Postal" name="CP" pattern="{9}" maxlength="9" required>
-                        <hr class="cuenta-line1 layout" />
-                      </div>
+                      <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Ciudad" name="Ciudad" pattern="{20}" maxlength="20" required>
+                      <hr class="cuenta-line1 layout" />
+                    </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Calle" name="Calle" pattern="{20}" maxlength="20" required>
-                        <hr class="cuenta-line1 layout" />
-                      </div>
+                      <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Código Postal" name="CP" pattern="{9}" maxlength="9" required>
+                      <hr class="cuenta-line1 layout" />
+                    </div>
                     <div class="crear-cv-block3 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Número de calle" name="NumCalle" pattern="{11}" maxlength="11" required>
-                        <hr class="cuenta-line1 layout" />
-                      </div>
+                      <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Calle" name="Calle" pattern="{20}" maxlength="20" required>
+                      <hr class="cuenta-line1 layout" />
+                    </div>
+                    <div class="crear-cv-block3 layout">
+                      <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Número de calle" name="NumCalle" pattern="{11}" maxlength="11" required>
+                      <hr class="cuenta-line1 layout" />
+                    </div>
                   </div>
                   <!-- <div class="crear-cv-block2-spacer"></div>
                   <div class="crear-cv-small-text-body layout">Nombre completo como aparece en la INE</div>
@@ -206,7 +203,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       </div>
                       <div class="crear-cv-block3 layout1">
                         <!-- <div class="crear-cv-small-text-body1 layout">Empresa</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empresa" name="Empresa" pattern="{30}" maxlength="30" required >
+                        <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Empresa" name="Empresa" pattern="{30}" maxlength="30" required>
                       </div>
                     </div>
                   </div>
@@ -217,7 +214,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <div class="crear-cv-block6 layout">
                       <div class="crear-cv-block3 layout">
                         <!-- <div class="crear-cv-small-text-body1 layout">Descripcion</div> -->
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Descripción" name="Descripcion" pattern="{100}" maxlength="100" required >
+                        <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Descripción" name="Descripcion" pattern="{100}" maxlength="100" required>
                       </div>
                       <div class="crear-cv-small-text-body2 layout">Limit: 100 words</div>
                     </div>
@@ -229,25 +226,19 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <div class="crear-cv-group layout">
                       <div class="crear-cv-block8 layout">
                         <div class="crear-cv-block3 layout3">
-                          <px-posize
-                            track-style='{"flexGrow":1}'
-                            x="16px 42fr 869fr"
-                            y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body11">Fecha Inicial
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
-                          </div>
-                        </px-posize>
+                          <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
+                            <div class="crear-cv-small-text-body11">Fecha Inicial
+                              <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                            </div>
+                          </px-posize>
                         </div>
                         <br>
                         <div class="crear-cv-block3 layout3">
-                          <px-posize
-                            track-style='{"flexGrow":1}'
-                            x="16px 42fr 869fr"
-                            y="11px minmax(0px, max-content) 10fr"
-                            ><div class="crear-cv-small-text-body11">Fecha Final
-                          <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
-                          </div>
-                        </px-posize>
+                          <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
+                            <div class="crear-cv-small-text-body11">Fecha Final
+                              <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
+                            </div>
+                          </px-posize>
                         </div>
                       </div>
                       <px-posize x="891fr 70px 6fr" y="3px 30px 3px" absolute="true"></px-posize>
@@ -268,12 +259,12 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                       <div class="crear-cv-block6 layout1">
                         <div class="crear-cv-block3 layout4">
                           <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
-                          <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Escuela" name="Escuela" pattern="{30}" maxlength="30" required>
+                          <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Escuela" name="Escuela" pattern="{30}" maxlength="30" required>
                         </div>
                         <div class="crear-cv-small-text-body3 layout">Limit: 100 words</div>
                       </div>
                       <div class="crear-cv-block3 layout1">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Carrera" name="Carrera" pattern="{30}" maxlength="30" required>
+                        <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Carrera" name="Carrera" pattern="{30}" maxlength="30" required>
                       </div>
                     </div>
                   </div>
@@ -285,21 +276,17 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                     <div class="crear-cv-group layout1">
                       <div class="crear-cv-block8 layout">
                         <div class="crear-cv-block3 layout5">
-<!--
+                          <!--
                           <px-posize track-style='{"flexGrow":1}' x="16px 110fr 801fr" y="11px minmax(0px, max-content) 10fr"> <input class="crear-cv-small-text-body12" type="text" name="GradoEducacion" pattern="{18}" required>
 Cambios Paulina-->
-                          <px-posize
-                            track-style='{"flexGrow":1}'
-                            x="16px 110fr 801fr"
-                            y="11px minmax(0px, max-content) 10fr"
-
-                            > <!--<input class="crear-cv-small-text-body12" type = "text" name="GradoEducacion" pattern="{18}" required>-->
+                          <px-posize track-style='{"flexGrow":1}' x="16px 110fr 801fr" y="11px minmax(0px, max-content) 10fr">
+                            <!--<input class="crear-cv-small-text-body12" type = "text" name="GradoEducacion" pattern="{18}" required>-->
 
                             ><select name="GradoEducacion" id="SelectCuenta" required>
                               <optgroup label="GradoEducacion">
-                              <option value="Licenciatura">Licenciatura</option>
-                              <option value="Maestria">Maestria</option>
-                              <option value="Doctorado">Doctorado</option>
+                                <option value="Licenciatura">Licenciatura</option>
+                                <option value="Maestria">Maestria</option>
+                                <option value="Doctorado">Doctorado</option>
                             </select>
                             <p class="crear-cv-small-text-body12">Grado de educación</p>
                             <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> -->
@@ -317,20 +304,18 @@ Cambios Paulina-->
                   <div class="crear-cv-block12-item">
                     <div class="crear-cv-group layout2">
                       <div class="crear-cv-block3 layout6">
-<!-- Cambios Paulina
+                        <!-- Cambios Paulina
                         <px-posize track-style='{"flexGrow":1}' x="16px 114fr 797fr" y="11px minmax(0px, max-content) 10fr">
                           <div class="crear-cv-small-text-body13"> Fecha de Graduación
                             <input type="date" class="calendario" name="FechaIncial" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
 -->
-                        <px-posize
-                          track-style='{"flexGrow":1}'
-                          x="16px 114fr 797fr"
-                          y="11px minmax(0px, max-content) 10fr"
-                          ><div class="crear-cv-small-text-body13"> Fecha de Graduación
-                          <input type="date" class="calendario" name="FechaGrad" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
-                          </div></px-posize>
+                        <px-posize track-style='{"flexGrow":1}' x="16px 114fr 797fr" y="11px minmax(0px, max-content) 10fr">
+                          <div class="crear-cv-small-text-body13"> Fecha de Graduación
+                            <input type="date" class="calendario" name="FechaGrad" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
+                          </div>
+                        </px-posize>
                       </div>
                       <px-posize x="891fr 30px 6fr" y="2px 30px 4px" absolute="true"></px-posize>
                     </div>
@@ -338,50 +323,54 @@ Cambios Paulina-->
                   <div class="crear-cv-block12-spacer"></div>
                   <!--<div class="crear-cv-small-text-body layout6">Fecha de graduacion</div>-->
                 </div>
-                <button class="add3" onClick="GFG_Fun()">
+                <button class="add3" onClick="GFG_Fun2()">
                   +
                 </button>
                 <p id="GFG_DOWN"></p>
-                <h5 class="crear-cv-highlights layout2">Descripción</h5>
-                <div class="crear-cv-block13 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Certificaciones" name="Ciudad" pattern="{20}" maxlength = "20" required>
-                      </div>
-                      <div class="crear-cv-block13 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Cursos" name="Ciudad" pattern="{20}" maxlength = "20" required>
-                      </div>
-                <div class="crear-cv-block13 layout">
-                  <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
-                  <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
+
+                <div class="divisionmamalona" id="55555">
+                  <h5 class="crear-cv-highlights layout2">Descripción</h5>
+                  <div class="crear-cv-block13 layout">
+                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Certificaciones" name="Ciudad" pattern="{20}" maxlength="20" required>
                   </div>
-                <button class="add2" onClick="GFG_Fun()">
+                  <div class="crear-cv-block13 layout">
+                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Cursos" name="Ciudad" pattern="{20}" maxlength="20" required>
+                  </div>
+                  <div class="crear-cv-block13 layout">
+                    <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
+                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
+                  </div>
+                </div>
+                <button class="add2" onClick="GFG_Fun3()">
                   +
                 </button>
                 <p id="GFG_DOWN"></p>
               </div>
               <div class="crear-cv-block11 layout1">
-             </div>
+              </div>
               <div class="crear-cv-block13 layout1">
-                <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr"
-                  > <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
-                  <input class="crear-cv-small-text-body14" type = "text" placeholder="RFC" name="RFC" pattern="{13}" maxlength="13" required></px-posize>
+                <px-posize track-style='{"flexGrow":1}' x="16px 47fr 867fr" y="11px minmax(0px, max-content) 10fr">
+                  <!-- <div class="crear-cv-small-text-body14">Apellido</div> -->
+                  <input class="crear-cv-small-text-body14" type="text" placeholder="RFC" name="RFC" pattern="{13}" maxlength="13" required>
+                </px-posize>
               </div>
             </div>
           </div>
           <div class="crear-cv-flex2-spacer"></div>
           <div class="crear-cv-flex2-item1">
             <form action="" method="post">
-            <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
-            <input type = "submit" name ="submit" value="Publicar" class="crear-cv-cover-block layout">
+              <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
+              <input type="submit" name="submit" value="Publicar" class="crear-cv-cover-block layout">
             </form>
             <!--<a href="IntUsuProf.php" style="text-decoration: none;"><div class="crear-cv-cover-block layout"><div class="crear-cv-text-body layout">Publicar</div></div></a>-->
           </div>
         </div>
-        </form>
-      </div>
-    </div> 
-    
-    
-    <!--
+      </form>
+    </div>
+  </div>
+
+
+  <!--
     <script type="text/javascript">
       AOS.init();
     </script> -->
@@ -470,6 +459,7 @@ Cambios Paulina-->
       .appendChild(document.createElement("br"));
 
   }
+
   function GFG_Fun2() {
 
     // Create a form dynamically
@@ -496,25 +486,44 @@ Cambios Paulina-->
     div3.setAttribute("class", "crear-cv-block3 layout")
 
     var form3 = document.createElement("select");
-    //form3.setAttribute("type", "date")
-    /*form3.setAttribute("id", "SelectCuenta");
+
+    var groups = document.createElement("optgroup")
+    groups.setAttribute("label","gradoEducacion");
     
-    var opgr = document.createElement("optgroup");
-    opgr.setAttribute("label","GradoEducacion");
-    var op1 = document.createElement("option");
-    op1.setAttribute("value","Licenciatura");
-    var op2 = document.createElement("option");
-    op2.setAttribute("value","maestria");
+
+    var opt1 = document.createElement("option");
+    var tex1 = document.createTextNode("licenciatura");
+
+    opt1.setAttribute("value","licenciatura");
+    opt1.appendChild(tex1)
+
+    var opt2 = document.createElement("option");
+    var tex2 = document.createTextNode("Maestria");
+
+    opt2.setAttribute("value","Maestria");
+    opt2.appendChild(tex2)
+
+    var opt3 = document.createElement("option");
+    var tex3 = document.createTextNode("Doctorado");
+
+    opt3.setAttribute("value","Doctorado");
+    opt3.appendChild(tex3)
     
-    opgr.append(op1);
-    form3.append(opgr);
+
+
+    form3.appendChild(groups);
+    groups.appendChild(opt1);
+    groups.appendChild(opt2);
+    groups.appendChild(opt3);
+
     /*<select name="GradoEducacion" id="SelectCuenta" required>
                               <optgroup label="GradoEducacion">
                                 <option value="Licenciatura">Licenciatura</option>
                                 <option value="Maestria">Maestria</option>
                                 <option value="Doctorado">Doctorado</option>
                             </select>
-                            <p class="crear-cv-small-text-body12">Grado de educación</p>*/
+
+*/
     var div4 = document.createElement("div");
     div4.setAttribute("class", "crear-cv-block3 layout")
 
@@ -530,6 +539,9 @@ Cambios Paulina-->
     //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
     div.append(form)
     div2.append(form2)
+    var grad=document.createTextNode("Grado de educacion")
+    grad.setAttribute("class","crear-cv-small-text-body13")
+    div3.appendChild(grad)
     div3.append(form3)
     div4.append(form4)
 
@@ -539,7 +551,6 @@ Cambios Paulina-->
       .appendChild(div);
     document.getElementsByClassName("crear-cv-group layout2")[0]
       .appendChild(document.createElement("br"));
-
     document.getElementsByClassName("crear-cv-group layout2")[0]
       .appendChild(div2);
     document.getElementsByClassName("crear-cv-group layout2")[0]
@@ -554,32 +565,62 @@ Cambios Paulina-->
       .appendChild(document.createElement("br"));
 
   }
+
   function GFG_Fun3() {
 
-// Create a form dynamically
-var div = document.createElement("div");
-div.setAttribute("class", "crear-cv-block3 layout7")
+    // Create a form dynamically
+    var div = document.createElement("div");
+    div.setAttribute("class", "crear-cv-block3 layout79")
 
-var form = document.createElement("input");
-form.setAttribute("method", "post");
-form.setAttribute("placeholder", "Habilidades")
-form.setAttribute("action", "submit.php");
-form.setAttribute("class", "crear-cv-small-text-body1 layout");
+    var form = document.createElement("input");
+    form.setAttribute("method", "post");
+    form.setAttribute("placeholder", "Certificaciones")
+    form.setAttribute("action", "submit.php");
+    form.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "crear-cv-block3 layout79")
+
+    var form2 = document.createElement("input");
+    form2.setAttribute("method", "post");
+    form2.setAttribute("placeholder", "Cursos")
+    form2.setAttribute("action", "submit.php");
+    form2.setAttribute("class", "crear-cv-small-text-body1 layout");
+
+    var div3 = document.createElement("div");
+    div3.setAttribute("class", "crear-cv-block3 layout79")
+
+    var form3 = document.createElement("input");
+    form3.setAttribute("method", "post");
+    form3.setAttribute("placeholder", "Habilidades")
+    form3.setAttribute("action", "submit.php");
+    form3.setAttribute("class", "crear-cv-small-text-body1 layout");
 
 
 
-//<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
-div.append(form)
+    //<input type="date" id="crear-cv-small-text-body11" id="fechaI" name="fechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+    div.append(form)
+    div2.append(form2)
+    div3.append(form3)
+
+
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(div);
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(div2);
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(document.createElement("br"));
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(div3);
+    document.getElementsByClassName("divisionmamalona")[0]
+      .appendChild(document.createElement("br"));
 
 
 
-document.getElementsByClassName("crear-cv-block13 layout")[0]
-  .appendChild(div);
-document.getElementsByClassName("crear-cv-block13 layout")[0]
-  .appendChild(document.createElement("br"));
 
-
-}
+  }
 </script>
 
 </html>

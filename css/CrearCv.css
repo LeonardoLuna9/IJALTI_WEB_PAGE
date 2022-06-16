@@ -384,6 +384,14 @@
   width: 125%;
   margin-left: 0%; }
 
+  .crear-cv-block3.layout79 {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 87%;
+    margin-left: 5%; }
+
 .crear-cv-small-text-body2 {
   display: flex;
   justify-content: flex-end;
