@@ -22,7 +22,9 @@ if(mysqli_num_rows($validaUsuario) == 0){
 if (isset($_POST['submit'])){
   $presentacion = mysqli_real_escape_string($conn, $_POST['presentacion']);
   $_SESSION['Presentacion'] = $presentacion;
-  // echo $_SESSION['Presentacion']; 
+
+  //echo $_SESSION['Presentacion']; 
+
   header('location:UsuProf3.php');
 }
 
