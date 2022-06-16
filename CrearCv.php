@@ -544,7 +544,7 @@ Cambios Paulina-->
     div.append(form)
     div2.append(form2)
     var grad=document.createTextNode("Grado de educacion")
-    grad.setAttribute("class","crear-cv-small-text-body13")
+    
     div3.appendChild(grad)
     div3.append(form3)
     div4.append(form4)
