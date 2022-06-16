@@ -1,0 +1,189 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+.crear-cv-block {
+    display: flex;
+    flex-direction: column;
+    background-color: white; }
+  
+  .crear-cv-block.layout {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0; }
+  
+  .crear-cv-flex {
+    display: flex;
+    flex-direction: column; }
+  
+  .crear-cv-flex.layout {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    width: 92.94%;
+    margin: 25px auto; }
+  
+  .crear-cv-flex1 {
+    display: flex; }
+  
+  .crear-cv-flex1.layout {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin: 4px 12px 0px; }
+  
+  .crear-cv-big-title {
+    font: 30px/1.2 "Abel", Helvetica, Arial, serif;
+    color: #383c40;
+    letter-spacing: 0px; }
+  
+  .crear-cv-big-title.layout {
+    position: relative;
+    flex: 0 0 auto;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin: 4px 0px 6px; }
+  
+  .crear-cv-flex1-spacer {
+    flex: 0 1 1195px; }
+  
+  .crear-cv-flex1-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 1 46px; }
+  
+  .crear-cv-block14 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 23px 23px 23px 23px; }
+  
+  .crear-cv-block14.layout {
+    position: relative;
+    overflow: hidden;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content; }
+  
+  .crear-cv-icon1 {
+    background: var(--src) center center/contain no-repeat; }
+  
+  .crear-cv-icon1.layout {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    min-width: 22px;
+    margin: 12px; }
+  
+  .crear-cv-flex1-spacer1 {
+    flex: 0 1 15px; }
+  
+  .crear-cv-block15 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 23px 23px 23px 23px; }
+  
+  .crear-cv-block15.layout {
+    position: relative;
+    overflow: hidden;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content; }
+  
+  .crear-cv-image4 {
+    background: var(--src) center center/contain no-repeat; }
+  
+  .crear-cv-image4.layout {
+    position: relative;
+    height: 22px;
+    width: 18px;
+    min-width: 18px;
+    margin: 12px 14px; }
+  
+  .crear-cv-flex1-spacer2 {
+    flex: 0 1 15px; }
+  
+  .crear-cv-icon2 {
+    background: var(--src) center center/contain no-repeat; }
+  
+  .crear-cv-icon2.layout {
+    position: relative;
+    height: 46px;
+    width: 46px;
+    min-width: 46px; }
+  
+  .crear-cv-flex7 {
+    display: flex;
+    flex-direction: column; }
+  
+  .crear-cv-flex7.layout{
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 70%;
+  }
+  
+  .crear-cv-highlights {
+    font: 700 16px/1.2 "Roboto", Helvetica, Arial, serif;
+    color: black;
+    letter-spacing: 0px; }
+  
+  .crear-cv-highlights.layout {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content; }
+  
+  .crear-cv-block3 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bfbfbf;
+    border-radius: 8px 8px 8px 8px; }
+  
+  .crear-cv-block3.layout {
+    position: relative;
+    font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
+    height: 55px;
+    margin: 15px 0px 0px 3px; }
+  
+  .crear-cv-small-text-body1 {
+    font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
+    color: black;
+    letter-spacing: 0px; }
+  
+  .crear-cv-small-text-body1.layout {
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin: 11px 16px 10px;
+    border: 0px; }
+  
+  .crear-cv-cover-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #0e6dff;
+    border-radius: 8px 8px 8px 8px; }
+  
+  .crear-cv-cover-block.layout {
+    font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 50px;
+    display: flex;
+    background-color: #0e6dff;
+    border: 0px;
+    width: 100px;
+    margin-top: 3%;
+    left: 90%;
+    padding: 13px 0px 10px 27px;
+    }
+  
+
+  

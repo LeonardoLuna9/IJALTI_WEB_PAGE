@@ -132,17 +132,17 @@ if (isset($_POST['submit'])) {
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" maxlength="10" required>
+        <input class="cuenta-highlights layout1" type="text" placeholder="Telefono" name="telefono" pattern="{10}" maxlength="10" required>
         <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" maxlength="30" required>
+        <input class="cuenta-highlights layout1" type="email" placeholder="Correo Electrónico" name="CorreoElectronico" maxlength="30" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre" name="Nombre" maxlength="20" required>
+        <input class="cuenta-highlights layout1" type="text" placeholder="Nombre" name="Nombre" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Paterno" name="ApellidoP" maxlength="20" required>
+        <input class="cuenta-highlights layout1" type="text" placeholder="Apellido Paterno" name="ApellidoP" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Materno" name="ApellidoM" maxlength="20" required>
+        <input class="cuenta-highlights layout1" type="text" placeholder="Apellido Materno" name="ApellidoM" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="18" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
+        <input class="cuenta-highlights layout1" type="password" id="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="18" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres" required>
         <hr class="cuenta-line layout" />
         <input class="cuenta-highlights layout1" type="password" id="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
         <hr class="cuenta-line1 layout1" />

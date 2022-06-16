@@ -1,57 +1,38 @@
 <?php
 
 @include 'config.php'; // Base de datos
+session_start();
+
+$reclutador = $_SESSION['Reclutador'];
 
 if (isset($_POST['submit'])) {
-  $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
-  $correo = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
-  $nombre = mysqli_real_escape_string($conn, $_POST['Nombre']);
-  $apellidoP = mysqli_real_escape_string($conn, $_POST['ApellidoP']);
-  $apellidoM = mysqli_real_escape_string($conn, $_POST['ApellidoM']);
-  $contraseña = md5($_POST['Contraseña']);
-  $RepContraseña = md5($_POST['RepetirContraseña']);
-  $SeleccionCuenta = $_POST['SeleccionaCuenta'];
+  $cif_nif = mysqli_real_escape_string($conn, $_POST['CIF']);
+  $nombreEmpresa = mysqli_real_escape_string($conn, $_POST['NombreEmpresa']); 
+  $correoEmpr = mysqli_real_escape_string($conn, $_POST['CorreoElectronicoEmpresarial']);
+  $descripcion = mysqli_real_escape_string($conn, $_POST['DescEmpresa']);
+  $telefonoEmpr = mysqli_real_escape_string($conn, $_POST['TelEmp']);
 
-  $select = " SELECT * FROM usuarios WHERE correo = '$correo' && contraseña = '$contraseña'";
+  $select = " SELECT * FROM empresarial WHERE CIF_NIF = '$cif_nif'";
 
   $result = mysqli_query($conn, $select);
 
+  // $insert = "INSERT INTO empresa(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+  //     mysqli_query($conn, $insert);
+
   if (mysqli_num_rows($result) > 0) {
 
-    $error[] = 'Usuario ya existe';
+    $error[] = 'Empresa ya existe';
   } else {
-    if ($contraseña != $RepContraseña) {
+    /*if ($contraseña != $RepContraseña) {
       $error[] = "Contraseña no coincide";
-    } else {
-      $insert = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+    } else {*/
+      $insert = "INSERT INTO empresarial(CIF_NIF, correoEmpresa, descripcion, telefonoEmpr, nombre_empresa) VALUES ('$cif_nif', '$correoEmpr','$descripcion' ,'$telefonoEmpr', '$nombreEmpresa')";
       mysqli_query($conn, $insert);
 
-      $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')"; // usuario_prof
+      $insert2 = "INSERT INTO reclutador(correo, CIF_NIF) VALUES ('$reclutador', '$cif_nif')";
       mysqli_query($conn, $insert2);
 
-      // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
-
-      // Otros usuarios:
-      // reclutador -- CIF NIF ???
-
-      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
-      mysqli_query($conn, $insert3);
-
-      // Usuario Profesinales
-      $insert4 = "INSERT INTO titulo(correo) VALUES ('$correo')"; // titulo
-      mysqli_query($conn, $insert4);
-
-      $insert5 = "INSERT INTO habilidades(correo) VALUES ('$correo')"; // habilidades
-      mysqli_query($conn, $insert5);
-
-      $insert6 = "INSERT INTO informacion_laboral(correo) VALUES ('$correo')"; // informacion_laboral
-      mysqli_query($conn, $insert6);
-
-      $insert7 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
-      mysqli_query($conn, $insert7);
-
       header('location:IniciarSesion.php');
-    }
   }
 };
 
@@ -144,7 +125,7 @@ if (isset($_POST['submit'])) {
         <hr class="cuenta-line1 layout" />
         <input class="cuenta-highlights layout1" type="text" placeholder="Telefono de la Empresa" name="TelEmp" required>
         <hr class="cuenta-line layout" />
-        <input type="submit" name="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
+        <input type="submit" name="submit" value="Registrar Empresa" class="cuenta-cover-block3 layout">
       </form>
     </div>
   </div>
