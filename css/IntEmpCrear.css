@@ -293,6 +293,18 @@
 .int-emp-crear-flex7-spacer {
   flex: 0 1 706px; }
 
+.int-emp-crear-text-body5.layout{
+    font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+    color: white;
+    position: relative;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin: 11px 20px 11px 15px; 
+    border: 0px;
+    background-color: #0e6dff;
+  }
+
 .int-emp-crear-flex7-item {
   display: flex;
   flex-direction: column;

@@ -109,7 +109,10 @@ if (isset($_POST['submit'])){
       </div>
       <div class="usu-prof2-block-spacer"></div>
       <div class="usu-prof2-block-item1">
+        
         <div class="usu-prof2-flex5 layout">
+        <form action="" method="post">
+
           <h1 class="usu-prof2-hero-title layout">Confirma la información</h1>
           <h4 class="usu-prof2-highlights3 layout">Revisa que la información proporcionada sea la correcta</h4>
           <div class="usu-prof2-cover-block9 layout">
@@ -189,6 +192,7 @@ if (isset($_POST['submit'])){
             </div>
           </div>
         </div>
+        </form>
       </div>
       <div class="usu-prof2-block-spacer1"></div>
       <div class="usu-prof2-block-item2">
