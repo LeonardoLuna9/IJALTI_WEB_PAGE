@@ -218,8 +218,8 @@
   height: 55px;
   margin: 15px 0px 0px 3px;
   right: -20%;
-  border: 0px;
-  top:-14%;
+  right: 0%;
+  top: 0%;
   width: 100%; }
 
 .crear-cv-small-text-body1 {
@@ -768,7 +768,7 @@
   bottom: 824px;
   left: 0px;
   right: 0px;
-  width: 87%;
+  width: 87.2%;
   margin: 0px 10% 0px 4.88%;
   padding-bottom: 1%; }
 
