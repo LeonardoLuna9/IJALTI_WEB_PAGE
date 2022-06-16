@@ -53,7 +53,6 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
     $error[] = 'No existe usuario';
     header('location:Cuenta.php');
   }
-
   else { */
 
  
