@@ -4,11 +4,11 @@
 
 session_start();
 
-/*if(!isset($_SESSION['CorreoElectronico'])){
+if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
-$correoValida=$_SESSION['CorreoElectronico'];
+$correoValida = $_SESSION['CorreoElectronico'];
 
 // Verificar en base de datos
 $buscaUsuario = " SELECT * FROM usuarios WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
@@ -40,7 +40,6 @@ $row3 = mysqli_fetch_array($query3);
 
 if (isset($_POST['Aplicate1'])){ 
   $_SESSION['Vacante'] = $row2['ID_vacante'];
-  /*
   $vacante = $row2['ID_vacante'];
   $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
   $referenceNumber = intval($referenceNumber);
@@ -57,7 +56,7 @@ if (isset($_POST['Aplicate2'])){
 if (isset($_POST['Aplicate3'])){ 
   $_SESSION['Vacante'] = $row3['ID_vacante'];
   header('location:UsuProf2.php');
-}*/
+}
 
 ?>
 

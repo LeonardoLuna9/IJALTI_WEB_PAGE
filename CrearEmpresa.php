@@ -1,6 +1,7 @@
 <?php
 
 @include 'config.php'; // Base de datos
+session_start();
 
 if (isset($_POST['submit'])) {
   $telefono = mysqli_real_escape_string($conn, $_POST['telefono']);
@@ -23,20 +24,23 @@ if (isset($_POST['submit'])) {
     if ($contraseña != $RepContraseña) {
       $error[] = "Contraseña no coincide";
     } else {
-      $insert = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
-      mysqli_query($conn, $insert);
+      $_SESSION['Reclutador'] = $correo;
+      $insert1 = "INSERT INTO usuarios(correo, nombre, apellidoP, apellidoM, contraseña) VALUES ('$correo', '$nombre','$apellidoP' ,'$apellidoM', '$contraseña')";
+      mysqli_query($conn, $insert1);
 
+      /*
       $insert2 = "INSERT INTO usuario_prof(correo) VALUES ('$correo')"; // usuario_prof
-      mysqli_query($conn, $insert2);
+      mysqli_query($conn, $insert2);*/
 
       // aplicantes - Restriccion porque solo sirve si ya hay una vacante a aplicar
-
       // Otros usuarios:
       // reclutador -- CIF NIF ???
 
-      $insert3 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
-      mysqli_query($conn, $insert3);
 
+      $insert2 = "INSERT INTO telefono(num_tel, correo) VALUES ($telefono, '$correo')"; // telefono
+      mysqli_query($conn, $insert2);
+
+      /*
       // Usuario Profesinales
       $insert4 = "INSERT INTO titulo(correo) VALUES ('$correo')"; // titulo
       mysqli_query($conn, $insert4);
@@ -49,8 +53,9 @@ if (isset($_POST['submit'])) {
 
       $insert7 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
       mysqli_query($conn, $insert7);
+      */
 
-      header('location:IniciarSesion.php');
+      header('location:CrearEmpresa2.php');
     }
   }
 };
@@ -134,17 +139,17 @@ if (isset($_POST['submit'])) {
           </div>
         </div>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Telefono" name="telefono" pattern="{10}" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Telefono" name="telefono" pattern="{10}" maxlength="10" required>
         <hr class="cuenta-line1 layout" />
-        <input class="cuenta-highlights layout1" type="email" placeholder="Correo Electrónico " name="CorreoElectronico" required>
+        <input class="cuenta-highlights layout1" type = "email" placeholder="Correo Electrónico" name="CorreoElectronico" maxlength="30" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Nombre" name="Nombre" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Nombre" name="Nombre" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Apellido Paterno" name="ApellidoP" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Paterno" name="ApellidoP" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="text" placeholder="Apellido Materno" name="ApellidoM" required>
+        <input class="cuenta-highlights layout1" type = "text" placeholder="Apellido Materno" name="ApellidoM" maxlength="20" required>
         <hr class="cuenta-line layout" />
-        <input class="cuenta-highlights layout1" type="password" id="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres" required>
+        <input class="cuenta-highlights layout1" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="18" title="Debe contener una mayúscula, una minúscula, un número y longitud de 8 caractéres"required>
         <hr class="cuenta-line layout" />
         <input class="cuenta-highlights layout1" type="password" id="confpsw" placeholder="Repetir Contraseña" name="RepetirContraseña" required>
         <hr class="cuenta-line1 layout1" />
@@ -156,7 +161,8 @@ if (isset($_POST['submit'])) {
           <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
           <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
         </div>
-        <a href="CrearEmpresa2.php" style="text-decoration: none;"><div class="cuenta-cover-block3 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a>
+        <input type="submit" name="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
+        <!-- <a href="CrearEmpresa2.php" style="text-decoration: none;"><div class="cuenta-cover-block3 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a> -->
         <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
       </form>
     </div>
