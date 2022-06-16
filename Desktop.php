@@ -1,3 +1,18 @@
+<?php
+  @include 'config.php'; // Base de datos
+  
+  $correoUsuario = $_GET['CorreoAplicantePerfil'];
+
+  $correoPerfil = "SELECT * FROM usuarios WHERE correo = '$correoUsuario'";
+  $query = mysqli_query($conn, $correoPerfil);  
+  $row = mysqli_fetch_array($query);
+
+  $correoPerfil1 = "SELECT * FROM usuarios WHERE correo = '$correoUsuario'";
+  $query1 = mysqli_query($conn, $correoPerfil);  
+  $row1 = mysqli_fetch_array($query);
+
+  echo "el correo es".$_GET['CorreoAplicantePerfil'];
+?>
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -88,7 +103,7 @@
           </div>
         </div>
         <div class="desktop-group layout">
-          <h1 class="desktop-hero-title layout">Luis Alberto Camarena</h1>
+          <h1 class="desktop-hero-title layout"><?php echo $row['nombre']; ?></h1>
           <h2 class="desktop-medium-title layout">Guadalajara, Jalisco</h2>
         </div>
         <h3 class="desktop-subtitle-box layout">
@@ -106,7 +121,7 @@
           <div class="desktop-block4 layout">
             <div style="--src:url(http://localhost/PaginaWebFinal/assets/ad0d54d9af49f0157288f12fbe8bc089.png)" class="desktop-image3 layout"></div>
           </div>
-          <h2 class="desktop-medium-title1 layout1">luis.alberto@gmail.com</h2>
+          <h2 class="desktop-medium-title1 layout1"><?php echo $row['correo']; ?></h2>
         </div>
         <div class="desktop-block1 layout">
           <div style="--src:url(http://localhost/PaginaWebFinal/assets/2c8fc37648bf8a9d06c2922f3af32218.png)" class="desktop-icon4 layout"></div>

@@ -118,7 +118,7 @@
             
             <div class= "crear-cv-block3 layout">
             <form action="" method="get">
-              <input class="submit" type="text" name="busqueda" placeholder="Buscar">
+              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador -->
               <input class="submit2" type="submit" name="enviar" value="Buscar" >
             </form>
             </div>
