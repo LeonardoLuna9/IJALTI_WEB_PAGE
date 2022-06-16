@@ -33,8 +33,21 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   $Conocimientos = mysqli_real_escape_string($conn, $_POST['Conocimientos']);
   $Funciones = mysqli_real_escape_string($conn, $_POST['Funciones']);
 
+
+  $consigueCIFNIF = "SELECT * from reclutador WHERE correo = '$CorreoElectronico'";
+  $query = mysqli_query($conn, $consigueCIFNIF);
+  $row = mysqli_fetch_array($query);
+
+  $CIFNIF = $row['CIF_NIF'];
+
+  $consigueEmpresa = "SELECT * from empresarial WHERE CIF_NIF = '$CIFNIF'";
+  $query1 = mysqli_query($conn, $consigueEmpresa);
+  $row1 = mysqli_fetch_array($query1);
+
+  $empresa = $row1['nombre_empresa'];
+
   //Falta post de Empresa y CIFNIF
-  $insertvacante = "INSERT INTO vacantes(nombre_vac, intro, sueldo, ubicacion, nivel_prof, campo_prof, descripcion, obj_puesto, perf_deseado, horario, conocimientos, funciones) VALUES ('$NombreVacante', '$IntroResumen', '$Sueldo', '$Ubicacion' ,'$NivelProf', '$CampoProf', '$Descripcion','$ObjPuesto', '$PerfDeseado', '$Horario', '$Conocimientos', '$Funciones')";
+  $insertvacante = "INSERT INTO vacantes(nombre_vac, intro, empresa, sueldo, ubicacion, nivel_prof, campo_prof, descripcion, obj_puesto, perf_deseado, horario, conocimientos, funciones, CIF_NIF) VALUES ('$NombreVacante', '$IntroResumen', '$empresa', '$Sueldo', '$Ubicacion' ,'$NivelProf', '$CampoProf', '$Descripcion','$ObjPuesto', '$PerfDeseado', '$Horario', '$Conocimientos', '$Funciones', '$CIFNIF')";
     mysqli_query($conn, $insertvacante);
 
   // Regresa a página principal empresa
@@ -122,7 +135,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
           <hr class="cuenta-line1 layout" />
          </div>
         <div class="crear-cv-block3 layout">
-          <select name="Nivel Profesional" id="NivelProf" required>
+          <select name="NivelProf" id="NivelProf" required>
             <optgroup label="Nivel Profesional">
             <option value="Licenciatura">Licenciatura</option>
             <option value="Maestria">Maestria</option>
