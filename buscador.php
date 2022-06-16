@@ -13,12 +13,11 @@ session_start();
 
     <br><br>
 
-    <?php
+    <!--
     $correoUsuario = "HolaSoyCorreo1@gmail.com";
-    ?>
     <form action='' method='get'>
-    <a href='Desktop.php?CorreoAplicantePerfil=<?php echo $correoUsuario;?>' >El que masca iguana</a>  <br>
-    </form> <br>
+    <a href='Desktop.php?CorreoAplicantePerfil=' >El que masca iguana</a>  <br>
+    </form> <br> -->
 
     <?php
     if(isset($_GET['enviar'])) 
