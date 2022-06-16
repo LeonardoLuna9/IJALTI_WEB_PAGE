@@ -722,7 +722,7 @@
   height: -moz-min-content;
   height: min-content;
   width: 87%;
-  margin: 10px 25.58% 60px 4.65%; }
+  margin: 10px 25.58% 29px 4.65%; }
 
 .crear-cv-block11.layout1 {
   position: absolute;
@@ -776,7 +776,7 @@
   text-align: center;
   position: relative;
   height: 50px;
-  margin: 1420px 20px 11px 15px;
+  margin: 1650px 20px 11px 15px;
   display: flex;
   background-color: #0e6dff;
   border: 0px;
@@ -806,6 +806,31 @@
   border: 0px;
   left: 20%; 
   margin-left: 5%;
+  margin-top: -1%;
+}
+
+.add2{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+  margin-top: 0%;
+}
+
+.add3{
+  width: 5%;
+  background-color: #0e6dff;
+  font: 14px/1.57 "Abel", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  border: 0px;
+  left: 20%; 
+  margin-left: 5%;
+  margin-top: 2%;
 }
   
   #SelectCuenta{

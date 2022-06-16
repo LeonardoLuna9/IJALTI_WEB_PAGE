@@ -264,7 +264,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
                 <div class="crear-cv-block9 layout">
                   <div class="crear-cv-block9-item">
                     <div class="crear-cv-flex6 layout">
-                      <h5 class="crear-cv-highlights layout">Educación</h5>
+                      <h5 class="crear-cv-highlights layout">Formación acádemica</h5>
                       <div class="crear-cv-block6 layout1">
                         <div class="crear-cv-block3 layout4">
                           <!-- <div class="crear-cv-small-text-body1 layout">Escuela</div> -->
@@ -338,11 +338,25 @@ Cambios Paulina-->
                   <div class="crear-cv-block12-spacer"></div>
                   <!--<div class="crear-cv-small-text-body layout6">Fecha de graduacion</div>-->
                 </div>
-                <h5 class="crear-cv-highlights layout2">Habilidades</h5>
+                <button class="add3" onClick="GFG_Fun()">
+                  +
+                </button>
+                <p id="GFG_DOWN"></p>
+                <h5 class="crear-cv-highlights layout2">Descripción</h5>
+                <div class="crear-cv-block13 layout">
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Certificaciones" name="Ciudad" pattern="{20}" maxlength = "20" required>
+                      </div>
+                      <div class="crear-cv-block13 layout">
+                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Cursos" name="Ciudad" pattern="{20}" maxlength = "20" required>
+                      </div>
                 <div class="crear-cv-block13 layout">
                   <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
                   <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
-                </div>
+                  </div>
+                <button class="add2" onClick="GFG_Fun()">
+                  +
+                </button>
+                <p id="GFG_DOWN"></p>
               </div>
               <div class="crear-cv-block11 layout1">
              </div>
