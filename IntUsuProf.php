@@ -27,12 +27,12 @@ if (isset($_POST['submit'])){
   header('location:CrearCv.php');
 }
 
-$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el uno (Oracle)
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el dos (Toshiba)
 $query1 = mysqli_query($conn, $vacante1);
 
 $row1 = mysqli_fetch_array($query1);
 
-$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el dos (Toshiba)
+$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el uno (Oracle)
 $query2 = mysqli_query($conn, $vacante2);
 
 $row2 = mysqli_fetch_array($query2);
@@ -48,7 +48,7 @@ $rowvacante = mysqli_fetch_array($queryvacante); // Lista de todas las vacantes
 $rowids = $rowvacante['ID_vacante'];
 
 if (isset($_POST['Aplicate1'])){ 
-  $_SESSION['Vacante'] = $row1['ID_vacante'];
+  $_SESSION['Vacante'] = $row2['ID_vacante'];
   /*
   $vacante = $row2['ID_vacante'];
   $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
@@ -258,7 +258,7 @@ if (isset($_POST['Aplicate3'])){
                     </div>
                   </div>
                   <div class="int-usu-prof-paragraph-body layout">
-                  <?php echo $row1['intro']; ?>
+                  <?php echo $row2['intro']; ?>
                   </div>
                   <div class="int-usu-prof-flex11 layout">
                     <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -369,7 +369,7 @@ if (isset($_POST['Aplicate3'])){
                       </div>
                     </div>
                     <div class="int-usu-prof-paragraph-body layout1">
-                    <?php echo $row2['intro']; ?>
+                    <?php echo $row1['intro']; ?>
                     </div>
                     <div class="int-usu-prof-flex16 layout">
                       <div class="int-usu-prof-text-body2 layout">#software</div>
