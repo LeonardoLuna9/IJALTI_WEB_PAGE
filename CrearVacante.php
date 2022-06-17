@@ -85,7 +85,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
         </div>
         <div class="crear-cv-flex1-item">
           <div class="crear-cv-block14 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="crear-cv-icon1 layout">
+            <div style="--src:url(/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="crear-cv-icon1 layout">
             </div>
           </div>
         </div>
@@ -93,14 +93,14 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
         </div>
         <div class="crear-cv-flex1-item">
           <div class="crear-cv-block15 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="crear-cv-image4 layout">
+            <div style="--src:url(/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="crear-cv-image4 layout">
             </div>
           </div>
         </div>
         <div class="crear-cv-flex1-spacer2">
         </div>
         <div class="crear-cv-flex1-item">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="crear-cv-icon2 layout">
+          <div style="--src:url(/assets/6db786cae790c9b78f84af356252d24b.png)" class="crear-cv-icon2 layout">
           </div>
         </div>
       </div>

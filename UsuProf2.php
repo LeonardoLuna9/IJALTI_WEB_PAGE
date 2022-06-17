@@ -58,7 +58,7 @@ if (isset($_POST['submit'])){
       <div class="usu-prof2-block-item">
         <div class="usu-prof2-cover-block3 layout">
           <div class="usu-prof2-flex layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="usu-prof2-icon3 layout"></div>
+            <div style="--src:url(/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="usu-prof2-icon3 layout"></div>
             <div class="usu-prof2-cover-block2 layout">
               <div class="usu-prof2-flex1 layout">
                 <div class="usu-prof2-flex1-item">
@@ -81,13 +81,13 @@ if (isset($_POST['submit'])){
               <div class="usu-prof2-box15 layout"></div>
               <div class="usu-prof2-box17 layout"></div>
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/2ae38ea5632235754bd78aa2f650374d.png)"
+                style="--src:url(/assets/2ae38ea5632235754bd78aa2f650374d.png)"
                 class="usu-prof2-image2 layout"
               ></div>
               <div class="usu-prof2-cover-group layout">
                 <div class="usu-prof2-box16 layout"></div>
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/b86e71291d200049b9abc11f40792139.png)"
+                  style="--src:url(/assets/b86e71291d200049b9abc11f40792139.png)"
                   class="usu-prof2-image3 layout"
                 ></div>
               </div>
@@ -100,11 +100,11 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof2-flex4-spacer"></div>
                 <div class="usu-prof2-flex4-item"><div class="usu-prof2-box8 layout"></div></div>
               </div>
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/83dbd43dce1484d5547515d54439abf1.png)" class="usu-prof2-icon1 layout"></div>
+              <div style="--src:url(/assets/83dbd43dce1484d5547515d54439abf1.png)" class="usu-prof2-icon1 layout"></div>
             </div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/9e6587d9d71ed6665bd6b5030de72a0a.png)" class="usu-prof2-image layout"></div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/046d996939a083c067ab06faeb93e597.png)" class="usu-prof2-cover-block1 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/ec63e319edd52afa23d013c040b56139.png)" class="usu-prof2-icon2 layout"></div>
+            <div style="--src:url(/assets/9e6587d9d71ed6665bd6b5030de72a0a.png)" class="usu-prof2-image layout"></div>
+            <div style="--src:url(/assets/046d996939a083c067ab06faeb93e597.png)" class="usu-prof2-cover-block1 layout">
+              <div style="--src:url(/assets/ec63e319edd52afa23d013c040b56139.png)" class="usu-prof2-icon2 layout"></div>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ if (isset($_POST['submit'])){
               <div class="usu-prof2-flex7 layout">
                 <div class="usu-prof2-flex7-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof2-cover-block7 layout"
                   >
                     <h5 class="usu-prof2-highlights layout">1</h5>
@@ -137,7 +137,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof2-cover-block5 layout"
                   >
                     <h5 class="usu-prof2-highlights1 layout">2</h5>
@@ -148,7 +148,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof2-cover-block5 layout"
                   >
                     <!--<h5 class="usu-prof2-highlights1 layout1">3</h5>
@@ -161,7 +161,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/2c1f110e2a334862edcc342ddd980d4b.png)"
+                    style="--src:url(/assets/2c1f110e2a334862edcc342ddd980d4b.png)"
                     class="usu-prof2-cover-block4 layout"
                   >
                     <h5 class="usu-prof2-highlights2 layout">4</h5>-->
@@ -199,18 +199,18 @@ if (isset($_POST['submit'])){
       <div class="usu-prof2-block-spacer1"></div>
       <div class="usu-prof2-block-item2">
         <div class="usu-prof2-block2 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="usu-prof2-icon4 layout"></div>
+          <div style="--src:url(/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="usu-prof2-icon4 layout"></div>
         </div>
       </div>
       <div class="usu-prof2-block-spacer2"></div>
       <div class="usu-prof2-block-item3">
         <div class="usu-prof2-block3 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="usu-prof2-image4 layout"></div>
+          <div style="--src:url(/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="usu-prof2-image4 layout"></div>
         </div>
       </div>
       <div class="usu-prof2-block-spacer3"></div>
       <div class="usu-prof2-block-item4">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="usu-prof2-icon5 layout"></div>
+        <div style="--src:url(/assets/6db786cae790c9b78f84af356252d24b.png)" class="usu-prof2-icon5 layout"></div>
       </div>
     </div>
     <script type="text/javascript">

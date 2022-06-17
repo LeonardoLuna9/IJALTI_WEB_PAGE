@@ -56,8 +56,8 @@ if (isset($_POST['enviar'])){
               </div>
             </div>
             <div class="int-emp-post-cover-block10 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-post-icon1 layout"></div>
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-post-icon2 layout"></div>
+              <div style="--src:url(/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-post-icon1 layout"></div>
+              <div style="--src:url(/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-post-icon2 layout"></div>
             </div>
             <div class="int-emp-post-flex5 layout">
               <div class="int-emp-post-flex5-item">
@@ -72,9 +72,9 @@ if (isset($_POST['enviar'])){
                 <div class="int-emp-post-box9 layout"></div>
               </div>
             </div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-post-icon layout"></div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="int-emp-post-cover-block11 layout">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-post-image1 layout"></div>
+            <div style="--src:url(/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-post-icon layout"></div>
+            <div style="--src:url(/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="int-emp-post-cover-block11 layout">
+              <div style="--src:url(/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-post-image1 layout"></div>
             </div>
           </div>
         </div>
@@ -86,29 +86,29 @@ if (isset($_POST['enviar'])){
             <h1 class="int-emp-post-big-title layout">Posts publicados</h1>
             <div class="int-emp-post-flex7-spacer"></div>
             <div class="int-emp-post-flex7-item">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/01537c32334bc2d327b868a938ffda61.png)" class="int-emp-post-image4 layout"></div>
+              <div style="--src:url(/assets/01537c32334bc2d327b868a938ffda61.png)" class="int-emp-post-image4 layout"></div>
             </div>
             <div class="int-emp-post-flex7-spacer1"></div>
             <div class="int-emp-post-flex7-item1">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/b0461e330ea3f041fd76eac055c61397.png)" class="int-emp-post-cover-block layout">
+              <div style="--src:url(/assets/b0461e330ea3f041fd76eac055c61397.png)" class="int-emp-post-cover-block layout">
 
               </div>
             </div>
             <div class="int-emp-post-flex7-spacer2"></div>
             <div class="int-emp-post-flex7-item2">
               <div class="int-emp-post-block1 layout">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="int-emp-post-icon3 layout"></div>
+                <div style="--src:url(/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="int-emp-post-icon3 layout"></div>
               </div>
             </div>
             <div class="int-emp-post-flex7-spacer3"></div>
             <div class="int-emp-post-flex7-item3">
               <div class="int-emp-post-block2 layout">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="int-emp-post-image2 layout"></div>
+                <div style="--src:url(/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="int-emp-post-image2 layout"></div>
               </div>
             </div>
             <div class="int-emp-post-flex7-spacer4"></div>
             <div class="int-emp-post-flex7-item4">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/c94fca6da593306d3ea157d98f11269e.png)" class="int-emp-post-icon5 layout"></div>
+              <div style="--src:url(/assets/c94fca6da593306d3ea157d98f11269e.png)" class="int-emp-post-icon5 layout"></div>
             </div>
           </div>
           <div class="int-emp-post-flex8 layout">
@@ -135,7 +135,7 @@ if (isset($_POST['enviar'])){
             
             </div>
             <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
+                    style="--src:url(/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
                     class="int-emp-post-image8 layout"
                   ></div>
         
@@ -143,8 +143,8 @@ if (isset($_POST['enviar'])){
           <div class="int-emp-post-cover-block8 layout">
             <div class="int-emp-post-flex9 layout">
               <div class="int-emp-post-flex9-item">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)" class="int-emp-post-cover-block1 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-image7 layout"></div>
+                <div style="--src:url(/assets/6e13d5367ad99c006fc752e6204d13a1.png)" class="int-emp-post-cover-block1 layout">
+                  <div style="--src:url(/assets/Toshiba.png)" class="int-emp-post-image7 layout"></div>
                 </div>
               </div>
               <div class="int-emp-post-flex9-spacer"></div>
@@ -215,7 +215,7 @@ if (isset($_POST['enviar'])){
                 </div>
               </div>
             </div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/8a41e1e67a1d945add3e44f10ec9870d.png)" class="int-emp-post-image5 layout"></div>
+            <div style="--src:url(/assets/8a41e1e67a1d945add3e44f10ec9870d.png)" class="int-emp-post-image5 layout"></div>
           </div>
           <div class="int-emp-post-group layout1">
             <div class="int-emp-post-cover-block16 layout">
@@ -247,7 +247,7 @@ be ordered in any color combination. As it made of a moldable material (polyuret
                 </div>
               </div>
             </div>
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/ca8d1d29096b4ac3bb46d65e5e860b2a.png)" class="int-emp-post-image6 layout"></div>
+            <div style="--src:url(/assets/ca8d1d29096b4ac3bb46d65e5e860b2a.png)" class="int-emp-post-image6 layout"></div>
           </div>
         </div>
       </div>

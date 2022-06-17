@@ -54,7 +54,7 @@ $row2 = mysqli_fetch_array($query2);
       <div class="desktop-flex layout">
         <div class="desktop-flex1 layout">
           <div class="desktop-flex1-item">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="desktop-icon layout"></div>
+            <div style="--src:url(/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="desktop-icon layout"></div>
           </div>
           <div class="desktop-flex1-spacer"></div>
           <h1 class="desktop-big-title1 layout">Aplicantes</h1>
@@ -78,12 +78,12 @@ $row2 = mysqli_fetch_array($query2);
           </div>
           <div class="desktop-flex2-spacer"></div>
           <div class="desktop-flex2-item1">
-            <a href="IntEmp.php" style="text-decoration: none;"><div style="--src:url(http://localhost/PaginaWebFinal/assets/92895f952a3b0e1dbe9da3e6806941ae.png)" class="desktop-image4 layout"></div></a>
+            <a href="IntEmp.php" style="text-decoration: none;"><div style="--src:url(/assets/92895f952a3b0e1dbe9da3e6806941ae.png)" class="desktop-image4 layout"></div></a>
           </div>
         </div>
         <div class="desktop-cover-block1 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="desktop-icon1 layout"></div>
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/cea2953d5f057da721482fde9542f499.png)" class="desktop-icon2 layout"></div>
+          <div style="--src:url(/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="desktop-icon1 layout"></div>
+          <div style="--src:url(/assets/cea2953d5f057da721482fde9542f499.png)" class="desktop-icon2 layout"></div>
         </div>
         <div class="desktop-flex6 layout">
           <div class="desktop-flex6-item">
@@ -95,10 +95,10 @@ $row2 = mysqli_fetch_array($query2);
                 <div class="desktop-flex8-spacer"></div>
                 <div class="desktop-flex8-item"><div class="desktop-box10 layout"></div></div>
               </div>
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="desktop-icon3 layout"></div>
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="desktop-cover-block layout">
+              <div style="--src:url(/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="desktop-icon3 layout"></div>
+              <div style="--src:url(/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="desktop-cover-block layout">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)"
+                  style="--src:url(/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)"
                   class="desktop-image2 layout"
                 ></div>
               </div>
@@ -106,7 +106,7 @@ $row2 = mysqli_fetch_array($query2);
           </div>
           <div class="desktop-flex6-spacer"></div>
           <div class="desktop-flex6-item1">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/afb8a4f87d6d53a58b2b08f0dc052c78.png)" class="desktop-image layout"></div>
+            <div style="--src:url(/assets/afb8a4f87d6d53a58b2b08f0dc052c78.png)" class="desktop-image layout"></div>
           </div>
         </div>
         <div class="desktop-group layout">
@@ -121,17 +121,17 @@ $row2 = mysqli_fetch_array($query2);
           >
         </h3>
         <div class="desktop-block2 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/51dd2e0f1587d970d5235aa79395cf49.png)" class="desktop-icon4 layout"></div>
+          <div style="--src:url(/assets/51dd2e0f1587d970d5235aa79395cf49.png)" class="desktop-icon4 layout"></div>
           <h2 class="desktop-medium-title1 layout">Jalisco, Guadalajara</h2>
         </div>
         <div class="desktop-block3 layout">
           <div class="desktop-block4 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/ad0d54d9af49f0157288f12fbe8bc089.png)" class="desktop-image3 layout"></div>
+            <div style="--src:url(/assets/ad0d54d9af49f0157288f12fbe8bc089.png)" class="desktop-image3 layout"></div>
           </div>
           <h2 class="desktop-medium-title1 layout1"><?php echo $row['correo']; ?></h2>
         </div>
         <div class="desktop-block1 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/2c8fc37648bf8a9d06c2922f3af32218.png)" class="desktop-icon4 layout"></div>
+          <div style="--src:url(/assets/2c8fc37648bf8a9d06c2922f3af32218.png)" class="desktop-icon4 layout"></div>
           <h2 class="desktop-medium-title1 layout2">Español, Ingles.</h2>
         </div>
         <div class="desktop-flex9 layout">
