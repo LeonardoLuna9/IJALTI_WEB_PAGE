@@ -95,7 +95,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-post-flex-item1">
         <div class="int-emp-post-flex6 layout">
           <div class="int-emp-post-flex7 layout">
-            <h1 class="int-emp-post-big-title layout">Posts publicados</h1>
+            <h1 class="int-emp-post-big-title layout">Puestos publicados <?php echo $correoValida?></h1>
             <div class="int-emp-post-flex7-spacer"></div>
             <div class="int-emp-post-flex7-item">
               <div style="--src:url(http://localhost/PaginaWebFinal/assets/01537c32334bc2d327b868a938ffda61.png)" class="int-emp-post-image4 layout"></div>

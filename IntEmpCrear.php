@@ -40,7 +40,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
 }*/
 
 if (isset($_POST['submit'])){ 
-  header('location:CrearVacante.php');
+   header('location:CrearVacante.php');
 }
 
 ?>
@@ -134,7 +134,7 @@ if (isset($_POST['submit'])){
         <div class="int-emp-crear-flex-item1">
           <div class="int-emp-crear-flex6 layout">
             <div class="int-emp-crear-flex7 layout">
-              <h1 class="int-emp-crear-big-title layout">Creación de trabajos</h1>
+              <h1 class="int-emp-crear-big-title layout">Creación de trabajos <?php echo $correoValida?></h1>
               <div class="int-emp-crear-flex7-spacer"></div>
               <div class="int-emp-crear-flex7-item">
                 <div
@@ -143,7 +143,7 @@ if (isset($_POST['submit'])){
                 ></div>
               </div>
               <div class="int-emp-crear-flex7-spacer1">
-              <form action="CrearVacante.php" method="post">
+              <form action="" method="post">
                   <input type = "submit" name ="submit" value="Crear Vacante" class="int-emp-crear-text-body5 layout">
               </form>
               </div>
