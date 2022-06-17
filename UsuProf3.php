@@ -37,7 +37,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
 
 
 //echo $vacante;
-echo $_SESSION['Presentacion'];
+//echo $_SESSION['Presentacion'];
 if (isset($_POST['submit'])){
   $definirAplica = "  INSERT INTO aplicantes(ID_vacante, correo, presentacion, fecha_apl) VALUES ($vacante, '$CorreoElectronico', '$presentacion', CURDATE()) ";
   mysqli_query($conn, $definirAplica);
