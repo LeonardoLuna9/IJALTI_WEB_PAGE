@@ -163,7 +163,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
         WHERE educacion.carrera LIKE '%$busqueda%' OR educacion.gradoEducacion LIKE '%$busqueda%' OR educacion.escuela LIKE '%$busqueda%' 
         OR informacion_laboral.empresa LIKE '%$busqueda%' OR informacion_laboral.descripcion LIKE '%$busqueda%'
         OR habilidades.experiencia_habil LIKE '%$busqueda%'");
-        $selectUsuario = array();
+        // $selectUsuario = array();
         //$cont = 0;
         
         while ($row = $consulta->fetch_array()) 

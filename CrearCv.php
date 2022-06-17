@@ -240,11 +240,9 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                         <h5 class="crear-cv-highlights layout1">Experiencia laboral</h5>
                         <div class="crear-cv-flex5-spacer"></div>
                         <div class="crear-cv-flex5-item">
-                          <div style="--src:url(http://localhost/PaginaWebFinal/assets/06e3cba43acec943570ffd2c403a7e4c.png)" class="crear-cv-image layout"></div>
                         </div>
                         <div class="crear-cv-flex5-spacer1"></div>
                         <div class="crear-cv-flex5-item1">
-                          <div style="--src:url(http://localhost/PaginaWebFinal/assets/7ba74c20a3d85f39cd180e40dfc3d51c.png)" class="crear-cv-image1 layout"></div>
                         </div>
                       </div>
                       <div class="crear-cv-block3 layout1">
