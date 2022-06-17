@@ -20,7 +20,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
 
 if (isset($_POST['submit'])){ 
   $CorreoElectronico = $_SESSION['CorreoElectronico'];
-  header('location:CrearCV.php');
+  header('location:CrearCv.php');
 }
 
 $vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el dos (Toshiba)
