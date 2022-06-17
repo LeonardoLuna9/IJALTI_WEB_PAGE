@@ -356,7 +356,8 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin: 83px 0px 0px; }
+  margin: 83px 0px 0px;
+  background-color:  #f1f7ff; }
 
 .usu-prof1-flex6 {
   display: flex;
