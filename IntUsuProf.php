@@ -234,7 +234,7 @@ if (isset($_POST['Aplicate3'])){
                 </div>
               </div>
             </div>
-            <h4 class="int-usu-prof-highlights3 layout">Hoy, 25 de abril</h4>
+            <h4 class="int-usu-prof-highlights3 layout">Hoy, 17 de Junio</h4>
             <div class="int-usu-prof-group layout1">
               <div class="int-usu-prof-cover-block9 layout">
                 <div class="int-usu-prof-flex9 layout">
@@ -380,7 +380,7 @@ if (isset($_POST['Aplicate3'])){
                       </div>
                       <div class="int-usu-prof-flex17-spacer"></div>
                       <div class="int-usu-prof-small-text-body1-box layout">
-                        <pre class="int-usu-prof-small-text-body1">Publicado hoy 5:20 pm </pre>
+                        <pre class="int-usu-prof-small-text-body1">Publicado hoy 2:20 pm </pre>
                       </div>
                       <div class="int-usu-prof-flex17-spacer1"></div>
                       <div class="int-usu-prof-flex17-item1">
@@ -406,7 +406,7 @@ if (isset($_POST['Aplicate3'])){
                 </div>
               </div>
             </div>
-            <h4 class="int-usu-prof-highlights3 layout">Ayer, 24 de abril</h4>
+            <h4 class="int-usu-prof-highlights3 layout">Ayer, 16 de Junio</h4>
             <div class="int-usu-prof-flex6-item">
               <div class="int-usu-prof-cover-group4 layout">
                 <px-posize x="488fr 11px 765fr" y="21px 11px 210px" absolute="true"
@@ -431,9 +431,9 @@ if (isset($_POST['Aplicate3'])){
                   <?php echo $row3['intro']; ?></pre
                   >
                 </div>
-                <div class="int-usu-prof-text-body2 layout4">#nft</div>
-                <div class="int-usu-prof-text-body2 layout5">#3dnfts</div>
-                <div class="int-usu-prof-text-body2 layout6">#NFTs</div>
+                <div class="int-usu-prof-text-body2 layout4">#software</div>
+                <div class="int-usu-prof-text-body2 layout5">#trabajo</div>
+                <div class="int-usu-prof-text-body2 layout6">#ciencia</div>
                 <div class="int-usu-prof-cover-group3 layout">
                   <div
                     style="--src:url(http://localhost/PaginaWebFinal/assets/1fe75c22eb321d7b3988fb6a847533ba.png)"
@@ -444,7 +444,7 @@ if (isset($_POST['Aplicate3'])){
                     class="int-usu-prof-image8 layout"
                   ></div>
                 </div>
-                <div class="int-usu-prof-small-text-body layout1">This post will be published Today at 08:30 AM</div>
+                <div class="int-usu-prof-small-text-body layout1">Este post será publicado Hoy a las 08:30 AM</div>
                 <div
                   style="--src:url(http://localhost/PaginaWebFinal/assets/0d5434093be9553a3550483adf558c57.png)"
                   class="int-usu-prof-image14 layout"
