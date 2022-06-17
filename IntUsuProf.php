@@ -63,7 +63,7 @@ if (isset($_POST['Aplicate1'])){
   $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
   $referenceNumber = intval($referenceNumber);
   $_SESSION['Vacante'] = $referenceNumber ;
-  */
+  
   header('location:UsuProf2.php');
 }
 
