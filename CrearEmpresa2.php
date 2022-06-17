@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
       $insert2 = "INSERT INTO reclutador(correo, CIF_NIF) VALUES ('$reclutador', '$cif_nif')";
       mysqli_query($conn, $insert2);
 
-      header('location:IniciarSesion.php');
+      header('location:index.php');
   }
 };
 
