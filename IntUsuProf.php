@@ -27,12 +27,12 @@ if (isset($_POST['submit'])){
   header('location:CrearCv.php');
 }
 
-$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el dos (Toshiba)
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // (Oracle)
 $query1 = mysqli_query($conn, $vacante1);
 
 $row1 = mysqli_fetch_array($query1);
 
-$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el uno (Oracle)
+$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el uno (Toshiba)
 $query2 = mysqli_query($conn, $vacante2);
 
 $row2 = mysqli_fetch_array($query2);
@@ -42,19 +42,28 @@ $query3 = mysqli_query($conn, $vacante3);
 
 $row3 = mysqli_fetch_array($query3);
 
-$vervacante = "SELECT * FROM vacantes";
-$queryvacante = mysqli_query($conn, $vervacante);
-$rowvacante = mysqli_fetch_array($queryvacante); // Lista de todas las vacantes
-$rowids = $rowvacante['ID_vacante'];
+if (isset($_POST['Vacante1'])){ 
+  $_SESSION['Vervacante'] = $row1['empresa'];
+  header('location:Vacanteprof2.php');
+}
+
+if (isset($_POST['Vacante2'])){ 
+  $_SESSION['Vervacante'] = $row2['empresa'];
+  header('location:Vacanteprof2.php');
+}
+
+if (isset($_POST['Vacante3'])){ 
+  $_SESSION['Vervacante'] = $row3['empresa'];
+  header('location:Vacanteprof2.php');
+}
 
 if (isset($_POST['Aplicate1'])){ 
-  $_SESSION['Vacante'] = $row2['ID_vacante'];
-  /*
-  $vacante = $row2['ID_vacante'];
+  $_SESSION['Vacante'] = $row1['ID_vacante'];
+  $vacante = $row1['ID_vacante'];
   $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
   $referenceNumber = intval($referenceNumber);
   $_SESSION['Vacante'] = $referenceNumber ;
-  */
+  
   header('location:UsuProf2.php');
 }
 
@@ -258,7 +267,7 @@ if (isset($_POST['Aplicate3'])){
                     </div>
                   </div>
                   <div class="int-usu-prof-paragraph-body layout">
-                  <?php echo $row2['intro']; ?>
+                  <?php echo $row1['intro']; ?>
                   </div>
                   <div class="int-usu-prof-flex11 layout">
                     <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -296,11 +305,10 @@ if (isset($_POST['Aplicate3'])){
                     <div class="int-usu-prof-flex12-spacer1"></div>
                     <div class="int-usu-prof-flex12-item1">
                       <div class="int-usu-prof-cover-block2 layout">
-
-                        <!-- echo '<form action="" method="get">' ;
-                        echo '<a href="' . htmlspecialchars("Vacanteprof.php?CorreoAplicantePerfil=". $correoUsuario ). '">'. $row['correo']. $row['nombre']. $row['apellidoP']. $row['apellidoM']. $row['carrera']. $row['gradoEducacion']. $row['escuela']. $row['empresa']. $row['descripcion']. $row['experiencia_habil']. '</a>';
-                        echo '</form>'; -->
-                        <a href="Vacanteprof.php" style="text-decoration:none;"><div class="int-usu-prof-text-body2 layout1">Ver</div></a>
+                      <form action="" method="post">
+                        <input type = "submit" name ="Vacante1" value="Ver" class="int-usu-prof-text-body2">
+                      </form>
+                        <!-- <a href="Vacanteprof.php" style="text-decoration:none;"><div class="int-usu-prof-text-body2 layout1">Ver</div></a> -->
                       </div>
                     </div>
                     <div class="int-usu-prof-flex12-spacer2"></div>
@@ -369,7 +377,7 @@ if (isset($_POST['Aplicate3'])){
                       </div>
                     </div>
                     <div class="int-usu-prof-paragraph-body layout1">
-                    <?php echo $row1['intro']; ?>
+                    <?php echo $row2['intro']; ?>
                     </div>
                     <div class="int-usu-prof-flex16 layout">
                       <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -398,9 +406,12 @@ if (isset($_POST['Aplicate3'])){
                       <div class="int-usu-prof-flex17-spacer1"></div>
                       <div class="int-usu-prof-flex17-item1">
                         <div class="int-usu-prof-cover-block2 layout">
-                          <a href="Vacanteprof.php" style="text-decoration:none;">
-                            <div class="int-usu-prof-text-body2 layout2">Ver</div> <!-- Toshiba -->
-                          </a>
+                        <form action="" method="post">
+                          <input type = "submit" name ="Vacante2" value="Ver" class="int-usu-prof-text-body2">
+                        </form>
+                          <!-- <a href="Vacanteprof2.php" style="text-decoration:none;">
+                            <div class="int-usu-prof-text-body2 layout2">Ver</div>
+                          </a> -->
                         </div>
                       </div>
                       <div class="int-usu-prof-flex17-spacer2"></div>
@@ -435,9 +446,12 @@ if (isset($_POST['Aplicate3'])){
                   </form>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
-                  <a href="Vacanteprof3.php" style="text-decoration:none;">
-                    <div class="int-usu-prof-text-body2 layout3">Ver</div> <!-- Gettinsoft -->
-                  </a>
+                  <form action="" method="post">
+                    <input type = "submit" name ="Vacante3" value="Ver" class="int-usu-prof-text-body2">
+                  </form>
+                  <!-- <a href="Vacanteprof3.php" style="text-decoration:none;">
+                    <div class="int-usu-prof-text-body2 layout3">Ver</div>
+                  </a> -->
                 </div>
                 <div class="int-usu-prof-paragraph-body1-box layout">
                   <pre class="int-usu-prof-paragraph-body1">
