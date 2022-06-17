@@ -23,15 +23,15 @@ if(mysqli_num_rows($validaUsuario) == 0){
 // Terminamos de verificar
 
 
-$CorreoElectronico = $_SESSION['CorreoElectronico'];
+// $CorreoElectronico = $_SESSION['CorreoElectronico'];
 
-// Verificar en base de datos
-$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
-$validaUsuario = mysqli_query($conn, $buscaUsuario);
-if(mysqli_num_rows($validaUsuario) == 0){
-  $error[] = 'No existe usuario';
-  header('location:Cuenta.php');
-}
+// // Verificar en base de datos
+// $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+// $validaUsuario = mysqli_query($conn, $buscaUsuario);
+// if(mysqli_num_rows($validaUsuario) == 0){
+//   $error[] = 'No existe usuario';
+//   header('location:Cuenta.php');
+// }
 
 if (isset($_POST['submit'])){
   $presentacion = mysqli_real_escape_string($conn, $_POST['presentacion']);

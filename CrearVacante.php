@@ -38,7 +38,7 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   $Funciones = mysqli_real_escape_string($conn, $_POST['Funciones']);
 
 
-  $consigueCIFNIF = "SELECT * from reclutador WHERE correo = '$CorreoElectronico'";
+  $consigueCIFNIF = "SELECT * from reclutador WHERE correo = '$correoValida'";
   $query = mysqli_query($conn, $consigueCIFNIF);
   $row = mysqli_fetch_array($query);
 
@@ -51,13 +51,14 @@ if (isset($_POST['submit'])){ // Hacemos POST a base de datos
   $empresa = $row1['nombre_empresa'];
 
   //Falta post de Empresa y CIFNIF
+  //$insertvacante = "UPDATE vacantes SET nombre_vac = '$NombreVacante', intro = '$IntroResumen', empresa = '$empresa', sueldo = '$Sueldo', ubicacion = '$Ubicacion', nivel_prof = '$NivelProf', campo_prof = '$CampoProf', descripcion = '$Descripcion', obj_puesto='$ObjPuesto', perf_deseado='$PerfDeseado', horario = '$Horario', conocimientos = '$Conocimientos', funciones = '$Funciones', CIF_NIF = '$CIFNIF'  WHERE correo = '$CorreoElectronico'";
   $insertvacante = "INSERT INTO vacantes(nombre_vac, intro, empresa, sueldo, ubicacion, nivel_prof, campo_prof, descripcion, obj_puesto, perf_deseado, horario, conocimientos, funciones, CIF_NIF) VALUES ('$NombreVacante', '$IntroResumen', '$empresa', '$Sueldo', '$Ubicacion' ,'$NivelProf', '$CampoProf', '$Descripcion','$ObjPuesto', '$PerfDeseado', '$Horario', '$Conocimientos', '$Funciones', '$CIFNIF')";
-    mysqli_query($conn, $insertvacante);
+  mysqli_query($conn, $insertvacante);
 
   // Regresa a página principal empresa
   header('location:IntEmpCrear.php');
   //}
-};
+}
 
 ?>
 
