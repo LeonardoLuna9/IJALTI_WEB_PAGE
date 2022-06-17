@@ -175,7 +175,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
         // urlencode($datos)) . '">'."\n";
             echo '<div class= "crear-cv-block3 layout">';
             echo '<form action="" method="get">' ;
-            echo '<a href="' . htmlspecialchars("Desktop.php?CorreoAplicantePerfil=". $correoUsuario ). '">'. $row['correo']. $row['nombre']. $row['apellidoP']. $row['apellidoM']. $row['carrera']. $row['gradoEducacion']. $row['escuela']. $row['empresa']. $row['descripcion']. $row['experiencia_habil']. '</a>';
+            echo '<a href="' . htmlspecialchars("Desktop.php?CorreoAplicantePerfil=". $correoUsuario ). '">'. $row['correo'].'&nbsp'.'&nbsp'. $row['nombre'].'&nbsp'.'&nbsp'. $row['apellidoP'].'&nbsp'.'&nbsp'. $row['apellidoM'].'&nbsp'.'&nbsp'. $row['carrera'].'&nbsp'.'&nbsp'. $row['gradoEducacion'].'&nbsp'.'&nbsp'. $row['escuela'].'&nbsp'.'&nbsp'. $row['empresa'].'&nbsp'.'&nbsp'. $row['descripcion'].'&nbsp'.'&nbsp'. $row['experiencia_habil']. '</a>';
             echo '</form>'; 
             echo '</div';
             // $cont = $cont + 1;
