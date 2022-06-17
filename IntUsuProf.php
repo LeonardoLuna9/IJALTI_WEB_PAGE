@@ -38,6 +38,11 @@ $query3 = mysqli_query($conn, $vacante3);
 
 $row3 = mysqli_fetch_array($query3);
 
+$vervacante = "SELECT * FROM vacantes";
+$queryvacante = mysqli_query($conn, $vervacante);
+$rowvacante = mysqli_fetch_array($queryvacante); // Lista de todas las vacantes
+$rowids = $rowvacante['ID_vacante'];
+
 if (isset($_POST['Aplicate1'])){ 
   $_SESSION['Vacante'] = $row2['ID_vacante'];
   $vacante = $row2['ID_vacante'];
@@ -286,6 +291,10 @@ if (isset($_POST['Aplicate3'])){
                     <div class="int-usu-prof-flex12-spacer1"></div>
                     <div class="int-usu-prof-flex12-item1">
                       <div class="int-usu-prof-cover-block2 layout">
+                        
+                        <!-- echo '<form action="" method="get">' ;
+                        echo '<a href="' . htmlspecialchars("Vacanteprof.php?CorreoAplicantePerfil=". $correoUsuario ). '">'. $row['correo']. $row['nombre']. $row['apellidoP']. $row['apellidoM']. $row['carrera']. $row['gradoEducacion']. $row['escuela']. $row['empresa']. $row['descripcion']. $row['experiencia_habil']. '</a>';
+                        echo '</form>'; -->
                         <a href="Vacanteprof.php" style="text-decoration:none;"><div class="int-usu-prof-text-body2 layout1">Ver</div></a>
                       </div>
                     </div>

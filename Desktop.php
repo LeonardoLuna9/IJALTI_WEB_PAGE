@@ -15,7 +15,7 @@ $correoPerfil2 = "SELECT * FROM habilidades WHERE correo = '$correoUsuario'";
 $query2 = mysqli_query($conn, $correoPerfil2);  
 $row2 = mysqli_fetch_array($query2);
 
-// echo "el correo es".$_GET['CorreoAplicantePerfil'];
+//  echo "el correo es".$_GET['CorreoAplicantePerfil'];
 ?>
 <!DOCTYPE html>
 <html>
