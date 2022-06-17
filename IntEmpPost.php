@@ -2,11 +2,23 @@
 @include 'config.php';
 session_start();
 
-if (isset($_POST['enviar'])){
-  $busqueda = mysqli_real_escape_string($conn, $_POST['busqueda']);
-  $_SESSION['busquedaUsuario'] = $busqueda;
-  header('location:buscador.php');
+//Verificamos usuario reclutador 
+ 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
 }
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
 
 ?>
 <!DOCTYPE html>
@@ -128,8 +140,8 @@ if (isset($_POST['enviar'])){
             <div class="int-emp-post-flex8-spacer1"></div>
             
             <div class= "crear-cv-block3 layout">
-            <form action="" method="post">
-              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador -->
+            <form action="buscador.php" method="get">
+              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador te lleva a resultados -->
               <input class="submit2" type="submit" name="enviar" value="Buscar" >
             </form>
             
@@ -138,14 +150,14 @@ if (isset($_POST['enviar'])){
           <div class="int-emp-post-cover-block8 layout">
             <div class="int-emp-post-flex9 layout">
               <div class="int-emp-post-flex9-item">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)" class="int-emp-post-cover-block1 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-image7 layout"></div>
+                <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-cover-block1 layout">
+                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/7fdfc216ff08749a1ea825ebbae53140.png)" class="int-emp-post-image7 layout"></div>
                 </div>
               </div>
               <div class="int-emp-post-flex9-spacer"></div>
               <div class="int-emp-post-flex9-item1">
                 <div class="int-emp-post-flex10 layout">
-                  <h3 class="int-emp-post-subtitle layout">Customer Support Assistan I</h3>
+                  <h3 class="int-emp-post-subtitle layout">Customer Support Assistant I</h3>
                   <div class="int-emp-post-paragraph-body layout">
                     Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te
                     sumergirás profundamente en cada capa de la experiencia, mejorando nuestros productos,

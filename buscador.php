@@ -1,6 +1,25 @@
 <?php
 @include 'config.php';
 session_start();
+
+//Verificamos usuario reclutador 
+ 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
+
 ?>
 
 <!DOCTYPE html> 
@@ -144,7 +163,7 @@ session_start();
         WHERE educacion.carrera LIKE '%$busqueda%' OR educacion.gradoEducacion LIKE '%$busqueda%' OR educacion.escuela LIKE '%$busqueda%' 
         OR informacion_laboral.empresa LIKE '%$busqueda%' OR informacion_laboral.descripcion LIKE '%$busqueda%'
         OR habilidades.experiencia_habil LIKE '%$busqueda%'");
-        $selectUsuario = array();
+        // $selectUsuario = array();
         //$cont = 0;
         
         while ($row = $consulta->fetch_array()) 

@@ -4,6 +4,24 @@
 
 session_start();
 
+//Verificamos usuario
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
+
 $vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
 $query = mysqli_query($conn, $vacante1);
 
@@ -135,11 +153,18 @@ if(mysqli_num_rows($result) > 0){
   
       <div class="vacanteprof-group1 layout">
         <h5 class="vacanteprof-highlights4-box layout">
-          <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">Descripción
+
+          <pre class="vacanteprof-highlights4"><span class="vacanteprof-highlights4-span0">
+            
+          
+          
+Descripción
 </span><span class="vacanteprof-highlights4-span1"> <?php echo $row['descripcion']; ?>
 
 
-</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:</span><span class="vacanteprof-highlights4-span3"> <?php echo $row['obj_puesto']; ?>
+</span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:
+  
+</span><span class="vacanteprof-highlights4-span3"> <?php echo $row['obj_puesto']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span4">Perfil Deseado:
@@ -170,7 +195,9 @@ Empresa: <?php echo $row['empresa']; ?>
 Ubicación: <?php echo $row['ubicacion']; ?> 
 Nivel profesional: <?php echo $row['nivel_prof']; ?>
 
-Campo Profesional: <?php echo $row['campo_prof']; ?></pre
+Campo Profesional: <?php echo $row['campo_prof']; ?>
+
+Horarios: <?php echo $row['horario']; ?> </pre
                   >
                   <br>
                 </h2>
