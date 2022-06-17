@@ -5,17 +5,34 @@ session_start();
 
 if (isset($_POST['submit'])){
   $correo = mysqli_real_escape_string($conn, $_POST['CorreoElectronico']);
-  $contraseña = md5($_POST['Contraseña']);
-
-  $select = " SELECT * FROM usuarios WHERE correo = '$correo' && contraseña = '$contraseña'";
-
+  $contra = md5($_POST['Contra']);
+  
+  // Verifica usuario
+  $select = " SELECT * FROM usuarios WHERE correo = '$correo' && contraseña = '$contra'";
   $result = mysqli_query($conn, $select);
-
   $row = mysqli_num_rows($result);
 
-  if($row == 1){
+  if($row == 1){ // Verifica que existe Usuario
     $_SESSION['CorreoElectronico'] = $correo;
-    header('location:IntUsuProf.php');
+
+    // Usuario Profesional
+    $selectProfesional = " SELECT * FROM usuario_prof WHERE correo = '$correo'";
+    $resultProfesional = mysqli_query($conn, $selectProfesional);
+    $rowProfesional = mysqli_num_rows($resultProfesional);
+
+    // Reclutador
+    $selectReclutador = " SELECT * FROM reclutador WHERE correo = '$correo'";
+    $resultReclutador = mysqli_query($conn, $selectReclutador);
+    $rowReclutador = mysqli_num_rows($resultReclutador);
+    if($rowProfesional == 1 && $rowReclutador == 0) { // Vamos a Usuario Profesional
+      header('location:IntUsuProf.php');
+    }
+    if($rowReclutador == 1 && $rowProfesional == 0){ // Vamos a Reclutador
+      header('location:IntEmpPost.php');
+    }
+    else {
+      $error[] = 'Error en registro de cuenta';
+    }
   }
   else{
     $error[] = 'Correo o contraseña incorrecta';
@@ -109,7 +126,7 @@ if (isset($_POST['submit'])){
           <hr class="iniciar-sesion-line layout1" />
         </div>
         <div class="iniciar-sesion-flex layout">
-          <input class="iniciar-sesion-highlights1 layout" type = "password" id ="psw" placeholder="Contraseña" name="Contraseña" maxlength="18" required>
+          <input class="iniciar-sesion-highlights1 layout" type = "password" id ="psw" placeholder="Contraseña" name="Contra" maxlength="18" required>
           <hr class="iniciar-sesion-line layout1" />
         </div>
         <input type = "submit" name ="submit" value="Iniciar sesión" class="iniciar-sesion-cover-block layout">

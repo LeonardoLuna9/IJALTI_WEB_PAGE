@@ -1,3 +1,35 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+
+$CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+if (isset($_POST['submit'])){
+  $presentacion = mysqli_real_escape_string($conn, $_POST['presentacion']);
+  $_SESSION['Presentacion'] = $presentacion;
+
+  //echo $_SESSION['Presentacion']; 
+
+  header('location:UsuProf3.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -79,7 +111,10 @@
       </div>
       <div class="usu-prof2-block-spacer"></div>
       <div class="usu-prof2-block-item1">
+        
         <div class="usu-prof2-flex5 layout">
+        <form action="" method="post">
+
           <h1 class="usu-prof2-hero-title layout">Confirma la información</h1>
           <h4 class="usu-prof2-highlights3 layout">Revisa que la información proporcionada sea la correcta</h4>
           <div class="usu-prof2-cover-block9 layout">
@@ -94,7 +129,11 @@
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
-                <div class="usu-prof2-flex7-item1"><div class="usu-prof2-box1 layout"></div></div>
+                <!--<div class="usu-prof2-flex7-item1"><div class="usu-prof2-box1 layout"></div></div>
+                <div class="usu-prof2-cover-block8 layout"><div class="usu-prof2-box4 layout"></div></div>-->
+                <div class="usu-prof2-flex7-item3">
+                  <div class="usu-prof2-cover-block8 layout"><div class="usu-prof2-box4 layout"></div></div>
+                </div>
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
@@ -105,14 +144,14 @@
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
-                <div class="usu-prof2-flex7-item2"><div class="usu-prof2-box2 layout"></div></div>
+                <!--<div class="usu-prof2-flex7-item2"><div class="usu-prof2-box2 layout"></div></div>-->
                 <div class="usu-prof2-flex7-spacer"></div>
                 <div class="usu-prof2-flex7-item">
                   <div
                     style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof2-cover-block5 layout"
                   >
-                    <h5 class="usu-prof2-highlights1 layout1">3</h5>
+                    <!--<h5 class="usu-prof2-highlights1 layout1">3</h5>
                   </div>
                 </div>
                 <div class="usu-prof2-flex7-spacer"></div>
@@ -125,7 +164,7 @@
                     style="--src:url(http://localhost/PaginaWebFinal/assets/2c1f110e2a334862edcc342ddd980d4b.png)"
                     class="usu-prof2-cover-block4 layout"
                   >
-                    <h5 class="usu-prof2-highlights2 layout">4</h5>
+                    <h5 class="usu-prof2-highlights2 layout">4</h5>-->
                   </div>
                 </div>
               </div>
@@ -133,20 +172,29 @@
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="50" placeholder = "Máximo 800 palabras "></textarea>
+                
+                <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="45" placeholder = "Máximo 100 palabras "> </textarea>
+                <!--<input class="usu-prof2-highlights5" type = "text" placeholder="Máximo 100 palabras" name="presentacion" pattern="{100}" maxlength="100" required>  -->             
+                
               </div>
             </div>
           </div>
           <div class="usu-prof2-flex8 layout">
             <div class="usu-prof2-flex8-item">
-              <a href="UsuProf1.php" style="text-decoration: none;"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
+              <a href="IntUsuProf.php" style="text-decoration: none;"><div class="usu-prof2-block4 layout"><h4 class="usu-prof2-highlights6 layout">Regresar</h4></div></a>
             </div>
             <div class="usu-prof2-flex8-spacer"></div>
             <div class="usu-prof2-flex8-item1">
+<!--
               <a href="UsuProf3.php" style="text-decoration: none;"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
+-->
+
+              <input type = "submit" name ="submit" value="Siguiente" class="usu-prof2-block1 layout usu-prof2-highlights4 layout">
+    
             </div>
           </div>
         </div>
+        </form>
       </div>
       <div class="usu-prof2-block-spacer1"></div>
       <div class="usu-prof2-block-item2">

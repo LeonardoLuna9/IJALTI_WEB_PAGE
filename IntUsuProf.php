@@ -8,8 +8,9 @@ if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
 
-$correoValida=$_SESSION['CorreoElectronico'];
+$correoValida = $_SESSION['CorreoElectronico'];
 
+// Verificar en base de datos
 $buscaUsuario = " SELECT * FROM usuarios WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
@@ -22,20 +23,41 @@ if (isset($_POST['submit'])){
   header('location:CrearCV.php');
 }
 
-$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
+$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1"; // Este es el uno (Oracle)
 $query1 = mysqli_query($conn, $vacante1);
 
 $row1 = mysqli_fetch_array($query1);
 
-$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2";
+$vacante2 = "SELECT * FROM vacantes WHERE ID_vacante = 2"; // Este es el dos (Toshiba)
 $query2 = mysqli_query($conn, $vacante2);
 
 $row2 = mysqli_fetch_array($query2);
 
-$vacante3 = "SELECT * FROM vacantes WHERE ID_vacante = 3";
+$vacante3 = "SELECT * FROM vacantes WHERE ID_vacante = 3"; // Este es el tres (GetinSoft)
 $query3 = mysqli_query($conn, $vacante3);
 
 $row3 = mysqli_fetch_array($query3);
+
+if (isset($_POST['Aplicate1'])){ 
+  $_SESSION['Vacante'] = $row1['ID_vacante'];
+  /*
+  $vacante = $row2['ID_vacante'];
+  $referenceNumber = mysqli_real_escape_string($conn, $_POST[$vacante]);
+  $referenceNumber = intval($referenceNumber);
+  $_SESSION['Vacante'] = $referenceNumber ;
+  */
+  header('location:UsuProf2.php');
+}
+
+if (isset($_POST['Aplicate2'])){ 
+  $_SESSION['Vacante'] = $row2['ID_vacante'];
+  header('location:UsuProf2.php');
+}
+
+if (isset($_POST['Aplicate3'])){ 
+  $_SESSION['Vacante'] = $row3['ID_vacante'];
+  header('location:UsuProf2.php');
+}
 
 ?>
 
@@ -227,7 +249,7 @@ $row3 = mysqli_fetch_array($query3);
                     </div>
                   </div>
                   <div class="int-usu-prof-paragraph-body layout">
-                  <?php echo $row2['intro']; ?>
+                  <?php echo $row1['intro']; ?>
                   </div>
                   <div class="int-usu-prof-flex11 layout">
                     <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -265,13 +287,16 @@ $row3 = mysqli_fetch_array($query3);
                     <div class="int-usu-prof-flex12-spacer1"></div>
                     <div class="int-usu-prof-flex12-item1">
                       <div class="int-usu-prof-cover-block2 layout">
-                        <a href="Vacanteprof.php" style="text-decoration:none;"><div class="int-usu-prof-text-body2 layout1">Ver</div></a>
+                        <a href="Vacanteprof2.php" style="text-decoration:none;"><div class="int-usu-prof-text-body2 layout1">Ver</div></a> <!-- Oracle -->
                       </div>
                     </div>
                     <div class="int-usu-prof-flex12-spacer2"></div>
                     <div class="int-usu-prof-flex12-item2">
                       <div class="int-usu-prof-cover-block3 layout">
-                        <a href="UsuProf1.php" style="text-decoration:none;"><div class="int-usu-prof-text-body1 layout">Aplicar ahora</div></a>
+                      <form action="" method="post">
+                        <!--<a href="UsuProf1.php" style="text-decoration:none;"><div class="int-usu-prof-text-body1 layout">Aplicar ahora</div></a> Aplicar ahora NO VACANTE-->
+                        <input type = "submit" name ="Aplicate1" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                      </form>
                       </div>
                     </div>
                   </div>
@@ -331,7 +356,7 @@ $row3 = mysqli_fetch_array($query3);
                       </div>
                     </div>
                     <div class="int-usu-prof-paragraph-body layout1">
-                    <?php echo $row1['intro']; ?>
+                    <?php echo $row2['intro']; ?>
                     </div>
                     <div class="int-usu-prof-flex16 layout">
                       <div class="int-usu-prof-text-body2 layout">#software</div>
@@ -360,17 +385,20 @@ $row3 = mysqli_fetch_array($query3);
                       <div class="int-usu-prof-flex17-spacer1"></div>
                       <div class="int-usu-prof-flex17-item1">
                         <div class="int-usu-prof-cover-block2 layout">
-                          <a href="Vacanteprof2.php" style="text-decoration:none;">
-                            <div class="int-usu-prof-text-body2 layout2">Ver</div>
+                          <a href="Vacanteprof.php" style="text-decoration:none;">
+                            <div class="int-usu-prof-text-body2 layout2">Ver</div> <!-- Toshiba -->
                           </a>
                         </div>
                       </div>
                       <div class="int-usu-prof-flex17-spacer2"></div>
                       <div class="int-usu-prof-flex17-item2">
                         <div class="int-usu-prof-cover-block3 layout">
-                          <a href="UsuProf1.php" style="text-decoration:none;">
+                          <!--<a href="UsuProf1.php" style="text-decoration:none;">
                             <div class="int-usu-prof-text-body1 layout">Aplicar ahora</div>
-                          </a>
+                          </a>-->
+                          <form action="" method="post">
+                          <input type = "submit" name ="Aplicate2" value="Aplicar ahora" class="int-usu-prof-text-body5 layout">
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -386,13 +414,16 @@ $row3 = mysqli_fetch_array($query3);
                 ></px-posize>
                 <div class="int-usu-prof-box14 layout"></div>
                 <div class="int-usu-prof-cover-block3 layout1">
-                  <a href="UsuProf1.php" style="text-decoration:none;">
+                  <!--<a href="UsuProf1.php" style="text-decoration:none;">
                     <div class="int-usu-prof-text-body1 layout1">Aplicar ahora</div>
-                  </a>
+                  </a>-->
+                  <form action="" method="post">
+                  <input type = "submit" name ="Aplicate3" value="Aplicar ahora" class="int-usu-prof-text-body1 layout1">
+                  </form>
                 </div>
                 <div class="int-usu-prof-cover-block2 layout1">
                   <a href="Vacanteprof3.php" style="text-decoration:none;">
-                    <div class="int-usu-prof-text-body2 layout3">Ver</div>
+                    <div class="int-usu-prof-text-body2 layout3">Ver</div> <!-- Gettinsoft -->
                   </a>
                 </div>
                 <div class="int-usu-prof-paragraph-body1-box layout">
