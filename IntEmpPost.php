@@ -122,7 +122,7 @@ if (isset($_POST['enviar'])){
             <div class="int-emp-post-flex8-spacer"></div>
             <div class="int-emp-post-flex8-item">
               <div class="int-emp-post-cover-block9 layout">
-                <h5 class="int-emp-post-highlights1 layout">Posts</h5>
+                <h5 class="int-emp-post-highlights1 layout">Puestos</h5>
               </div>
             </div>
             <div class="int-emp-post-flex8-spacer1"></div>
@@ -134,11 +134,6 @@ if (isset($_POST['enviar'])){
             </form>
             
             </div>
-            <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
-                    class="int-emp-post-image8 layout"
-                  ></div>
-        
           </div>
           <div class="int-emp-post-cover-block8 layout">
             <div class="int-emp-post-flex9 layout">
@@ -188,10 +183,10 @@ if (isset($_POST['enviar'])){
               <div class="int-emp-post-flex13 layout">
                 <h3 class="int-emp-post-subtitle layout1">Software Engineer III/C#</h3>
                 <div class="int-emp-post-paragraph-body layout1">
-                  Responsible to write/execute automated and manual test and building out test pipelines for
-                  discovering defects and reporting them. The area of responsibility will include back end and front
-                  end. The type of testing being done is primarily functional, regression, integration and performance
-                  on the applications involved.
+                  Responsable de escribir/ejecutar pruebas automatizadas y manuales y construir canalizaciones de prueba para
+                   descubrir defectos y reportarlos. El área de responsabilidad incluirá back-end y front
+                   final. El tipo de pruebas que se realizan son principalmente funcionales, de regresión, de integración y de rendimiento.
+                   sobre las aplicaciones involucradas.
                 </div>
                 <div class="int-emp-post-flex14 layout">
                   <div class="int-emp-post-text-body1 layout">#software</div>
@@ -223,8 +218,7 @@ if (isset($_POST['enviar'])){
                 <h3 class="int-emp-post-subtitle1 layout">Software Engineer II/JAVA</h3>
                 <div class="int-emp-post-paragraph-body1-box layout">
                   <pre class="int-emp-post-paragraph-body1">
-Empresa dedicada al desarrollo de tecnología, software y hardware en las siguientes áreas industriales tecnologías de la información (TI) y comunicaciones, farmacéutica, automotriz, agricultura, salud, alimentos y bebidas
-be ordered in any color combination. As it made of a moldable material (polyurethane) this background.</pre>
+Empresa dedicada al desarrollo de tecnología, software y hardware en las siguientes áreas industriales tecnologías de la información (TI) y comunicaciones.</pre>
                 </div>
                 <div class="int-emp-post-flex17 layout">
                   <div class="int-emp-post-text-body1 layout3">#engineer</div>
