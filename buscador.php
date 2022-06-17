@@ -130,44 +130,7 @@ session_start();
                     <br><br>
 
                 </div>
-                <div class="usu-prof1-flex9-item">
-                    <div class="usu-prof1-content-box1-spacer">
-                    </div>
-                    <div class="usu-prof1-content-box1-item">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="usu-prof1-content-box layout">
-                <div class="usu-prof1-content-box-spacer">
-                </div>
-                <div class="usu-prof1-content-box-item">
-                  
-                  </div>
-                </div>
-              </div>
-              <div id="message">
-              </div>
-            </div>
-          </div>
-      <div class="usu-prof1-block-spacer1"></div>
-      <div class="usu-prof1-block-item2">
-      </div>
-      <div class="usu-prof1-block-spacer2"></div>
-      <div class="usu-prof1-block-item3">
-      </div>
-      <div class="usu-prof1-block-spacer3"></div>
-    </div>
-    </body>
-</html>
-    
-    <!--
-    $correoUsuario = "HolaSoyCorreo1@gmail.com";
-    <form action='' method='get'>
-    <a href='Desktop.php?CorreoAplicantePerfil=' >El que masca iguana</a>  <br>
-    </form> <br>-->
-
-    <?php
+                <?php
     if(isset($_GET['enviar'])) 
     {
         $busqueda = $_GET['busqueda'];
@@ -221,6 +184,39 @@ session_start();
     
 //}
     ?>
-</div>
-</body>
+                <div class="usu-prof1-flex9-item">
+                    <div class="usu-prof1-content-box1-spacer">
+                    </div>
+                    <div class="usu-prof1-content-box1-item">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="usu-prof1-content-box layout">
+                <div class="usu-prof1-content-box-spacer">
+                </div>
+                <div class="usu-prof1-content-box-item">
+                  
+                  </div>
+                </div>
+              </div>
+              <div id="message">
+              </div>
+            </div>
+          </div>
+      <div class="usu-prof1-block-spacer1"></div>
+      <div class="usu-prof1-block-item2">
+      </div>
+      <div class="usu-prof1-block-spacer2"></div>
+      <div class="usu-prof1-block-item3">
+      </div>
+      <div class="usu-prof1-block-spacer3"></div>
+    </div>
+    </body>
 </html>
+    
+    <!--
+    $correoUsuario = "HolaSoyCorreo1@gmail.com";
+    <form action='' method='get'>
+    <a href='Desktop.php?CorreoAplicantePerfil=' >El que masca iguana</a>  <br>
+    </form> <br>-->
