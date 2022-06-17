@@ -23,6 +23,11 @@ if(mysqli_num_rows($validaUsuario) == 0){
 
 $correoUsuario = $_SESSION['CorreoAplicantePerfil'];
 
+// usuarios
+$usuarioNombre = "SELECT * FROM usuarios WHERE correo = '$correoUsuario'"; 
+$queryUsuarioNombre = mysqli_query($conn, $usuarioNombre);
+$rowNombre = mysqli_fetch_array($queryUsuarioNombre);
+
 // usuario_prof
 $usuario = "SELECT * FROM usuario_prof WHERE correo = '$correoUsuario'"; 
 $queryUsuario = mysqli_query($conn, $usuario);
@@ -51,7 +56,7 @@ $rowCursos = mysqli_fetch_array($queryCursos);
 // cursos
 $usuarioHab = "SELECT * FROM habilidades WHERE correo = '$correoUsuario'"; 
 $queryHab = mysqli_query($conn, $usuarioHab);
-$rowHab = mysqli_fetch_array($queryHab);*/
+$rowHab = mysqli_fetch_array($queryHab);
 
 ?>
 
@@ -76,6 +81,7 @@ $rowHab = mysqli_fetch_array($queryHab);*/
   <h1 id="google_translate_element" class=""title >CV</h1>
   <br><br>
   <h2 class="head"> Nombre</h2><br>
+  <h4><?php echo $rowNombre['nombre']. '&nbsp'. $rowNombre['apellidoP']. '&nbsp'. $rowNombre['apellidoM']; ?> </h4>
   <br>
   <h2 class="head"> Datos personales </h2><br>
     <h4>Fecha de Nacimiento: <?php echo $row['fechaNac']; ?> </h4>
