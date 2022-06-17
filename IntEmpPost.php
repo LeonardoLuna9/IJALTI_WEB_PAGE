@@ -143,14 +143,14 @@ if (isset($_POST['enviar'])){
           <div class="int-emp-post-cover-block8 layout">
             <div class="int-emp-post-flex9 layout">
               <div class="int-emp-post-flex9-item">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)" class="int-emp-post-cover-block1 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-image7 layout"></div>
+                <div style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)" class="int-emp-post-cover-block1 layout">
+                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/7fdfc216ff08749a1ea825ebbae53140.png)" class="int-emp-post-image7 layout"></div>
                 </div>
               </div>
               <div class="int-emp-post-flex9-spacer"></div>
               <div class="int-emp-post-flex9-item1">
                 <div class="int-emp-post-flex10 layout">
-                  <h3 class="int-emp-post-subtitle layout">Customer Support Assistan I</h3>
+                  <h3 class="int-emp-post-subtitle layout">Customer Support Assistant I</h3>
                   <div class="int-emp-post-paragraph-body layout">
                     Crea con nosotros el software de vanguardia que hace Oracle el líder de la industria. Te
                     sumergirás profundamente en cada capa de la experiencia, mejorando nuestros productos,
