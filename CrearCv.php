@@ -6,7 +6,7 @@ session_start();
 
 if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
-}
+}//ola
 
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
 //Validación para ver si ya tiene CV 
