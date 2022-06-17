@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
       header('location:IntUsuProf.php');
     }
     if($rowReclutador == 1 && $rowProfesional == 0){ // Vamos a Reclutador
-      header('location:IntEmpCrear.php');
+      header('location:IntEmpPost.php');
     }
     else {
       $error[] = 'Error en registro de cuenta';
