@@ -10,18 +10,6 @@ if(!isset($_SESSION['CorreoElectronico'])){
   header('location:index.php');
 }
 
-$correoValida = $_SESSION['CorreoElectronico'];
-
-// Verificar en base de datos
-$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
-$validaUsuario = mysqli_query($conn, $buscaUsuario);
-if(mysqli_num_rows($validaUsuario) == 0){
-  $error[] = 'No existe usuario';
-  header('location:index.php');
-}
-
-// Terminamos de verificar
-
 
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
 $vacante = $_SESSION['Vacante'];
@@ -32,8 +20,10 @@ $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
   $error[] = 'No existe usuario';
-  header('location:Cuenta.php');
+  header('location:index.php');
 }
+
+// Terminamos de verificar
 
 
 //echo $vacante;
