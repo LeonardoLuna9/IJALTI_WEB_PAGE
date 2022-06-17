@@ -4,9 +4,23 @@
 
 session_start();
 
-/*if(!isset($_SESSION['CorreoElectronico'])){
+//Verificamos usuario
+
+if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
 
 
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
@@ -23,12 +37,12 @@ if(mysqli_num_rows($validaUsuario) == 0){
 
 
 //echo $vacante;
-echo $_SESSION['Presentacion'];
+//echo $_SESSION['Presentacion'];
 if (isset($_POST['submit'])){
   $definirAplica = "  INSERT INTO aplicantes(ID_vacante, correo, presentacion, fecha_apl) VALUES ($vacante, '$CorreoElectronico', '$presentacion', CURDATE()) ";
   mysqli_query($conn, $definirAplica);
   header('location:IntUsuProf.php');
-}*/
+}
 
 ?>
 
@@ -60,7 +74,7 @@ if (isset($_POST['submit'])){
       <div class="usu-prof3-block-item">
         <div class="usu-prof3-cover-block2 layout">
           <div class="usu-prof3-flex layout">
-            <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="usu-prof3-icon4 layout"></div>
+            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="usu-prof3-icon4 layout"></div>
             <div class="usu-prof3-cover-block1 layout">
               <div class="usu-prof3-flex1 layout">
                 <div class="usu-prof3-flex1-item">
@@ -83,13 +97,13 @@ if (isset($_POST['submit'])){
               <div class="usu-prof3-box18 layout"></div>
               <div class="usu-prof3-box20 layout"></div>
               <div
-                style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/2ae38ea5632235754bd78aa2f650374d.png)"
+                style="--src:url(http://localhost/PaginaWebFinal/assets/2ae38ea5632235754bd78aa2f650374d.png)"
                 class="usu-prof3-image2 layout"
               ></div>
               <div class="usu-prof3-cover-group layout">
                 <div class="usu-prof3-box19 layout"></div>
                 <div
-                  style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/b86e71291d200049b9abc11f40792139.png)"
+                  style="--src:url(http://localhost/PaginaWebFinal/assets/b86e71291d200049b9abc11f40792139.png)"
                   class="usu-prof3-image3 layout"
                 ></div>
               </div>
@@ -102,11 +116,11 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof3-flex4-spacer"></div>
                 <div class="usu-prof3-flex4-item"><div class="usu-prof3-box10 layout"></div></div>
               </div>
-              <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/83dbd43dce1484d5547515d54439abf1.png)" class="usu-prof3-icon2 layout"></div>
+              <div style="--src:url(http://localhost/PaginaWebFinal/assets/83dbd43dce1484d5547515d54439abf1.png)" class="usu-prof3-icon2 layout"></div>
             </div>
-            <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/9e6587d9d71ed6665bd6b5030de72a0a.png)" class="usu-prof3-image layout"></div>
-            <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/046d996939a083c067ab06faeb93e597.png)" class="usu-prof3-cover-block layout">
-              <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/ec63e319edd52afa23d013c040b56139.png)" class="usu-prof3-icon3 layout"></div>
+            <div style="--src:url(http://localhost/PaginaWebFinal/assets/9e6587d9d71ed6665bd6b5030de72a0a.png)" class="usu-prof3-image layout"></div>
+            <div style="--src:url(http://localhost/PaginaWebFinal/assets/046d996939a083c067ab06faeb93e597.png)" class="usu-prof3-cover-block layout">
+              <div style="--src:url(http://localhost/PaginaWebFinal/assets/ec63e319edd52afa23d013c040b56139.png)" class="usu-prof3-icon3 layout"></div>
             </div>
           </div>
         </div>
@@ -121,7 +135,7 @@ if (isset($_POST['submit'])){
               <div class="usu-prof3-flex7 layout">
                 <div class="usu-prof3-flex7-item">
                   <div
-                    style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block6 layout"
                   >
                     <h5 class="usu-prof3-highlights layout">1</h5>
@@ -132,7 +146,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof3-flex7-spacer"></div>
                 <div class="usu-prof3-flex7-item">
                   <div
-                    style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block3 layout"
                   >
                     <h5 class="usu-prof3-highlights1 layout">2</h5>
@@ -143,7 +157,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof3-flex7-spacer"></div>
                 <div class="usu-prof3-flex7-item">
                   <div
-                    style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block3 layout"
                   >
                     <!--<h5 class="usu-prof3-highlights1 layout1">3</h5>
@@ -154,7 +168,7 @@ if (isset($_POST['submit'])){
                 <div class="usu-prof3-flex7-spacer"></div>
                 <div class="usu-prof3-flex7-item">
                   <div
-                    style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/beec82d6453cc2811bc255eec03cf954.png)"
                     class="usu-prof3-cover-block3 layout"
                   >
                     <h5 class="usu-prof3-highlights1 layout2">4</h5>-->
@@ -169,7 +183,7 @@ if (isset($_POST['submit'])){
                   <div class="usu-prof3-flex8-item1"><div class="usu-prof3-box4 layout"></div></div>
                 </div>
                 <div
-                  style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/015f9569e126d7fdbd2e6f0205a87664.png)"
+                  style="--src:url(http://localhost/PaginaWebFinal/assets/015f9569e126d7fdbd2e6f0205a87664.png)"
                   class="usu-prof3-icon1 layout"
                 ></div>
               </div>
@@ -192,18 +206,18 @@ if (isset($_POST['submit'])){
       <div class="usu-prof3-block-spacer1"></div>
       <div class="usu-prof3-block-item2">
         <div class="usu-prof3-block2 layout">
-          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="usu-prof3-icon5 layout"></div>
+          <div style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="usu-prof3-icon5 layout"></div>
         </div>
       </div>
       <div class="usu-prof3-block-spacer2"></div>
       <div class="usu-prof3-block-item3">
         <div class="usu-prof3-block3 layout">
-          <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="usu-prof3-image4 layout"></div>
+          <div style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="usu-prof3-image4 layout"></div>
         </div>
       </div>
       <div class="usu-prof3-block-spacer3"></div>
       <div class="usu-prof3-block-item4">
-        <div style="--src:url(http://192.168.64.2/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="usu-prof3-icon6 layout"></div>
+        <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="usu-prof3-icon6 layout"></div>
       </div>
     </div>
     <script type="text/javascript">

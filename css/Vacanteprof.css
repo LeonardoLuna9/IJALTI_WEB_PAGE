@@ -2161,8 +2161,8 @@
     height: min-content;
     bottom: 807px;
     left: 0px;
-    right: 0px;
-    width: 6.6%;
+    right: -10px;
+    width: 8%;
     margin: 0px 5.09% 0px 88.31%; }
     @media (max-width: 1199px) {
       .vacanteprof-cover-block.layout {

@@ -4,6 +4,25 @@
 
 session_start();
 
+//Verificamos usuario reclutador 
+ 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
+
+/*
 if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
 }
@@ -18,10 +37,10 @@ $validaUsuario = mysqli_query($conn, $buscaReclutador);
 if(mysqli_num_rows($validaUsuario) == 0){
   $error[] = 'No existe usuario';
   header('location:Cuenta.php');
-}
+}*/
 
 if (isset($_POST['submit'])){ 
-  header('location:CrearVacante.php');
+   header('location:CrearVacante.php');
 }
 
 ?>
@@ -115,7 +134,7 @@ if (isset($_POST['submit'])){
         <div class="int-emp-crear-flex-item1">
           <div class="int-emp-crear-flex6 layout">
             <div class="int-emp-crear-flex7 layout">
-              <h1 class="int-emp-crear-big-title layout">Creación de trabajos</h1>
+              <h1 class="int-emp-crear-big-title layout">Creación de trabajos <?php echo $correoValida?></h1>
               <div class="int-emp-crear-flex7-spacer"></div>
               <div class="int-emp-crear-flex7-item">
                 <div
@@ -174,7 +193,7 @@ if (isset($_POST['submit'])){
               <div class="int-emp-crear-flex8-spacer"></div>
               <div class="int-emp-crear-flex8-item">
                 <div class="int-emp-crear-cover-block9 layout">
-                  <a href="IntEmpPost.php" style="text-decoration: none;"><h5 class="int-emp-crear-highlights1 layout">Posts</h5></a>
+                  <a href="IntEmpPost.php" style="text-decoration: none;"><h5 class="int-emp-crear-highlights1 layout">Puestos</h5></a>
                 </div>
               </div>
               <div class="int-emp-crear-flex8-spacer1"></div>
@@ -197,7 +216,7 @@ if (isset($_POST['submit'])){
               <div class="int-emp-crear-flex9 layout">
                 <div class="int-emp-crear-flex9-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)"
                     class="int-emp-crear-cover-block1 layout"
                   >
                     <div
@@ -245,10 +264,10 @@ if (isset($_POST['submit'])){
                 <div class="int-emp-crear-flex13 layout">
                   <h3 class="int-emp-crear-subtitle layout1">Software Engineer III/C#</h3>
                   <div class="int-emp-crear-paragraph-body layout1">
-                    Responsible to write/execute automated and manual test and building out test pipelines for
-                    discovering defects and reporting them. The area of responsibility will include back end and front
-                    end. The type of testing being done is primarily functional, regression, integration and performance
-                    on the applications involved.
+                     Responsable de escribir/ejecutar pruebas automatizadas y manuales y construir canalizaciones de prueba para
+                     descubrir defectos y reportarlos. El área de responsabilidad incluirá back-end y front
+                     final. El tipo de pruebas que se realizan son principalmente funcionales, de regresión, de integración y de rendimiento.
+                     sobre las aplicaciones involucradas.
                   </div>
                   <div class="int-emp-crear-flex14 layout">
                     <div class="int-emp-crear-text-body1 layout">#software</div>

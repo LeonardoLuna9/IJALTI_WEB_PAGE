@@ -1,3 +1,26 @@
+<?php
+@include 'config.php';
+session_start();
+
+//Verificamos usuario reclutador 
+ 
+if(!isset($_SESSION['CorreoElectronico'])){
+  header('location:IniciarSesion.php');
+}
+
+$correoValida = $_SESSION['CorreoElectronico'];
+
+// Verificar en base de datos
+$buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if(mysqli_num_rows($validaUsuario) == 0){
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
+// Terminamos de verificar
+
+?>
 <!DOCTYPE html>
 <html>
 <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -72,7 +95,7 @@
       <div class="int-emp-post-flex-item1">
         <div class="int-emp-post-flex6 layout">
           <div class="int-emp-post-flex7 layout">
-            <h1 class="int-emp-post-big-title layout">Posts publicados</h1>
+            <h1 class="int-emp-post-big-title layout">Puestos publicados <?php echo $correoValida?></h1>
             <div class="int-emp-post-flex7-spacer"></div>
             <div class="int-emp-post-flex7-item">
               <div style="--src:url(http://localhost/PaginaWebFinal/assets/01537c32334bc2d327b868a938ffda61.png)" class="int-emp-post-image4 layout"></div>
@@ -111,18 +134,18 @@
             <div class="int-emp-post-flex8-spacer"></div>
             <div class="int-emp-post-flex8-item">
               <div class="int-emp-post-cover-block9 layout">
-                <h5 class="int-emp-post-highlights1 layout">Posts</h5>
+                <h5 class="int-emp-post-highlights1 layout">Puestos</h5>
               </div>
             </div>
             <div class="int-emp-post-flex8-spacer1"></div>
             
             <div class= "crear-cv-block3 layout">
-            <form action="" method="get">
-              <input class="crear-cv-small-text-body1 layout" type="text" name="busqueda" placeholder="Buscar"> <br>
-              <input type="submit" name="enviar" value="Buscar" >
+            <form action="buscador.php" method="get">
+              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador te lleva a resultados -->
+              <input class="submit2" type="submit" name="enviar" value="Buscar" >
             </form>
+            
             </div>
-        
           </div>
           <div class="int-emp-post-cover-block8 layout">
             <div class="int-emp-post-flex9 layout">
@@ -172,10 +195,10 @@
               <div class="int-emp-post-flex13 layout">
                 <h3 class="int-emp-post-subtitle layout1">Software Engineer III/C#</h3>
                 <div class="int-emp-post-paragraph-body layout1">
-                  Responsible to write/execute automated and manual test and building out test pipelines for
-                  discovering defects and reporting them. The area of responsibility will include back end and front
-                  end. The type of testing being done is primarily functional, regression, integration and performance
-                  on the applications involved.
+                  Responsable de escribir/ejecutar pruebas automatizadas y manuales y construir canalizaciones de prueba para
+                   descubrir defectos y reportarlos. El área de responsabilidad incluirá back-end y front
+                   final. El tipo de pruebas que se realizan son principalmente funcionales, de regresión, de integración y de rendimiento.
+                   sobre las aplicaciones involucradas.
                 </div>
                 <div class="int-emp-post-flex14 layout">
                   <div class="int-emp-post-text-body1 layout">#software</div>
@@ -207,8 +230,7 @@
                 <h3 class="int-emp-post-subtitle1 layout">Software Engineer II/JAVA</h3>
                 <div class="int-emp-post-paragraph-body1-box layout">
                   <pre class="int-emp-post-paragraph-body1">
-Empresa dedicada al desarrollo de tecnología, software y hardware en las siguientes áreas industriales tecnologías de la información (TI) y comunicaciones, farmacéutica, automotriz, agricultura, salud, alimentos y bebidas
-be ordered in any color combination. As it made of a moldable material (polyurethane) this background.</pre>
+Empresa dedicada al desarrollo de tecnología, software y hardware en las siguientes áreas industriales tecnologías de la información (TI) y comunicaciones.</pre>
                 </div>
                 <div class="int-emp-post-flex17 layout">
                   <div class="int-emp-post-text-body1 layout3">#engineer</div>
@@ -219,7 +241,7 @@ be ordered in any color combination. As it made of a moldable material (polyuret
                   <div class="int-emp-post-flex17-spacer2"></div>
                   <div class="int-emp-post-flex17-item">
                     <div class="int-emp-post-cover-block2 layout1">
-                      <div class="int-emp-post-text-body1 layout6">Edit</div>
+                      <div class="int-emp-post-text-body1 layout6">Editar</div>
                     </div>
                   </div>
                   <div class="int-emp-post-flex17-spacer3"></div>

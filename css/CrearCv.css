@@ -216,7 +216,11 @@
 .crear-cv-block3.layout {
   position: relative;
   height: 55px;
-  margin: 15px 0px 0px 3px; }
+  margin: 15px 0px 0px 3px;
+  right: 0%;
+  top: 0%;
+  width: 100%;
+  border: 0px; }
 
 .crear-cv-small-text-body1 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -742,7 +746,7 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content;
+  height: 40px;
   width: 87%;
   margin: 10px 25.58% 29px 4.65%; }
 
