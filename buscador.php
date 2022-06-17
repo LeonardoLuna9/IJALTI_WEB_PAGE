@@ -163,25 +163,17 @@ session_start();
         }
         //print_r($selectUsuario);
     }
-    /*
-    print_r($selectUsuario);
+    // print_r($selectUsuario);
     
-    if (isset($_POST['0'])) { // Hacemos POST a base de datos
-        $_SESSION['CorreoAplicantePerfil'] = 'JimmyRings117@gmail.com';
-        header('location:Desktop.php');
-    }
-    
-    /*while(true){*/
-    /*
-    foreach($selectUsuario as $key => $val) {
-        print "$key = $val <br>";
-        //print $selectUsuario[$i];
-        if (isset($_POST[$val])){ // Hacemos POST a base de datos
-            $_SESSION['CorreoAplicantePerfil'] = $val;
-            header('location:Desktop.php');
-        }
-    }*/
-    
+    // //while(true){
+    // foreach($selectUsuario as $key => $val) {
+    //     print "$key = $val <br>";
+    //     //print $selectUsuario[$i];
+    // }
+    // if (isset($_POST['JimmyRings117@gmail.com'])){ // Hacemos POST a base de datos
+    //     $_SESSION['CorreoAplicantePerfil'] = $val;
+    //     header('location:Desktop.php');
+    // }
 //}
     ?>
                 <div class="usu-prof1-flex9-item">
