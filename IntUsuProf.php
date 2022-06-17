@@ -111,7 +111,7 @@ if (isset($_POST['Aplicate3'])){
           <div class="int-usu-prof-cover-block16 layout">
             <div class="int-usu-prof-flex1 layout">
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)"
+                style="--src:url(/assets/7323574fa6f9b67892c5c58f273263e8.png)"
                 class="int-usu-prof-icon6 layout"
               ></div>
               <div class="int-usu-prof-cover-block15 layout">
@@ -133,11 +133,11 @@ if (isset($_POST['Aplicate3'])){
               </div>
               <div class="int-usu-prof-cover-block13 layout">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/2eae75f79ebf95c0ee4dbc57f6f284bf.png)"
+                  style="--src:url(/assets/2eae75f79ebf95c0ee4dbc57f6f284bf.png)"
                   class="int-usu-prof-image3 layout"
                 ></div>
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/18e2e2dc8fe09cd974e7d2be3ea2adfd.png)"
+                  style="--src:url(/assets/18e2e2dc8fe09cd974e7d2be3ea2adfd.png)"
                   class="int-usu-prof-image4 layout"
                 ></div>
               </div>
@@ -149,19 +149,19 @@ if (isset($_POST['Aplicate3'])){
                 <div class="int-usu-prof-flex5-item"><div class="int-usu-prof-box8 layout"></div></div>
               </div>
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/1eea1a8715c573a5471bf7e21ba2dfb7.png)"
+                style="--src:url(/assets/1eea1a8715c573a5471bf7e21ba2dfb7.png)"
                 class="int-usu-prof-image layout"
               ></div>
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/5c02a89a277a49e5189745732f210d9b.png)"
+                style="--src:url(/assets/5c02a89a277a49e5189745732f210d9b.png)"
                 class="int-usu-prof-icon1 layout"
               ></div>
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)"
+                style="--src:url(/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)"
                 class="int-usu-prof-cover-block14 layout"
               >
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)"
+                  style="--src:url(/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)"
                   class="int-usu-prof-image2 layout"
                 ></div>
               </div>
@@ -184,11 +184,11 @@ if (isset($_POST['Aplicate3'])){
               <div class="int-usu-prof-flex7-spacer1"></div>
               <div class="int-usu-prof-flex7-item1">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/b0461e330ea3f041fd76eac055c61397.png)"
+                  style="--src:url(/assets/b0461e330ea3f041fd76eac055c61397.png)"
                   class="int-usu-prof-cover-block17 layout"
                 >
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
+                    style="--src:url(/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
                     class="int-usu-prof-image18 layout"
                   ></div>
                 </div>
@@ -197,7 +197,7 @@ if (isset($_POST['Aplicate3'])){
               <div class="int-usu-prof-flex7-item2">
                 <div class="int-usu-prof-block1 layout">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)"
+                    style="--src:url(/assets/e1b8c76181004a3e9e95a1151056a5c1.png)"
                     class="int-usu-prof-icon2 layout"
                   ></div>
                 </div>
@@ -206,7 +206,7 @@ if (isset($_POST['Aplicate3'])){
               <div class="int-usu-prof-flex7-item3">
                 <div class="int-usu-prof-block2 layout">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)"
+                    style="--src:url(/assets/601449fdf3b988c9624f92ad1efe381a.png)"
                     class="int-usu-prof-image5 layout"
                   ></div>
                 </div>
@@ -214,7 +214,7 @@ if (isset($_POST['Aplicate3'])){
               <div class="int-usu-prof-flex7-spacer4"></div>
               <div class="int-usu-prof-flex7-item4">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)"
+                  style="--src:url(/assets/6db786cae790c9b78f84af356252d24b.png)"
                   class="int-usu-prof-icon3 layout"
                 ></div>
               </div>
@@ -246,7 +246,7 @@ if (isset($_POST['Aplicate3'])){
                   <div class="int-usu-prof-content-box-spacer"></div>
                   <div class="int-usu-prof-content-box-item">
                     <div
-                      style="--src:url(http://localhost/PaginaWebFinal/assets/e1dd2116b0f75109122cb8810416a881.png)"
+                      style="--src:url(/assets/e1dd2116b0f75109122cb8810416a881.png)"
                       class="int-usu-prof-image6 layout"
                     ></div>
                   </div>
@@ -262,7 +262,7 @@ if (isset($_POST['Aplicate3'])){
                     <div class="int-usu-prof-flex10-spacer"></div>
                     <div class="int-usu-prof-flex10-item">
                       <div
-                        style="--src:url(http://localhost/PaginaWebFinal/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
+                        style="--src:url(/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
                         class="int-usu-prof-image15 layout"
                       ></div>
                     </div>
@@ -282,21 +282,21 @@ if (isset($_POST['Aplicate3'])){
                       <div class="int-usu-prof-group layout">
                         <div class="int-usu-prof-cover-group layout">
                           <div
-                            style="--src:url(http://localhost/PaginaWebFinal/assets/c06e8a1512a76b3c5454794cef531957.png)"
+                            style="--src:url(/assets/c06e8a1512a76b3c5454794cef531957.png)"
                             class="int-usu-prof-group1 layout"
                           >
                             <div
-                              style="--src:url(http://localhost/PaginaWebFinal/assets/56e30d43634fe4b4eee9dbe4ebe9c1d9.png)"
+                              style="--src:url(/assets/56e30d43634fe4b4eee9dbe4ebe9c1d9.png)"
                               class="int-usu-prof-image16 layout"
                             ></div>
                           </div>
                         </div>
                         <div
-                          style="--src:url(http://localhost/PaginaWebFinal/assets/dfda6ca516cd214360dc79f008f28d25.png)"
+                          style="--src:url(/assets/dfda6ca516cd214360dc79f008f28d25.png)"
                           class="int-usu-prof-block3 layout"
                         ></div>
                         <div
-                          style="--src:url(http://localhost/PaginaWebFinal/assets/9d933c6a9c4cfbf110f1c80278b842ec.png)"
+                          style="--src:url(/assets/9d933c6a9c4cfbf110f1c80278b842ec.png)"
                           class="int-usu-prof-image17 layout"
                         ></div>
                       </div>
@@ -325,33 +325,33 @@ if (isset($_POST['Aplicate3'])){
                 </div>
               </div>
               <div
-                style="--src:url(http://localhost/PaginaWebFinal/assets/9a5b7a06aad50440d2eb287187ec6dfc.png)"
+                style="--src:url(/assets/9a5b7a06aad50440d2eb287187ec6dfc.png)"
                 class="int-usu-prof-cover-block layout"
               >
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/36f3a87f9d158cecc4f21dfe83a80c31.png)"
+                  style="--src:url(/assets/36f3a87f9d158cecc4f21dfe83a80c31.png)"
                   class="int-usu-prof-image10 layout"
                 ></div>
                 <px-posize x="171fr 43px 16fr" y="134px 104px 0px" absolute="true"
                   ><div
                     class="int-usu-prof-image11"
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/7d4aaf8f47c94336c8e3c4892398c594.png)"
+                    style="--src:url(/assets/7d4aaf8f47c94336c8e3c4892398c594.png)"
                   ></div
                 ></px-posize>
                 <div class="int-usu-prof-cover-group2 layout">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/b22b81424bec3cd1a3d38ebdea16dbb2.png)"
+                    style="--src:url(/assets/b22b81424bec3cd1a3d38ebdea16dbb2.png)"
                     class="int-usu-prof-image12 layout"
                   ></div>
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/8e4c8b1021a8561d15326ad427e1e8cc.png)"
+                    style="--src:url(/assets/8e4c8b1021a8561d15326ad427e1e8cc.png)"
                     class="int-usu-prof-cover1 layout"
                   ></div>
                 </div>
                 <px-posize x="18fr 43px 169fr" y="4px 104px 130px" absolute="true"
                   ><div
                     class="int-usu-prof-image11"
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/4bf7e3ae87eb183a1ac857109e897719.png)"
+                    style="--src:url(/assets/4bf7e3ae87eb183a1ac857109e897719.png)"
                   ></div
                 ></px-posize>
               </div>
@@ -360,7 +360,7 @@ if (isset($_POST['Aplicate3'])){
               <div class="int-usu-prof-flex13 layout">
                 <div class="int-usu-prof-flex13-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/Toshibathird.png)"
+                    style="--src:url(/assets/Toshibathird.png)"
                     class="int-usu-prof-image13 layout"
                   ></div>
                 </div>
@@ -372,7 +372,7 @@ if (isset($_POST['Aplicate3'])){
                       <div class="int-usu-prof-flex15-spacer"></div>
                       <div class="int-usu-prof-flex15-item">
                         <div
-                          style="--src:url(http://localhost/PaginaWebFinal/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
+                          style="--src:url(/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
                           class="int-usu-prof-image15 layout1"
                         ></div>
                       </div>
@@ -391,11 +391,11 @@ if (isset($_POST['Aplicate3'])){
                       <div class="int-usu-prof-flex17-item">
                         <div class="int-usu-prof-cover-group1 layout">
                           <div
-                            style="--src:url(http://localhost/PaginaWebFinal/assets/1fe75c22eb321d7b3988fb6a847533ba.png)"
+                            style="--src:url(/assets/1fe75c22eb321d7b3988fb6a847533ba.png)"
                             class="int-usu-prof-icon4 layout"
                           ></div>
                           <div
-                            style="--src:url(http://localhost/PaginaWebFinal/assets/de8823913ca2abfa33906fc19678e927.png)"
+                            style="--src:url(/assets/de8823913ca2abfa33906fc19678e927.png)"
                             class="int-usu-prof-icon7 layout"
                           ></div>
                         </div>
@@ -435,7 +435,7 @@ if (isset($_POST['Aplicate3'])){
             <div class="int-usu-prof-flex6-item">
               <div class="int-usu-prof-cover-group4 layout">
                 <px-posize x="488fr 11px 765fr" y="21px 11px 210px" absolute="true"
-                  ><div class="int-usu-prof-icon5" style="--src:url(http://localhost/PaginaWebFinal/assets/401c08b9ec450675d063c437fde8ff0d.png)"></div
+                  ><div class="int-usu-prof-icon5" style="--src:url(/assets/401c08b9ec450675d063c437fde8ff0d.png)"></div
                 ></px-posize>
                 <div class="int-usu-prof-box14 layout"></div>
                 <div class="int-usu-prof-cover-block3 layout1">
@@ -464,23 +464,23 @@ if (isset($_POST['Aplicate3'])){
                 <div class="int-usu-prof-text-body2 layout6">#ciencia</div>
                 <div class="int-usu-prof-cover-group3 layout">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/1fe75c22eb321d7b3988fb6a847533ba.png)"
+                    style="--src:url(/assets/1fe75c22eb321d7b3988fb6a847533ba.png)"
                     class="int-usu-prof-icon4 layout1"
                   ></div>
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/6114b2c347029943866dcbc63887c051.png)"
+                    style="--src:url(/assets/6114b2c347029943866dcbc63887c051.png)"
                     class="int-usu-prof-image8 layout"
                   ></div>
                 </div>
                 <div class="int-usu-prof-small-text-body layout1">Este post será publicado Hoy a las 08:30 AM</div>
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/0d5434093be9553a3550483adf558c57.png)"
+                  style="--src:url(/assets/0d5434093be9553a3550483adf558c57.png)"
                   class="int-usu-prof-image14 layout"
                 ></div>
                 <px-posize x="1209fr 17px 38fr" y="28px 27px 187px" absolute="true"
                   ><div
                     class="int-usu-prof-image151"
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
+                    style="--src:url(/assets/80e7ac964c28c99f2c5d445d357fc5f4.png)"
                   ></div
                 ></px-posize>
               </div>

@@ -44,22 +44,22 @@ if(mysqli_num_rows($validaUsuario) == 0){
   <div class="int-emp int-emp-group layout54">
     <div class="int-emp-cover-group13 layout">
       <div class="int-emp-group1 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="int-emp-img layout"></div>
+        <div style="--src:url(/assets/e1b8c76181004a3e9e95a1151056a5c1.png)" class="int-emp-img layout"></div>
       </div>
       <div class="int-emp-group2 layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="int-emp-img layout1"></div>
+        <div style="--src:url(/assets/601449fdf3b988c9624f92ad1efe381a.png)" class="int-emp-img layout1"></div>
       </div>
       <div class="int-emp-cover-group layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/6db786cae790c9b78f84af356252d24b.png)" class="int-emp-img layout2"></div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/69d690ec87262e6d91c21699ac4a6b13.png)" class="int-emp-img layout3"></div>
+        <div style="--src:url(/assets/6db786cae790c9b78f84af356252d24b.png)" class="int-emp-img layout2"></div>
+        <div style="--src:url(/assets/69d690ec87262e6d91c21699ac4a6b13.png)" class="int-emp-img layout3"></div>
       </div>
       <div class="int-emp-rect layout"></div>
       <div class="int-emp-txt layout">Aplicantes</div>
       <px-posize x="1586fr 69px 73fr" y="42px 25px 26px" absolute="true">
-        <div class="int-emp-img1" style="--src:url(http://localhost/PaginaWebFinal/assets/55332f877608c9f1b3986fd0c46c1dcd.png)"></div>
+        <div class="int-emp-img1" style="--src:url(/assets/55332f877608c9f1b3986fd0c46c1dcd.png)"></div>
       </px-posize>
-      <div style="--src:url(http://localhost/PaginaWebFinal/assets/bedb9931d995fb69802dd678967770fc.png)" class="int-emp-cover-block layout">
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)" class="int-emp-img layout4"></div>
+      <div style="--src:url(/assets/bedb9931d995fb69802dd678967770fc.png)" class="int-emp-cover-block layout">
+        <div style="--src:url(/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)" class="int-emp-img layout4"></div>
       </div>
     </div>
     <div class="int-emp-group3 layout">
@@ -87,7 +87,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
             <div class="int-emp-flex2 layout">
               <div class="int-emp-flex2-item">
                 <div class="int-emp-group9 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/1d91f164f54fa23a599100e366665e0b.png)" class="int-emp-img layout5"></div>
+                  <div style="--src:url(/assets/1d91f164f54fa23a599100e366665e0b.png)" class="int-emp-img layout5"></div>
                 </div>
               </div>
               <div class="int-emp-flex2-spacer"></div>
@@ -101,7 +101,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-txt4 layout">ESPECIALIDAD</div>
               <div class="int-emp-flex3-item">
                 <div class="int-emp-group11 layout">
-                  <div style="--src:url(http://localhost/PaginaWebFinal/assets/1d91f164f54fa23a599100e366665e0b.png)" class="int-emp-img layout6"></div>
+                  <div style="--src:url(/assets/1d91f164f54fa23a599100e366665e0b.png)" class="int-emp-img layout6"></div>
                 </div>
               </div>
             </div>
@@ -191,13 +191,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout4">
         <div class="int-emp-group23 layout">
           <div class="int-emp-group24 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout7"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout7"></div>
           </div>
           <div class="int-emp-group25 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout8"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout8"></div>
           </div>
           <div class="int-emp-group26 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout9"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout9"></div>
           </div>
         </div>
       </div>
@@ -252,7 +252,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex8 layout">
                 <div class="int-emp-flex8-item">
                   <div class="int-emp-group31 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout11"></div>
+                    <div style="--src:url(/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout11"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex8-spacer"></div>
@@ -265,13 +265,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout8">
         <div class="int-emp-group32 layout">
           <div class="int-emp-group33 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout12"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout12"></div>
           </div>
           <div class="int-emp-group34 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout13"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout13"></div>
           </div>
           <div class="int-emp-group35 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout14"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout14"></div>
           </div>
         </div>
       </div>
@@ -326,7 +326,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex11 layout">
                 <div class="int-emp-flex11-item">
                   <div class="int-emp-group40 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout16"></div>
+                    <div style="--src:url(/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout16"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex11-spacer"></div>
@@ -339,13 +339,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout12">
         <div class="int-emp-group41 layout">
           <div class="int-emp-group42 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout17"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout17"></div>
           </div>
           <div class="int-emp-group43 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout18"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout18"></div>
           </div>
           <div class="int-emp-group44 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout19"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout19"></div>
           </div>
         </div>
       </div>
@@ -399,13 +399,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout17">
         <div class="int-emp-group47 layout">
           <div class="int-emp-group48 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout20"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout20"></div>
           </div>
           <div class="int-emp-group49 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout21"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout21"></div>
           </div>
           <div class="int-emp-group50 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout22"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout22"></div>
           </div>
         </div>
       </div>
@@ -459,13 +459,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout21">
         <div class="int-emp-group54 layout">
           <div class="int-emp-group55 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout23"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout23"></div>
           </div>
           <div class="int-emp-group56 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout24"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout24"></div>
           </div>
           <div class="int-emp-group57 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout25"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout25"></div>
           </div>
         </div>
       </div>
@@ -518,7 +518,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex8 layout">
                 <div class="int-emp-flex8-item">
                   <div class="int-emp-group62 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout27"></div>
+                    <div style="--src:url(/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout27"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex8-spacer"></div>
@@ -531,13 +531,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout25">
         <div class="int-emp-group63 layout">
           <div class="int-emp-group64 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout28"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout28"></div>
           </div>
           <div class="int-emp-group65 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout29"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout29"></div>
           </div>
           <div class="int-emp-group66 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout30"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout30"></div>
           </div>
         </div>
       </div>
@@ -590,7 +590,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex11 layout">
                 <div class="int-emp-flex11-item">
                   <div class="int-emp-group71 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout32"></div>
+                    <div style="--src:url(/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout32"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex11-spacer"></div>
@@ -603,13 +603,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout29">
         <div class="int-emp-group72 layout">
           <div class="int-emp-group73 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout33"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout33"></div>
           </div>
           <div class="int-emp-group74 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout34"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout34"></div>
           </div>
           <div class="int-emp-group75 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout35"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout35"></div>
           </div>
         </div>
       </div>
@@ -661,13 +661,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout34">
         <div class="int-emp-group78 layout">
           <div class="int-emp-group79 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout36"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout36"></div>
           </div>
           <div class="int-emp-group80 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout37"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout37"></div>
           </div>
           <div class="int-emp-group81 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout38"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout38"></div>
           </div>
         </div>
       </div>
@@ -723,13 +723,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout38">
         <div class="int-emp-group85 layout">
           <div class="int-emp-group86 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout39"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout39"></div>
           </div>
           <div class="int-emp-group87 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout40"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout40"></div>
           </div>
           <div class="int-emp-group88 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout41"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout41"></div>
           </div>
         </div>
       </div>
@@ -782,7 +782,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex8 layout">
                 <div class="int-emp-flex8-item">
                   <div class="int-emp-group93 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout43"></div>
+                    <div style="--src:url(/assets/e3c249304af00aceeedbd44befdb0c0a.png)" class="int-emp-img layout43"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex8-spacer"></div>
@@ -795,13 +795,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout42">
         <div class="int-emp-group94 layout">
           <div class="int-emp-group95 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout44"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout44"></div>
           </div>
           <div class="int-emp-group96 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout45"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout45"></div>
           </div>
           <div class="int-emp-group97 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout46"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout46"></div>
           </div>
         </div>
       </div>
@@ -854,7 +854,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
               <div class="int-emp-flex11 layout">
                 <div class="int-emp-flex11-item">
                   <div class="int-emp-group102 layout">
-                    <div style="--src:url(http://localhost/PaginaWebFinal/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout48"></div>
+                    <div style="--src:url(/assets/8cc8ecddf859ba9f36ddea87cc10138d.png)" class="int-emp-img layout48"></div>
                   </div>
                 </div>
                 <div class="int-emp-flex11-spacer"></div>
@@ -867,13 +867,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout47">
         <div class="int-emp-group103 layout">
           <div class="int-emp-group104 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout49"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout49"></div>
           </div>
           <div class="int-emp-group105 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout50"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout50"></div>
           </div>
           <div class="int-emp-group106 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout51"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout51"></div>
           </div>
         </div>
       </div>
@@ -925,13 +925,13 @@ if(mysqli_num_rows($validaUsuario) == 0){
       <div class="int-emp-group layout52">
         <div class="int-emp-group109 layout">
           <div class="int-emp-group110 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout52"></div>
+            <div style="--src:url(/assets/7b6e79a7aba1ac0d643fff0c65e1e93a.png)" class="int-emp-img layout52"></div>
           </div>
           <div class="int-emp-group111 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout53"></div>
+            <div style="--src:url(/assets/a0a39c89bd8df0b5956aee4cb9d21818.png)" class="int-emp-img layout53"></div>
           </div>
           <div class="int-emp-group112 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout54"></div>
+            <div style="--src:url(/assets/d10978458d61fcac6b7ef9c01df88df6.png)" class="int-emp-img layout54"></div>
           </div>
         </div>
       </div>
@@ -960,12 +960,12 @@ if(mysqli_num_rows($validaUsuario) == 0){
             </div>
           </div>
         </div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-cover-group10 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-img layout55"></div>
+        <div style="--src:url(/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-cover-group10 layout">
+          <div style="--src:url(/assets/3b3ce0d989dcd5ddee6ba7e50aa7b4c6.png)" class="int-emp-img layout55"></div>
         </div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="int-emp-cover-group9 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-cover-group8 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-img layout56"></div>
+        <div style="--src:url(/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="int-emp-cover-group9 layout">
+          <div style="--src:url(/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-cover-group8 layout">
+            <div style="--src:url(/assets/6b2a8b41bff1a2cfdc7f576557253bb8.png)" class="int-emp-img layout56"></div>
           </div>
           <div style="--src:url(/assets/8f83a7d1f3e5bec5c47bfeba6a103133.png)" class="int-emp-img layout57"></div>
         </div>
@@ -973,16 +973,16 @@ if(mysqli_num_rows($validaUsuario) == 0){
         <div class="int-emp-cover-group6 layout"></div>
         <div class="int-emp-cover-group5 layout"></div>
         <div class="int-emp-cover-group4 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-cover-group3 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-img layout58"></div>
+          <div style="--src:url(/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-cover-group3 layout">
+            <div style="--src:url(/assets/2805d49bbf7338977dcbdb48755c9baa.png)" class="int-emp-img layout58"></div>
           </div>
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-cover-group2 layout">
-            <div style="--src:url(http://localhost/PaginaWebFinal/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-img layout59"></div>
+          <div style="--src:url(/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-cover-group2 layout">
+            <div style="--src:url(/assets/cea2953d5f057da721482fde9542f499.png)" class="int-emp-img layout59"></div>
           </div>
           <div class="int-emp-rect8 layout"></div>
         </div>
-        <div style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="int-emp-cover-group1 layout">
-          <div style="--src:url(http://localhost/PaginaWebFinal/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="int-emp-img layout60"></div>
+        <div style="--src:url(/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="int-emp-cover-group1 layout">
+          <div style="--src:url(/assets/7323574fa6f9b67892c5c58f273263e8.png)" class="int-emp-img layout60"></div>
         </div>
 
       </div>
@@ -994,7 +994,7 @@ if(mysqli_num_rows($validaUsuario) == 0){
   </px-posize>
   <div class="int-emp-txt100 layout">No. de aplicantes (12)</div>
   <px-posize x="109fr 32px 1587fr" y="99px 37px 981px" absolute="true">
-    <div class="int-emp-img4" style="--src:url(http://localhost/PaginaWebFinal/assets/92895f952a3b0e1dbe9da3e6806941ae.png)"></div>
+    <div class="int-emp-img4" style="--src:url(/assets/92895f952a3b0e1dbe9da3e6806941ae.png)"></div>
   </px-posize>
   </div>
   <script type="text/javascript">
