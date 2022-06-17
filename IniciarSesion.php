@@ -73,7 +73,7 @@ if (isset($_POST['submit'])){
             <div class="iniciar-sesion-cover-block1 layout">
               <div class="iniciar-sesion-cover-block1-item">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/5037b87665450aab69c59ca57378a47d.png)"
+                  style="--src:url(/assets/5037b87665450aab69c59ca57378a47d.png)"
                   class="iniciar-sesion-image layout"
                 ></div>
               </div>
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])){
             <div class="iniciar-sesion-cover-block2 layout">
               <div class="iniciar-sesion-cover-block2-item">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/2303a87489ac6b89c93fee94b7816c22.png)"
+                  style="--src:url(/assets/2303a87489ac6b89c93fee94b7816c22.png)"
                   class="iniciar-sesion-icon layout"
                 ></div>
               </div>
@@ -99,7 +99,7 @@ if (isset($_POST['submit'])){
             <div class="iniciar-sesion-cover-block3 layout">
               <div class="iniciar-sesion-cover-block3-item">
                 <div
-                  style="--src:url(http://localhost/PaginaWebFinal/assets/0c9806ea3660136deed51beda1131df3.png)"
+                  style="--src:url(/assets/0c9806ea3660136deed51beda1131df3.png)"
                   class="iniciar-sesion-icon layout1"
                 ></div>
               </div>

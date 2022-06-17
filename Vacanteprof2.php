@@ -234,7 +234,7 @@ Horarios: <?php echo $rowdetalles['horario']; ?> </pre
         xxs-y="5px 46px 61px"
         tn-x="1664fr 48px 16fr"
         tn-y="5px 46px 5px"
-        ><a href = "IntUsuProf.php" style="text-decoration: none;"><div class="vacanteprof-icon8" style="--src:url(http://localhost/PaginaWebFinal/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
+        ><a href = "IntUsuProf.php" style="text-decoration: none;"><div class="vacanteprof-icon8" style="--src:url(/assets/c39743a94e40f92fbc033634223cd9fd.png)"></div
       ></a></px-posize>
 
       <px-posize
@@ -255,7 +255,7 @@ Horarios: <?php echo $rowdetalles['horario']; ?> </pre
         tn-y="20px 27px 5px"
         ><div
           class="vacanteprof-image14"
-          style="--src:url(http://localhost/PaginaWebFinal/assets/a51c9108a4402e7c5140055632e9aec0.png)"
+          style="--src:url(/assets/a51c9108a4402e7c5140055632e9aec0.png)"
         ></div></px-posize
       ><px-posize
         x="475fr 48px 1205fr"
@@ -273,7 +273,7 @@ Horarios: <?php echo $rowdetalles['horario']; ?> </pre
         xxs-y="37px 16px 54px"
         tn-x="475fr 48px 1205fr"
         tn-y="19px 16px 5px"
-        ><div class="vacanteprof-image16" style="--src:url(http://localhost/PaginaWebFinal/assets/b142754cb9a6537f63126106030836fe.png)"></div
+        ><div class="vacanteprof-image16" style="--src:url(/assets/b142754cb9a6537f63126106030836fe.png)"></div
       ></px-posize>
     </div>
     <script type="text/javascript">

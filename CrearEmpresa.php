@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
         <div class="cuenta-flex1-item">
           <div class="cuenta-cover-block1 layout">
             <div class="cuenta-cover-block1-item">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/571ef6a80d41f9dfd53a10e217d57ad9.png)" class="cuenta-image2 layout"></div>
+              <div style="--src:url(/assets/571ef6a80d41f9dfd53a10e217d57ad9.png)" class="cuenta-image2 layout"></div>
             </div>
             <div class="cuenta-cover-block1-spacer"></div>
             <div class="cuenta-small-text-body layout">Ingresar con Google</div>
@@ -97,7 +97,7 @@ if (isset($_POST['submit'])) {
           <div class="cuenta-flex2 layout">
             <div class="cuenta-cover-block1 layout1">
               <div class="cuenta-cover-block1-item1">
-                <div style="--src:url(http://localhost/PaginaWebFinal/assets/08eca4a24ed703acded7cfce2a48dab4.png)" class="cuenta-image2 layout1"></div>
+                <div style="--src:url(/assets/08eca4a24ed703acded7cfce2a48dab4.png)" class="cuenta-image2 layout1"></div>
               </div>
               <div class="cuenta-cover-block1-spacer1"></div>
               <div class="cuenta-small-text-body layout1">Ingresar con Facebook</div>
@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
         <div class="cuenta-flex1-item2">
           <div class="cuenta-cover-block layout">
             <div class="cuenta-cover-block-item">
-              <div style="--src:url(http://localhost/PaginaWebFinal/assets/47448dd426ca9db3d5c1834b897a6a45.png)" class="cuenta-image3 layout"></div>
+              <div style="--src:url(/assets/47448dd426ca9db3d5c1834b897a6a45.png)" class="cuenta-image3 layout"></div>
             </div>
             <div class="cuenta-cover-block-spacer"></div>
             <div class="cuenta-small-text-body layout2">Ingresar con LinkedIn</div>
@@ -131,8 +131,8 @@ if (isset($_POST['submit'])) {
           <h5 class="cuenta-highlights layout">¿Cómo planeas usar tu cuenta?</h5>
           <div class="cuenta-flex3-spacer">
             <select name="SeleccionaCuenta" id="SelectCuenta">
-            <option value="http://localhost/PaginaWebFinal/CrearEmpresa.php">Empresarial</option>  
-            <option value="http://localhost/PaginaWebFinal/Cuenta.php">Usuario Profesional</option>    
+            <option value="/CrearEmpresa.php">Empresarial</option>  
+            <option value="/Cuenta.php">Usuario Profesional</option>    
             </select>
           </div>
           <div class="cuenta-flex3-item">
