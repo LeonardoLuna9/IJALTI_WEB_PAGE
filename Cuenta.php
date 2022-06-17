@@ -45,6 +45,12 @@ if (isset($_POST['submit'])) {
       $insert6 = "INSERT INTO educacion(correo) VALUES ('$correo')"; // educacion
       mysqli_query($conn, $insert6);
 
+      $insert7 = "INSERT INTO certificaciones(correo) VALUES ('$correo')"; // certificaciones
+      mysqli_query($conn, $insert7);
+
+      $insert8 = "INSERT INTO cursos(correo) VALUES ('$correo')"; // cursos
+      mysqli_query($conn, $insert8);
+
       // Otros usuarios:
       // reclutador -- CIF NIF ???
 

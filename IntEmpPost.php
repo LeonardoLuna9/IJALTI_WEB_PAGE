@@ -1,3 +1,14 @@
+<?php
+@include 'config.php';
+session_start();
+
+if (isset($_POST['enviar'])){
+  $busqueda = mysqli_real_escape_string($conn, $_POST['busqueda']);
+  $_SESSION['busquedaUsuario'] = $busqueda;
+  header('location:buscador.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
@@ -117,11 +128,16 @@
             <div class="int-emp-post-flex8-spacer1"></div>
             
             <div class= "crear-cv-block3 layout">
-            <form action="" method="get">
-              <input class="crear-cv-small-text-body1 layout" type="text" name="busqueda" placeholder="Buscar"> <br>
-              <input type="submit" name="enviar" value="Buscar" >
+            <form action="" method="post">
+              <input class="submit" type="text" name="busqueda" placeholder="Buscar"> <!-- Buscador -->
+              <input class="submit2" type="submit" name="enviar" value="Buscar" >
             </form>
+            
             </div>
+            <div
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/0247ef7e399fc3f1c444b97a9d2dece4.png)"
+                    class="int-emp-post-image8 layout"
+                  ></div>
         
           </div>
           <div class="int-emp-post-cover-block8 layout">
@@ -219,7 +235,7 @@ be ordered in any color combination. As it made of a moldable material (polyuret
                   <div class="int-emp-post-flex17-spacer2"></div>
                   <div class="int-emp-post-flex17-item">
                     <div class="int-emp-post-cover-block2 layout1">
-                      <div class="int-emp-post-text-body1 layout6">Edit</div>
+                      <div class="int-emp-post-text-body1 layout6">Editar</div>
                     </div>
                   </div>
                   <div class="int-emp-post-flex17-spacer3"></div>

@@ -22,7 +22,9 @@ if(mysqli_num_rows($validaUsuario) == 0){
 if (isset($_POST['submit'])){
   $presentacion = mysqli_real_escape_string($conn, $_POST['presentacion']);
   $_SESSION['Presentacion'] = $presentacion;
-  // echo $_SESSION['Presentacion']; 
+
+  //echo $_SESSION['Presentacion']; 
+
   header('location:UsuProf3.php');
 }
 
@@ -170,10 +172,10 @@ if (isset($_POST['submit'])){
               <h2 class="usu-prof2-medium-title layout">Presentate</h2>
               <h4 class="usu-prof2-highlights31 layout">Puedes escribir un breve texto de presentación aquí</h4>
               <div class="usu-prof2-cover-block layout">
-                <form action="" method="post">
+                
                 <textarea class="usu-prof2-highlights5" name="presentacion" rows="10" cols="45" placeholder = "Máximo 100 palabras "> </textarea>
                 <!--<input class="usu-prof2-highlights5" type = "text" placeholder="Máximo 100 palabras" name="presentacion" pattern="{100}" maxlength="100" required>  -->             
-                </form>
+                
               </div>
             </div>
           </div>
@@ -186,9 +188,9 @@ if (isset($_POST['submit'])){
 <!--
               <a href="UsuProf3.php" style="text-decoration: none;"><div class="usu-prof2-block1 layout"><h4 class="usu-prof2-highlights4 layout">Siguiente</h4></div></a>
 -->
-              <form action="" method="post">
+
               <input type = "submit" name ="submit" value="Siguiente" class="usu-prof2-block1 layout usu-prof2-highlights4 layout">
-              </form>
+    
             </div>
           </div>
         </div>

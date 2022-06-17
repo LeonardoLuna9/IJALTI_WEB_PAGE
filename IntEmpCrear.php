@@ -197,7 +197,7 @@ if (isset($_POST['submit'])){
               <div class="int-emp-crear-flex9 layout">
                 <div class="int-emp-crear-flex9-item">
                   <div
-                    style="--src:url(http://localhost/PaginaWebFinal/assets/6e13d5367ad99c006fc752e6204d13a1.png)"
+                    style="--src:url(http://localhost/PaginaWebFinal/assets/Toshiba.png)"
                     class="int-emp-crear-cover-block1 layout"
                   >
                     <div

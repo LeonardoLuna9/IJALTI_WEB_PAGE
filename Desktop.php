@@ -1,7 +1,10 @@
 <?php
 @include 'config.php'; // Base de datos
-  
+//session_start();
+
 $correoUsuario = $_GET['CorreoAplicantePerfil'];
+
+$_SESSION['CorreoAplicantePerfil'] = $correoUsuario;
 
 $correoPerfil = "SELECT * FROM usuarios WHERE correo = '$correoUsuario'";
 $query = mysqli_query($conn, $correoPerfil);  
@@ -133,7 +136,10 @@ $row2 = mysqli_fetch_array($query2);
         </div>
         <div class="desktop-flex9 layout">
           <div class="desktop-flex9-item">
-            <div class="desktop-cover-block3 layout"><h1 class="desktop-big-title layout">Mostrar CV</h1></div>
+            <div class="desktop-cover-block3 layout">
+              <!-- Boton Mostrar CV-->
+              <a class="desktop-big-title layout" href="Cv.php">Mostrar CV</a>
+            </div>
           </div>
           <div class="desktop-flex9-spacer"></div>
           <div class="desktop-flex9-item1">

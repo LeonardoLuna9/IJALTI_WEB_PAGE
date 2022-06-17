@@ -6,9 +6,17 @@ session_start();
 
 if(!isset($_SESSION['CorreoElectronico'])){
   header('location:IniciarSesion.php');
-}
+}//ola
 
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
+
+$buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
+$validaUsuario = mysqli_query($conn, $buscaUsuario);
+if (mysqli_num_rows($validaUsuario) == 0) {
+  $error[] = 'No existe usuario';
+  header('location:Cuenta.php');
+}
+
 //Validación para ver si ya tiene CV 
 $select = " SELECT * FROM informacion_laboral WHERE correo = '$CorreoElectronico' AND empresa != NULL"; //Prueba para ver si me valida 
 
@@ -29,6 +37,9 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   $calle = mysqli_real_escape_string($conn, $_POST['Calle']);
   $numCalle = mysqli_real_escape_string($conn, $_POST['NumCalle']);
 
+  // Situación laboral
+  $SitLaboral = mysqli_real_escape_string($conn, $_POST['SitLaboral']); // Nueva
+
   //Información laboral
   $empresa = mysqli_real_escape_string($conn, $_POST['Empresa']);
   $desc = mysqli_real_escape_string($conn, $_POST['Descripcion']);
@@ -44,8 +55,12 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   $fechaGrad = strtotime($_POST['FechaGrad']);
   $fechaGrad = date('Y-m-d H:i:s', $fechaGrad);
 
-  // Habilidades 
+  // Descripción
+  $Certificaciones = mysqli_real_escape_string($conn, $_POST['Certificaciones']); // Nueva
+  $Cursos = mysqli_real_escape_string($conn, $_POST['Cursos']);  // Nueva
   $habilidades = mysqli_real_escape_string($conn, $_POST['Habilidades']);
+  
+
   /*
   $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'"; //Prueba para ver si me valida 
   $validaUsuario = mysqli_query($conn, $buscaUsuario);
@@ -55,10 +70,9 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   }
   else { */
 
-=======
- 
+
   // Update en usuario_prof
-  $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc' WHERE correo = '$CorreoElectronico'";
+  $insert1 = "UPDATE usuario_prof SET fechaNac = '$fechNac', codigo_postal = '$cp', ciudad = '$ciudad', num_calle = '$numCalle', calle = '$calle', RFC = '$rfc', sitLab = '$SitLaboral' WHERE correo = '$CorreoElectronico'";
   mysqli_query($conn, $insert1);
 
   // Update en informacion_laboral
@@ -69,9 +83,17 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
   $insert3 = "UPDATE educacion SET escuela = '$escuela', carrera = '$carrera', gradoEducacion = '$gradEd', fechaGrad = '$fechaGrad' WHERE correo = '$CorreoElectronico'";
   mysqli_query($conn, $insert3);
 
-  // Update en habilidades
-  $insert4 = "UPDATE habilidades SET experiencia_habil = '$habilidades' WHERE correo = '$CorreoElectronico'";
+  //Update en certificaciones
+  $insert4 = "UPDATE certificaciones SET certificacion = '$Certificaciones' WHERE correo = '$CorreoElectronico'";
   mysqli_query($conn, $insert4);
+
+  //Update en cursos
+  $insert5 = "UPDATE cursos SET curso = '$Cursos' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert5);
+
+  // Update en habilidades
+  $insert6 = "UPDATE habilidades SET experiencia_habil = '$habilidades' WHERE correo = '$CorreoElectronico'";
+  mysqli_query($conn, $insert6);
 
   // Regresa a página principal
   header('location:IntUsuProf.php');
@@ -148,7 +170,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                       <div class="crear-cv-block3 layout">
                         <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
                           <div class="crear-cv-small-text-body11">Fecha de nacimiento
-                            <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                            <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="1950-01-01" max="2022-12-31" required>
                           </div>
                           <br>
                           <hr class="cuenta-line1 layout" />
@@ -182,7 +204,20 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                 </div>
                 <h5 class="crear-cv-highlights layout2">Situación Laboral</h5>
                 <div class="crear-cv-block13 layout">
-                        <input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empleado, desempleado, estudiante" name="SitLaboral" pattern="{20}" maxlength = "20" required>
+                  <!-- We are helljumpers, BECAUSE HELL IS OUR DOMAIN! -->
+                          <px-posize track-style='{"flexGrow":1}' x="16px 110fr 801fr" y="11px minmax(0px, max-content) 10fr">
+                            <!--<input class="crear-cv-small-text-body12" type = "text" name="GradoEducacion" pattern="{18}" required>-->
+
+                            ><select name="SitLaboral" id="SelectCuenta" required>
+                              <optgroup label="GradoEducacion">
+                                <option value="Empleado">Empleado</option>
+                                <option value="Desempleado">Desempleado</option>
+                                <option value="Estudiante">Estudiante</option>
+                            </select>
+                            <p class="crear-cv-small-text-body12">Situación laboral</p>
+                            <!-- <div class="crear-cv-small-text-body12">Grado de educacion</div> -->
+                          </px-posize>
+                        <!--<input class="crear-cv-small-text-body1 layout" type = "text" placeholder="Empleado, desempleado, estudiante" name="SitLaboral" pattern="{20}" maxlength = "20" required> Situación laboral -->
                       </div>
                 <div class="crear-cv-block4 layout">
                   <div class="crear-cv-block4-item">
@@ -191,11 +226,9 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                         <h5 class="crear-cv-highlights layout1">Experiencia laboral</h5>
                         <div class="crear-cv-flex5-spacer"></div>
                         <div class="crear-cv-flex5-item">
-                          <div style="--src:url(http://localhost/PaginaWebFinal/assets/06e3cba43acec943570ffd2c403a7e4c.png)" class="crear-cv-image layout"></div>
                         </div>
                         <div class="crear-cv-flex5-spacer1"></div>
                         <div class="crear-cv-flex5-item1">
-                          <div style="--src:url(http://localhost/PaginaWebFinal/assets/7ba74c20a3d85f39cd180e40dfc3d51c.png)" class="crear-cv-image1 layout"></div>
                         </div>
                       </div>
                       <div class="crear-cv-block3 layout1">
@@ -225,7 +258,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                         <div class="crear-cv-block3 layout3">
                           <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
                             <div class="crear-cv-small-text-body11">Fecha Inicial
-                              <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="2018-01-01" max="2022-12-31" required>
+                              <input type="date" id="crear-cv-small-text-body11" name="FechaInicial" value="2022-06-17" min="1950-01-01" max="2022-12-31" required>
                             </div>
                           </px-posize>
                         </div>
@@ -233,7 +266,7 @@ if (isset($_POST['submit'])) { // Hacemos POST a base de datos
                         <div class="crear-cv-block3 layout3">
                           <px-posize track-style='{"flexGrow":1}' x="16px 42fr 869fr" y="11px minmax(0px, max-content) 10fr">
                             <div class="crear-cv-small-text-body11">Fecha Final
-                              <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="2000-01-01" max="2022-12-31" required>
+                              <input type="date" id="crear-cv-small-text-body11" name="FechaFinal" value="2022-06-17" min="1950-01-01" max="2022-12-31" required>
                             </div>
                           </px-posize>
                         </div>
@@ -310,7 +343,7 @@ Cambios Paulina-->
 -->
                         <px-posize track-style='{"flexGrow":1}' x="16px 114fr 797fr" y="11px minmax(0px, max-content) 10fr">
                           <div class="crear-cv-small-text-body13"> Fecha de Graduación
-                            <input type="date" class="calendario" name="FechaGrad" value="2022-06-07" min="2000-01-01" max="2022-12-31" required>
+                            <input type="date" class="calendario" name="FechaGrad" value="2022-06-07" min="1950-01-01" max="2022-12-31" required>
                           </div>
                         </px-posize>
                       </div>
@@ -328,13 +361,13 @@ Cambios Paulina-->
                 <div class="divisionmamalona" id="55555">
                   <h5 class="crear-cv-highlights layout2">Descripción</h5>
                   <div class="crear-cv-block13 layout">
-                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Certificaciones" name="Ciudad" pattern="{20}" maxlength="20" required>
+                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Certificaciones" name="Certificaciones" pattern="{20}" maxlength="20" required>
                   </div>
                   <div class="crear-cv-block13 layout">
-                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Cursos" name="Ciudad" pattern="{20}" maxlength="20" required>
+                    <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Cursos" name="Cursos" pattern="{20}" maxlength="20" required>
                   </div>
                   <div class="crear-cv-block13 layout">
-                    <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> -->
+                    <!-- <div class="crear-cv-small-text-body1 layout">Escribir acá</div> --> 
                     <input class="crear-cv-small-text-body1 layout" type="text" placeholder="Habilidades" name="Habilidades" pattern="{50}" maxlength="50" required>
                   </div>
                 </div>
