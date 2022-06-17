@@ -220,7 +220,7 @@
   right: 0%;
   top: 0%;
   width: 100%;
-  border: 0px; }
+ }
 
 .crear-cv-small-text-body1 {
   font: 12px/1.2 "Roboto", Helvetica, Arial, serif;
@@ -865,4 +865,5 @@
     margin-left: 125%;
     margin-top: -2%;
   }
+
 
