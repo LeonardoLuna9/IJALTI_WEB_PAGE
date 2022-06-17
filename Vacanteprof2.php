@@ -4,13 +4,18 @@
 
 session_start();
 
-$vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
-$query = mysqli_query($conn, $vacante1);
+// $vacante1 = "SELECT * FROM vacantes WHERE ID_vacante = 1";
+// $query = mysqli_query($conn, $vacante1);
 
-$row = mysqli_fetch_array($query);
+// $row = mysqli_fetch_array($query);
+
+$vacantedetalles =  $_SESSION['Vervacante'];
+$detalles = "SELECT * FROM vacantes WHERE empresa = '$vacantedetalles'";
+$querydetalles =  mysqli_query($conn, $detalles);
+$rowdetalles = mysqli_fetch_array($querydetalles);
 
 if (isset($_POST['Aplicate1'])){ 
-  $_SESSION['Vacante'] = $row['ID_vacante'];
+  $_SESSION['Vacante'] = $rowdetalles['ID_vacante'];
   header('location:UsuProf2.php');
 }
 
@@ -126,7 +131,7 @@ if(mysqli_num_rows($result) > 0){
     <div class="vacanteprof vacanteprof-block layout">
       <div class="vacanteprof-cover-group2 layout">
         <div class="vacanteprof-cover-group1 layout" >
-          <img class="Oracle" src="./assets/Toshibathird.png">
+          <img class="Oracle" src="<?php echo $rowdetalles['LINK']; ?>">
     
          
         </div>
@@ -141,27 +146,27 @@ if(mysqli_num_rows($result) > 0){
           
           
 Descripción
-</span><span class="vacanteprof-highlights4-span1"> <?php echo $row['descripcion']; ?>
+</span><span class="vacanteprof-highlights4-span1"> <?php echo $rowdetalles['descripcion']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span2">Objetivo del puesto:
   
-</span><span class="vacanteprof-highlights4-span3"> <?php echo $row['obj_puesto']; ?>
+</span><span class="vacanteprof-highlights4-span3"> <?php echo $rowdetalles['obj_puesto']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span4">Perfil Deseado:
 </span><span class="vacanteprof-highlights4-span5">
-<?php echo $row['perf_deseado']; ?>
+<?php echo $rowdetalles['perf_deseado']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span6">Conocimientos:
 </span><span class="vacanteprof-highlights4-span7">
-<?php echo $row['conocimientos']; ?>
+<?php echo $rowdetalles['conocimientos']; ?>
 
 
 </span><span class="vacanteprof-highlights4-span8">Funciones:
 </span><span class="vacanteprof-highlights4-span9">
-<?php echo $row['funciones']; ?></span></pre>
+<?php echo $rowdetalles['funciones']; ?></span></pre>
         </h5>
       </div>
       <div class="vacanteprof-group layout3">
@@ -172,14 +177,14 @@ Descripción
               <div class="vacanteprof-group layout">
                 <h2 class="vacanteprof-medium-title1-box layout">
                   <pre class="vacanteprof-medium-title1">
-Empresa: <?php echo $row['empresa']; ?> 
-Índice de referencia salarial: <?php echo $row['sueldo']; ?> 
-Ubicación: <?php echo $row['ubicacion']; ?> 
-Nivel profesional: <?php echo $row['nivel_prof']; ?>
+Empresa: <?php echo $rowdetalles['empresa']; ?> 
+Índice de referencia salarial: <?php echo $rowdetalles['sueldo']; ?> 
+Ubicación: <?php echo $rowdetalles['ubicacion']; ?> 
+Nivel profesional: <?php echo $rowdetalles['nivel_prof']; ?>
 
-Campo Profesional: <?php echo $row['campo_prof']; ?>
+Campo Profesional: <?php echo $rowdetalles['campo_prof']; ?>
 
-Horarios: <?php echo $row['horario']; ?> </pre
+Horarios: <?php echo $rowdetalles['horario']; ?> </pre
                   >
                   <br>
                 </h2>
@@ -204,10 +209,10 @@ Horarios: <?php echo $row['horario']; ?> </pre
       </div>
       </form>
       <div class="vacanteprof-paragraph-body layout2">
-      <?php echo $row['intro']; ?>
+      <?php echo $rowdetalles['intro']; ?>
       </div>
       <div class="vacanteprof-group layout4">
-        <h3 class="vacanteprof-subtitle layout"><?php echo $row['nombre_vac']; ?></h3>
+        <h3 class="vacanteprof-subtitle layout"><?php echo $rowdetalles['nombre_vac']; ?></h3>
       </div>
       <div class="vacanteprof-text-body2 layout6">#software</div>
       <div class="vacanteprof-text-body2 layout7">#trabajo</div>
