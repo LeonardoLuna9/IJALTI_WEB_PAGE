@@ -217,9 +217,8 @@
   position: relative;
   height: 55px;
   margin: 15px 0px 0px 3px;
-  right: -30%;
-  border: 0px;
-  top:-14%;
+  right: 0%;
+  top: 0%;
   width: 100%; }
 
 .crear-cv-small-text-body1 {
@@ -746,7 +745,7 @@
   position: relative;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content;
+  height: 40px;
   width: 87%;
   margin: 10px 25.58% 29px 4.65%; }
 
