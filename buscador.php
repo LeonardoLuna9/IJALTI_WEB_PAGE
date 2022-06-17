@@ -5,7 +5,7 @@ session_start();
 //Verificamos usuario reclutador 
  
 if(!isset($_SESSION['CorreoElectronico'])){
-  header('location:IniciarSesion.php');
+  header('location:index.php');
 }
 
 $correoValida = $_SESSION['CorreoElectronico'];
@@ -15,7 +15,7 @@ $buscaUsuario = " SELECT * FROM reclutador WHERE correo = '$correoValida'"; //Pr
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
   $error[] = 'No existe usuario';
-  header('location:Cuenta.php');
+  header('location:index.php');
 }
 
 // Terminamos de verificar

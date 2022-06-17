@@ -163,7 +163,7 @@ if (isset($_POST['submit'])) {
         </div>
         <input type="submit" name="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
         <!-- <a href="CrearEmpresa2.php" style="text-decoration: none;"><div class="cuenta-cover-block3 layout"><h4 class="usu-prof1-highlights4 layout">Siguiente</h4></div></a> -->
-        <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
+        <h5 class="cuenta-highlights layout4"><a href="index.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
       </form>
     </div>
   </div>

@@ -7,8 +7,9 @@ session_start();
 //Verificamos usuario
 
 if(!isset($_SESSION['CorreoElectronico'])){
-  header('location:IniciarSesion.php');
+  header('location:index.php');
 }
+
 
 $CorreoElectronico = $_SESSION['CorreoElectronico'];
 $vacante = $_SESSION['Vacante'];
@@ -19,7 +20,7 @@ $buscaUsuario = " SELECT * FROM usuario_prof WHERE correo = '$CorreoElectronico'
 $validaUsuario = mysqli_query($conn, $buscaUsuario);
 if(mysqli_num_rows($validaUsuario) == 0){
   $error[] = 'No existe usuario';
-  header('location:Cuenta.php');
+  header('location:index.php');
 }
 
 // Terminamos de verificar

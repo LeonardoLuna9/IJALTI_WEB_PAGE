@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
       // Otros usuarios:
       // reclutador -- CIF NIF ???
 
-      header('location:IniciarSesion.php');
+      header('location:index.php');
     }
   }
 };
@@ -161,7 +161,7 @@ if (isset($_POST['submit'])) {
           <p id="confirmation" class="invalid">Las contraseñas coinciden</b></p>
         </div>
         <input type="submit" name="submit" value="Crear Cuenta" class="cuenta-cover-block3 layout">
-        <h5 class="cuenta-highlights layout4"><a href="IniciarSesion.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
+        <h5 class="cuenta-highlights layout4"><a href="index.php" style="text-decoration: none;">¿Ya tienes una cuenta? Iniciar sesión</a></h5>
       </form>
     </div>
   </div>
